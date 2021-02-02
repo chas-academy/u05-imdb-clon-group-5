@@ -9,7 +9,9 @@
 </head>
 <body>
     <!-- component -->
+
 <main class="bg-yellow-200 grid place-items-center h-screen">
+    <h1>Hello World</h1>
     <div class="relative">
       <div class="h-40 w-40 bg-pink-400 rounded-t-full relative overflow-hidden">
         <div class="h-40 w-40 bg-gradient-to-l from-pink-100 to-pink-400 rounded-t-full absolute left-12"></div>

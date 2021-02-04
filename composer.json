@@ -58,6 +58,14 @@
         ],
         "post-create-project-cmd": [
             "@php artisan key:generate --ansi"
-        ]
+        ],
+        "scripts": {
+            "compile": [
+                "@php artisan route:cache",
+                "@php artisan event:cache",
+                "@php artisan view:cache"
+            ]
+        }
     }
+    
 }

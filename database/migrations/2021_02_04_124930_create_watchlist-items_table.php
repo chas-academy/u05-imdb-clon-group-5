@@ -13,7 +13,8 @@ class CreateWatchlistItemsTable extends Migration
      */
     public function up()
     {
-        Schema::create('watchlist-items', function (Blueprint $table) {
+        Schema::create('watchlistitems', function (Blueprint $table) {
+            $table->id();
             $table->foreignId('watchlists_id')->constrained();
             $table->foreignId('movies_id')->constrained();
             $table->timestamps();
@@ -28,6 +29,6 @@ class CreateWatchlistItemsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('watchlist-items');
+        Schema::dropIfExists('watchlistitems');
     }
 }

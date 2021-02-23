@@ -20,3 +20,7 @@ Route::get('/', function () {
 Route::get('/', function () {
     return view('imdb');
 });
+
+Route::get('/', function () {
+    return view('navigation');
+});

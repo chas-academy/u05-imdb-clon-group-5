@@ -19,6 +19,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+<<<<<<< HEAD
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
@@ -37,3 +38,8 @@ Auth::routes();
 
 
 
+=======
+Route::get('/', function () {
+    return view('imdb');
+});
+>>>>>>> parent of 4b91d67 (Route added to navigation)

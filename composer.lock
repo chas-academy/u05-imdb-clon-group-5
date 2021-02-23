@@ -64,22 +64,22 @@
         },
         {
             "name": "backpack/crud",
-            "version": "4.1.32",
+            "version": "4.1.36",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Laravel-Backpack/CRUD.git",
-                "reference": "1a65e15562989c8fda3d2941da7110ca4008e21e"
+                "reference": "779364646e3b57258b981ff9f1bdcd9887143836"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Laravel-Backpack/CRUD/zipball/1a65e15562989c8fda3d2941da7110ca4008e21e",
-                "reference": "1a65e15562989c8fda3d2941da7110ca4008e21e",
+                "url": "https://api.github.com/repos/Laravel-Backpack/CRUD/zipball/779364646e3b57258b981ff9f1bdcd9887143836",
+                "reference": "779364646e3b57258b981ff9f1bdcd9887143836",
                 "shasum": ""
             },
             "require": {
                 "composer/package-versions-deprecated": "^1.8",
                 "creativeorange/gravatar": "~1.0",
-                "doctrine/dbal": "^2.5",
+                "doctrine/dbal": "^2.5|^3.0",
                 "guzzlehttp/guzzle": "^7.0|^6.3",
                 "laravel/framework": "^8.0|^7.0|^6.0",
                 "prologue/alerts": "^0.4.1"
@@ -151,9 +151,9 @@
             ],
             "support": {
                 "issues": "https://github.com/Laravel-Backpack/CRUD/issues",
-                "source": "https://github.com/Laravel-Backpack/CRUD/tree/4.1.32"
+                "source": "https://github.com/Laravel-Backpack/CRUD/tree/4.1.36"
             },
-            "time": "2021-02-01T14:06:00+00:00"
+            "time": "2021-02-22T20:31:42+00:00"
         },
         {
             "name": "brick/math",

@@ -20,9 +20,12 @@ Route::get('/', function () {
 });
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> parent of 150967e (undo merge 23/2)
+=======
+>>>>>>> parent of 82420ac (undid merge from 22/2)
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
@@ -42,6 +45,7 @@ Auth::routes();
 
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 Route::get('/', function () {
@@ -49,3 +53,5 @@ Route::get('/', function () {
 });
 >>>>>>> parent of 4b91d67 (Route added to navigation)
 >>>>>>> parent of 150967e (undo merge 23/2)
+=======
+>>>>>>> parent of 82420ac (undid merge from 22/2)

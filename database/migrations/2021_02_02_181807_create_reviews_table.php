@@ -15,8 +15,10 @@ class CreateReviewsTable extends Migration
     {
         Schema::create('reviews', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->constrained();
-            $table->foreignId('movie_id')->constrained();
+            $table->foreignId('user_id')->unsigned()->nullable();
+            $table->foreignId('movie_id')->unsigned()->nullable();
+            $table->foreignId('genres_id')->unsigned()->nullable();
+            $table->string('genre')->nullable();
             $table->string('review-title')->nullable();
             $table->text('review-text')->nullable();
             $table->timestamps();

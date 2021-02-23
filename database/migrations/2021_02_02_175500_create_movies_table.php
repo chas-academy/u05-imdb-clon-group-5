@@ -15,13 +15,13 @@ class CreateMoviesTable extends Migration
     {
         Schema::create('movies', function (Blueprint $table) {
             $table->id();
-            $table->string('title', 30);
+            $table->string('title');
             $table->unsignedTinyInteger('rating')->nullable();
-            $table->string('director', 30)->nullable();
-            $table->string('writer', 30)->nullable();
+            $table->string('director')->nullable();
+            $table->string('writer')->nullable();
             $table->text('description')->nullable();
             $table->string('img-url')->nullable();
-            // $table->foreignId('genre-id')->constrained();
+            $table->string('genre')->nullable();
             $table->timestamps();
         });
     }

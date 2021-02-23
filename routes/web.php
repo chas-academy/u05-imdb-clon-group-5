@@ -19,13 +19,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> parent of 150967e (undo merge 23/2)
-=======
->>>>>>> parent of 82420ac (undid merge from 22/2)
+// <<<<<<< HEAD
+// <<<<<<< HEAD
+// =======
+// <<<<<<< HEAD
+// >>>>>>> parent of 150967e (undo merge 23/2)
+// =======
+// >>>>>>> parent of 82420ac (undid merge from 22/2)
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
@@ -44,14 +44,14 @@ Auth::routes();
 
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
+// <<<<<<< HEAD
+// <<<<<<< HEAD
+// =======
+// =======
 Route::get('/', function () {
     return view('imdb');
 });
->>>>>>> parent of 4b91d67 (Route added to navigation)
->>>>>>> parent of 150967e (undo merge 23/2)
-=======
->>>>>>> parent of 82420ac (undid merge from 22/2)
+// >>>>>>> parent of 4b91d67 (Route added to navigation)
+// >>>>>>> parent of 150967e (undo merge 23/2)
+// =======
+// >>>>>>> parent of 82420ac (undid merge from 22/2)

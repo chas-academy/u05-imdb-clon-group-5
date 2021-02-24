@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 <body class="bg-midnight relative">
@@ -53,10 +55,10 @@
 
   <section class="flex mt-12 justify-center">
     <div class="m-4">
-    <h1 class="text-white text-center text-3xl sm:text-5xl lg:text-7xl">
+    <h1 class="text-white font-inter text-center text-3xl sm:text-5xl lg:text-7xl">
       Express Your Movie
     </h1>
-    <h1 class="text-white text-center text-3xl sm:text-5xl lg:text-7xl">Habits</h1>
+    <h1 class="text-white font-poppins text-center text-3xl sm:text-5xl lg:text-7xl">Habits</h1>
     
       <img class="lg:m-auto md:w-auto" src="../img/Couch.png">
     

@@ -18,5 +18,5 @@ Route::get('/', function () {
 });
 
 Route::get('/', function () {
-    return view('imdb');
+    return view('navigation');
 });

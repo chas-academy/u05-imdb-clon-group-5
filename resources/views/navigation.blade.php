@@ -16,6 +16,19 @@
                         <img class="w-28 mt-4 mb-2" src="../img/imdb_logo.svg">
                     </a>
                 </li>
+
+                <li class="ml-6 mt-4 mb-2">
+                    <a href="#" class="hover:text-gray-300">Movies</a>
+                </li>
+                <li class="ml-6 mt-4 mb-2">
+                    <a href="#" class="hover:text-gray-300">TV shows</a>
+                </li>
+                <li class="ml-6 mt-4 mb-2">
+                    <a href="#" class="hover:text-gray-300">Genre</a>
+                </li>
+                <li class="ml-6 mt-4 mb-2">
+                    <a href="#" class="hover:text-gray-300">Watchlist</a>
+                </li>
             </ul>
         </div>
     </nav>

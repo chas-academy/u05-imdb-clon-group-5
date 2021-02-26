@@ -2,7 +2,7 @@
 @section('content')
     
 
-
+    <div class="max-w-screen-xl m-auto  bg-midnight">
     <section class="flex mt-12 justify-center">
         <div class="m-4">
         <h1 class="text-white font-inter text-center text-3xl sm:text-5xl lg:text-7xl">
@@ -10,7 +10,7 @@
         </h1>
         <h1 class="text-white font-poppins text-center text-3xl sm:text-5xl lg:text-7xl">Habits</h1>
         
-        <img class="lg:m-auto md:w-auto" src="../img/Couch.png">
+        <img class="lg:m-auto md:w-auto" src="../img/Couch.svg">
         
     </div>
     </section>
@@ -28,5 +28,5 @@
         sign up
         </a>
         </div>
-
+    </div>
 @endsection

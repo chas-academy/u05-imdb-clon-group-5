@@ -10,15 +10,15 @@
     <title>Movie-db</title>
 </head>
 
-<body class="bg-midnight">
+<body class="bg-midnight-700">
     {{-- add navigation here --}}
     <a href="/login">Login</a>
-      
+    
 
     @yield('content')
     
  
-    
+   
 
   
     

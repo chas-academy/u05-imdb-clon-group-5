@@ -18,7 +18,7 @@
     @yield('content')
     
  
-    
+   
 
   
     

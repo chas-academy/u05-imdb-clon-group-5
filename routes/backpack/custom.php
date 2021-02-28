@@ -18,4 +18,7 @@ Route::group([
     Route::crud('movie', 'MovieCrudController');
     Route::crud('watchlist', 'WatchlistCrudController');
     Route::crud('watchlistitem', 'WatchlistitemCrudController');
+    Route::crud('genre', 'GenreCrudController');
+    Route::crud('genreitem', 'GenreitemCrudController');
+    Route::crud('review', 'ReviewCrudController');
 }); // this should be the absolute last line of this file

@@ -35,6 +35,10 @@ class Genre extends Model
     |--------------------------------------------------------------------------
     */
 
+    public function genreitem() {
+        return $this->hasMany('App\Models\Genreitem');
+    }
+    
     /*
     |--------------------------------------------------------------------------
     | SCOPES

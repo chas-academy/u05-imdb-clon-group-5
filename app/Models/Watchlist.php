@@ -35,6 +35,10 @@ class Watchlist extends Model
     |--------------------------------------------------------------------------
     */
 
+    public function watchlistitem() {
+        return $this->hasMany('App\Models\Watchlistitems');
+    }
+
     /*
     |--------------------------------------------------------------------------
     | SCOPES

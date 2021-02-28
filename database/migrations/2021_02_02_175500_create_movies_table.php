@@ -20,7 +20,7 @@ class CreateMoviesTable extends Migration
             $table->string('writer', 30)->nullable();
             $table->text('description')->nullable();
             $table->year('year')->nullable();
-            $table->time('time')->nullable();
+            $table->time('runtime')->nullable();
             $table->date('release_date')->nullable();
             $table->longText('img-url')->nullable();
             $table->unsignedTinyInteger('rating')->nullable();

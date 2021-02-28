@@ -35,6 +35,14 @@ class Movie extends Model
     |--------------------------------------------------------------------------
     */
 
+    public function watchlistitem() {
+        return $this->hasMany('App\Models\Watchlistitems');
+    }
+
+    public function genreitem() {
+        return $this->hasMany('App\Models\Genreitem');
+    }
+
     /*
     |--------------------------------------------------------------------------
     | SCOPES

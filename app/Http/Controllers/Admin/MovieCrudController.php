@@ -46,7 +46,7 @@ class MovieCrudController extends CrudController
         CRUD::column('writer');
         CRUD::column('description');
         CRUD::column('year');
-        CRUD::column('time');
+        CRUD::column('runtime');
         CRUD::column('release_date');
         CRUD::column('img-url')->type('image');
 
@@ -74,7 +74,7 @@ class MovieCrudController extends CrudController
         CRUD::field('writer');
         CRUD::field('description')->type('textarea');
         CRUD::field('year')->type('number');
-        CRUD::field('time')->type('time');
+        CRUD::field('runtime')->type('time');
         CRUD::field('release_date')->type('date');
         CRUD::field('img-url')->type('image');
 

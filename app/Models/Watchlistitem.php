@@ -35,6 +35,14 @@ class Watchlistitem extends Model
     |--------------------------------------------------------------------------
     */
 
+    public function watchlist() {
+        return $this->belongsTo('App\Models\Watchlist', 'watchlists_id');
+    }
+
+    public function movies() {
+        return $this->belongsTo('App\Models\Movie', 'movies_id');
+    }
+
     /*
     |--------------------------------------------------------------------------
     | SCOPES

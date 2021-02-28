@@ -35,6 +35,14 @@ class Genreitem extends Model
     |--------------------------------------------------------------------------
     */
 
+    public function Genre() {
+        return $this->belongsTo('App\Models\Genre', 'genres_id');
+    }
+
+    public function movies() {
+        return $this->belongsTo('App\Models\Movie', 'movies_id');
+    }
+
     /*
     |--------------------------------------------------------------------------
     | SCOPES

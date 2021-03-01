@@ -7,31 +7,22 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <title>u05</title>
 </head>
-<body class="font-sans bg-gray-900 text-white">
-    <nav class="border-b border-gray-800">
-        <div class="container mx-auto flex items-center justify-between px-4 py-6+">
-            <ul class="flex item-center">
-                <li>
-                    <a href="#">
-                        <img class="w-28 mt-4 mb-2" src="../img/imdb_logo.svg">
-                    </a>
-                </li>
+    <body class="font-sans bg-gray-900 text-white">
+    <div class="container mx-auto border-b bg-gray-800 border-gray-800 p-5">
+    <header class="flex flex-row justify-between">
+        <a href="#" class="x1 mt-2">
+            <img class="md:w-12 lg:w-24" src="../img/imdb_logo.svg" alt="Imdb Logo" title="Imdb Logo"></a>
 
-                <li class="ml-6 mt-4 mb-2">
-                    <a href="#" class="hover:text-gray-300">Movies</a>
-                </li>
-                <li class="ml-6 mt-4 mb-2">
-                    <a href="#" class="hover:text-gray-300">TV shows</a>
-                </li>
-                <li class="ml-6 mt-4 mb-2">
-                    <a href="#" class="hover:text-gray-300">Genre</a>
-                </li>
-                <li class="ml-6 mt-4 mb-2">
-                    <a href="#" class="hover:text-gray-300">Watchlist</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-    
+</header>
+<nav>
+    <ul class="hidden md:flex-row" id="mobile-menu">
+        <li><a href="#" class="pr-5">Movies</a></li>
+        <li><a href="#" class="pr-5">Tv shows</a></li>
+        <li><a href="#" class="pr-5">Genre</a></li>
+        <li><a href="#" class="pr-5">Watchlist</a></li>
+    </ul>
+</nav>
+</div>
 </body>
 </html>
+ 

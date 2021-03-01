@@ -11,7 +11,10 @@
     <div class="container mx-auto border-b bg-gray-800 border-gray-800 p-5">
     <header class="flex flex-row justify-between">
         <a href="#" class="x1 mt-2">
-            <img class="md:w-12 lg:w-24" src="../img/imdb_logo.svg" alt="Imdb Logo" title="Imdb Logo"></a>
+            <img class="md:w-12 lg:w-24" src="../img/imdb_logo.svg" alt="Imdb Logo" title="Imdb Logo">        </a>
+        <a href="#" class="x2 ml-auto mt-4">
+            <img class="md:w-16 lg:w-20" src="../img/login_logo.svg" alt="Login Logo" title="Login Logo">
+        </a>
 
 </header>
 <nav>

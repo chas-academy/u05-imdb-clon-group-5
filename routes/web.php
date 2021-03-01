@@ -14,6 +14,21 @@ use App\Http\Controllers\mainController;
 |
 */
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Route::get('/', function () { return view('welcome'); });
 
 

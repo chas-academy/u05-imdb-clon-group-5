@@ -26,10 +26,9 @@ use App\Http\Controllers\mainController;
 
 
 
-
-
-
-Route::get('/', function () { return view('welcome'); });
+Route::get('/', function () {	
+    return view('index');	
+});
 
 
 //Storage to the DB

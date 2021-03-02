@@ -11,12 +11,23 @@
     <div class="container mx-auto border-b bg-gray-800 border-gray-800 p-5">
     <header class="flex flex-row justify-between">
         <a href="#" class="x1 mt-2">
-            <img class="md:w-12 lg:w-24" src="../img/imdb_logo.svg" alt="Imdb Logo" title="Imdb Logo">        </a>
-        <a href="#" class="x2 ml-auto mt-4">
-            <img class="md:w-16 lg:w-20" src="../img/login_logo.svg" alt="Login Logo" title="Login Logo">
+            <img class="md:w-12 lg:w-24" src="../img/imdb_logo.svg" alt="Imdb Logo" title="Imdb Logo">
         </a>
-        <p id="burgerbtn" class="lg:w-24 ml-12 mt-2 md:hidden">
-            <img class="md:w-8 lg:w-24" src="../img/navigation_logo.svg" alt="Navigation Logo" title="Navigation Logo">
+
+        <!-- search here! -->
+        <a href="#" class="x1 mt-2">
+            <img class="hidden sm:hidden md:flex lg:w-26 lg:ml-6 max-w-screen-lg" src="../img/search_box.svg" alt="Searchbox" title="Searchbox">
+        </a>
+
+        <!-- <a href="#" class="x3 ml-auto ">
+            <img class="lg:w-24 absolute top-1/2 left-1/2 " src="../img/magnifier.svg" alt="magnifier" title="magnifier">
+        </a> -->
+
+        <a href="#" class="x2 ml-auto mt-3">
+            <img class="md:w-16 md:mt-2 lg:w-20" src="../img/login_logo.svg" alt="Login Logo" title="Login Logo">
+        </a>
+        <p id="burgerbtn" class="lg:w-24 lg:ml-5 ml-3 mt-3 md:hidden">
+            <img class="md:w-8 md:ml-3 lg:w-24" src="../img/navigation_logo.svg" alt="Navigation Logo" title="Navigation Logo">
         </p>
 </header>
 <nav>

@@ -2,7 +2,7 @@
 @section('content')
 
 <div class="overflow-x-hidden relative m-auto max-w-screen-xl bg-midnight">
-    <img class="w-full h-full" src="../img/hero-bg.svg">
+    <img class="w-full h-full" src="../img/hero-page-bg.jpg">
 
         <img class="w-11/12 h-11/12 inset-center" src="../img/hero-movie-bg.svg">
       

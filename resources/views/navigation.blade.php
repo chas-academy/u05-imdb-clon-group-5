@@ -39,10 +39,10 @@
     </div>
   </div>
         <a href="#" class="x2 ml-auto mt-3">
-            <img class="md:w-16 md:mt-3.5 lg:w-20" src="../img/login_logo.svg" alt="Login Logo" title="Login Logo">
+            <img class="md:w-16 md:mt-3.5 md:pt-2 lg:w-20" src="../img/login_logo.svg" alt="Login Logo" title="Login Logo">
         </a>
-        <p id="burgerbtn" class="lg:w-24 lg:ml-5 ml-3 mt-3.5 md:hidden">
-            <img class="md:w-8 md:ml-3 mt-1 lg:w-24" src="../img/navigation_logo.svg" alt="Navigation Logo" title="Navigation Logo">
+        <p id="burgerbtn" class="lg:w-24 lg:ml-5 mt-2 ml-3 md:mt-5 md:hidden">
+            <img class="md:w-8 md:ml-3 mt-1 lg:w-24 lg:mt" src="../img/navigation_logo.svg" alt="Navigation Logo" title="Navigation Logo">
         </p>
 </header>
 <nav>

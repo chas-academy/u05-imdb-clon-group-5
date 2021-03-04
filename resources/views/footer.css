@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap"); 
+
+#imdb {
+    color: black; 
+    width: 66.03px; 
+    height: 23.34px; 
+    top: 3626px; 
+    left: 506px; 
+}
+
+#cat {
+    color: black; 
+    width: 48px; 
+    height: 46,82px; 
+    top: 3614px; 
+    left: 593px; 
+}
+
+#about {
+    color: black; 
+    font-family: "Poppins" "sans-serif"; 
+    width: 109px; 
+    height: 29px; 
+    top: 3623px; 
+    left: 658px; 
+}

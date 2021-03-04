@@ -25,19 +25,9 @@
        
 </div>
 
-        
-
-          
-
-
-
-
-
-
-
-
-
-
+{{-- @include('carousel.blade.php') --}}
 
    
 @endsection
+
+

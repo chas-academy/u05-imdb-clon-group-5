@@ -13,12 +13,18 @@ use App\Http\Controllers\mainController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-
-
 Route::get('/', function () {	
-    return view('index');	
+    return view('index');
 });
+
+/*  Route::get('/', function () {	
+    return view('carousel-featured-now');	
+});  */
+
+
+
+
+
 
 
 //Storage to the DB

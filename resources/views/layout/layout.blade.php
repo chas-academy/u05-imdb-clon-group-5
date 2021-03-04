@@ -11,6 +11,7 @@
 </head>
 
 <body class="bg-midnight-700">
+    <div class="max-w-screen-xl m-auto">
     {{-- add navigation here --}}
     <a href="/login">Login</a>
     
@@ -21,7 +22,7 @@
    
 
   
-    
+</div>
 </body>
 </html>
 

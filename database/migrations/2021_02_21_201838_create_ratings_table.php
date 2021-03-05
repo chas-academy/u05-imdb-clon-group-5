@@ -12,10 +12,10 @@ class CreateRatingsTable extends Migration
     public function up()
     {
         Schema::create('ratings', function (Blueprint $table) {
-            $table->unsignedTinyInteger('rating');
-            $table->foreignId('user_id')->unsigned()->nullable();
-            $table->foreignId('movies_id')->unsigned()->nullable();
-            $table->string('title');
+            $table->id();
+            $table->unsignedSmallInteger('rating')->nullable();
+            $table->foreignId('user_id')->constrained();
+            $table->foreignId('movies_id')->constrained();    
             $table->timestamps();
          });
     }

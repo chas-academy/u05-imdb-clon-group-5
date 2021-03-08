@@ -37,7 +37,7 @@
         </li>
 
         <li>
-            <a href="#">Science fiction</a> 
+            <a href="#">Science Fiction</a> 
         </li>
 
         <li>

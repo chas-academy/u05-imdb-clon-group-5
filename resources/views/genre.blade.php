@@ -1,14 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:ital,wght@0,400;0,900;1,400;1,500;1,600;1,700;1,800&display=swap">
-    <link rel="stylesheet" href="genre.css">
-    <title>Genre</title>
-</head>
-<body>
-    <ul class="genre">
+@extends('layout/layout')
+@section('genre')
+
+<div class="overflow-x-hidden relative m-auto max-w-screen-xl bg-midnight-500">
+
+    <ul class="font-inter text-2xl sm:font-inter sm:text-5xl lg:text-6xl xl:text-8xl text-white text-center sm:text-left">
         <li>
             <a href="#">Action</a> 
         </li>
@@ -49,7 +44,11 @@
             <a href="#">Thriller</a> 
         </li>
   
-</ul>
+    </ul>
 
-</body>
-</html>
+</div>
+
+
+
+
+@endsection

@@ -1,46 +1,46 @@
-@extends('layout/layout')
-@section('genre')
+@extends('layout/layout') 
+@section('content')
 
-<div class="overflow-x-hidden relative m-auto max-w-screen-xl bg-midnight-500">
+<div class="bg-midnight-500 h-screen py-20">
 
-    <ul class="font-inter text-2xl sm:font-inter sm:text-5xl lg:text-6xl xl:text-8xl text-white text-center sm:text-left">
-        <li>
+    <ul class="font-Inter text-3xl sm:text-6xl text-white text-center">
+        <li class="m-4">
             <a href="#">Action</a> 
         </li>
 
-        <li>
+        <li class="m-4">
             <a href="#">Animation</a> 
         </li>
 
-        <li>
+        <li class="m-4">
             <a href="#">Comedy</a> 
         </li>
 
-        <li>
+        <li class="m-4">
             <a href="#">Crime</a> 
         </li>
 
-        <li>
+        <li class="m-4">
             <a href="#">Drama</a> 
         </li>
 
-        <li>
+        <li class="m-4">
             <a href="#">Fantasy</a> 
         </li>
     
-        <li>
+        <li class="m-4">
             <a href="#">Horror</a> 
         </li>
 
-        <li>
+        <li class="m-4">
             <a href="#">Romance</a> 
         </li>
 
-        <li>
+        <li class="m-4">
             <a href="#">Science Fiction</a> 
         </li>
 
-        <li>
+        <li class="m-4">
             <a href="#">Thriller</a> 
         </li>
   

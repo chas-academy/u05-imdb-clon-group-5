@@ -11,15 +11,17 @@
     <title>Movie-db</title>
 </head>
 
-<body class="bg-midnight-700">
+<body class="bg-midnight-700  max-w-screen-xl m-auto">
     {{-- add navigation here --}}
-    {{-- <a href="/login">Login</a> --}}
+
     
 
-     @yield('content')
-    {{--  @yield('carousel') --}}
+    
+     @yield('content') 
+
   
 
+ 
 
    
     

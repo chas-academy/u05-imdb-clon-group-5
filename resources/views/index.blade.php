@@ -1,7 +1,10 @@
 @extends('layout/layout')
 @section('content')
 
-<div class="overflow-x-hidden relative m-auto max-w-screen-xl bg-midnight">
+<div>
+    <div class="relative">
+
+  
     <img class="w-full h-full" src="../img/hero-page-bg.jpg">
 
         <img class="w-11/12 h-11/12 inset-center" src="../img/hero-movie-bg.svg">
@@ -22,12 +25,24 @@
                PLAY
            </a>
                </div>
-       
-</div>
+        </div>
+    </div>
+    <x-img-carousel :movies="$movies"/>
+    
+</div> 
 
-{{-- @include('carousel.blade.php') --}}
 
-   
+
+
+ 
+
+ 
+
+
+
+
 @endsection
+
+
 
 

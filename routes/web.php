@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\mainController;
+use App\Http\Controllers\MovieController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,9 +18,17 @@ Route::get('/', function () {
     return view('index');
 });
 
-/*  Route::get('/', function () {	
-    return view('carousel-featured-now');	
-});  */
+Route::get('/test', function () {	
+    return view('test');
+});
+
+
+Route::get('/',[MovieController::class, 'movieCarousel']);
+
+
+
+
+
 
 
 

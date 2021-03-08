@@ -22,8 +22,7 @@ class CreateMoviesTable extends Migration
             $table->year('year')->nullable();
             $table->time('runtime')->nullable();
             $table->date('release_date')->nullable();
-            $table->longText('img-url')->nullable();
-            $table->unsignedTinyInteger('rating')->nullable();
+            $table->longText('img')->nullable();    
             $table->timestamps();
         });
     }

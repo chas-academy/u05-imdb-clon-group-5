@@ -7,3 +7,4 @@
 <li class='nav-item'><a class='nav-link' href='{{ backpack_url('genre') }}'><i class='nav-icon la la-question'></i> Genres</a></li>
 <li class='nav-item'><a class='nav-link' href='{{ backpack_url('genreitem') }}'><i class='nav-icon la la-question'></i> Genreitems</a></li>
 <li class='nav-item'><a class='nav-link' href='{{ backpack_url('review') }}'><i class='nav-icon la la-question'></i> Reviews</a></li>
+<li class='nav-item'><a class='nav-link' href='{{ backpack_url('rating') }}'><i class='nav-icon la la-question'></i> Ratings</a></li>

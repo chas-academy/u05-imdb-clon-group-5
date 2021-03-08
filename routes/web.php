@@ -36,6 +36,8 @@ Route::get('/',[MovieController::class, 'movieCarousel']);
 
 
 
+
+
 //Storage to the DB
 Route::post('/save', [mainController::class, 'save'])->name('save');
 //Check in the DB

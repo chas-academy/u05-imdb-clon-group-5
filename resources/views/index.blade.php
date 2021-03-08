@@ -1,11 +1,16 @@
 @extends('layout/layout')
 @section('content')
 
+<<<<<<< HEAD
 <div>
     <div class="relative">
 
   
     <img class="w-full h-full" src="../img/hero-page-bg.jpg">
+=======
+<div class="overflow-x-hidden relative m-auto bg-midnight">
+    <img class="w-full h-full" src="../img/hero-bg.svg">
+>>>>>>> Development
 
         <img class="w-11/12 h-11/12 inset-center" src="../img/hero-movie-bg.svg">
       
@@ -25,12 +30,21 @@
                PLAY
            </a>
                </div>
+<<<<<<< HEAD
         </div>
     </div>
     <x-img-carousel :movies="$movies"/>
     
 </div> 
 
+=======
+              
+</div>
+
+
+
+        
+>>>>>>> Development
 
 
 

@@ -2,16 +2,16 @@
 
 namespace App\Http\Controllers\Admin;
 
-use App\Http\Requests\MovieRequest;
+use App\Http\Requests\RatingRequest;
 use Backpack\CRUD\app\Http\Controllers\CrudController;
 use Backpack\CRUD\app\Library\CrudPanel\CrudPanelFacade as CRUD;
 
 /**
- * Class MovieCrudController
+ * Class RatingCrudController
  * @package App\Http\Controllers\Admin
  * @property-read \Backpack\CRUD\app\Library\CrudPanel\CrudPanel $crud
  */
-class MovieCrudController extends CrudController
+class RatingCrudController extends CrudController
 {
     use \Backpack\CRUD\app\Http\Controllers\Operations\ListOperation;
     use \Backpack\CRUD\app\Http\Controllers\Operations\CreateOperation;
@@ -26,9 +26,9 @@ class MovieCrudController extends CrudController
      */
     public function setup()
     {
-        CRUD::setModel(\App\Models\Movie::class);
-        CRUD::setRoute(config('backpack.base.route_prefix') . '/movie');
-        CRUD::setEntityNameStrings('movie', 'movies');
+        CRUD::setModel(\App\Models\Rating::class);
+        CRUD::setRoute(config('backpack.base.route_prefix') . '/rating');
+        CRUD::setEntityNameStrings('rating', 'ratings');
     }
 
     /**
@@ -39,16 +39,7 @@ class MovieCrudController extends CrudController
      */
     protected function setupListOperation()
     {
-        // CRUD::setFromDb(); // columns
-
-        CRUD::column('title');
-        CRUD::column('director');
-        CRUD::column('writer');
-        CRUD::column('description');
-        CRUD::column('year');
-        CRUD::column('runtime');
-        CRUD::column('release_date');
-        CRUD::column('img')->type('image');
+        CRUD::setFromDb(); // columns
 
         /**
          * Columns can be defined using the fluent syntax or array syntax:
@@ -65,18 +56,9 @@ class MovieCrudController extends CrudController
      */
     protected function setupCreateOperation()
     {
-        CRUD::setValidation(MovieRequest::class);
+        CRUD::setValidation(RatingRequest::class);
 
-        // CRUD::setFromDb(); // fields
-
-        CRUD::field('title');
-        CRUD::field('director');
-        CRUD::field('writer');
-        CRUD::field('description')->type('textarea');
-        CRUD::field('year')->type('number');
-        CRUD::field('runtime')->type('time');
-        CRUD::field('release_date')->type('date');
-        CRUD::field('img')->type('image');
+        CRUD::setFromDb(); // fields
 
         /**
          * Fields can be defined using the fluent syntax or array syntax:

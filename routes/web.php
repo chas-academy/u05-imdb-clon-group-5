@@ -17,7 +17,7 @@ use App\Http\Controllers\mainController;
 
 
 Route::get('/', function () {	
-    return view('index');	
+    return view('raise_your_awareness');	
 });
 
 

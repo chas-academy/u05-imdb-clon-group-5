@@ -5,6 +5,19 @@ module.exports = {
     darkMode: false, // or 'media' or 'class'
     theme: {
         extend: {
+            inset: {
+                100: "40rem",
+                110: "60rem",
+                120: "80rem",
+                130: "100rem",
+            },
+            minWidth: {
+                "1/4": "25%",
+                "1/3": "33%",
+                "1/2": "50%",
+                "3/4": "75%",
+                full: "100%",
+            },
             colors: {
                 midnight: {
                     DEFAULT: "#011627",
@@ -16,7 +29,7 @@ module.exports = {
                     500: "#011627",
                     600: "#000C16",
                     700: "#00070B",
-                    800: "#000000",
+                    800: "#0B1A22",
                     900: "#000000",
                 },
                 dianne: {
@@ -41,8 +54,9 @@ module.exports = {
         //to get one of the fonts above type font-inter or
         //font-poppins for the one you want as a class
     },
+
     variants: {
         extend: {},
     },
-    plugins: [],
+    plugins: [require("tailwind-scrollbar-hide")],
 };

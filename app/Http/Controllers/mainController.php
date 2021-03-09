@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Hash;
 
 class mainController extends Controller
 {
+   
     //
     function login() {
         return view('login');

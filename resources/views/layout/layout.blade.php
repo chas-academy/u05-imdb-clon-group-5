@@ -11,12 +11,7 @@
     <title>Movie-db</title>
 </head>
 
-<<<<<<< HEAD
 <body class="bg-midnight-700  max-w-screen-xl m-auto">
-=======
-<body class="bg-midnight-700">
-    <div class="max-w-screen-xl m-auto">
->>>>>>> Development
     {{-- add navigation here --}}
 
     

@@ -12,27 +12,24 @@ slideRight.addEventListener("click", () => {
     });
     arrow += 1;
     if (arrow == 1) {
-        console.log(arrow);
         imgSlide.forEach((imgSlide) => {
             imgSlide.classList.remove("right-0");
             imgSlide.classList.remove("left-0");
             imgSlide.classList.toggle("right-80");
         });
     } else if (arrow == 2) {
-        console.log(arrow);
         imgSlide.forEach((imgSlide) => {
             imgSlide.classList.remove("right-80");
             imgSlide.classList.toggle("right-100");
         });
     } else if (arrow == 3) {
-        console.log(arrow);
         imgSlide.forEach((imgSlide) => {
             imgSlide.classList.remove("right-100");
             imgSlide.classList.toggle("right-110");
         });
     } else {
         arrow = 0;
-        console.log(arrow);
+
         imgSlide.forEach((imgSlide) => {
             imgSlide.classList.remove("right-110");
             imgSlide.classList.toggle("right-0");
@@ -42,20 +39,16 @@ slideRight.addEventListener("click", () => {
 /* left arrow for img carousel  */
 slideLeft.addEventListener("click", () => {
     if (arrow == 0) {
-        console.log("borde vara left-0");
     } else if (arrow == 1) {
         arrow -= 1;
-        console.log("left-1");
         imgSlide.forEach((imgSlide) => {
             imgSlide.classList.toggle("right-80");
-            console.log(arrow);
         });
     } else if (arrow == 2) {
         arrow -= 1;
         imgSlide.forEach((imgSlide) => {
             imgSlide.classList.remove("right-100");
             imgSlide.classList.toggle("right-80");
-            console.log(arrow);
         });
         console.log("left-2");
     } else if (arrow == 3) {
@@ -63,11 +56,8 @@ slideLeft.addEventListener("click", () => {
         imgSlide.forEach((imgSlide) => {
             imgSlide.classList.remove("right-110");
             imgSlide.classList.toggle("right-100");
-            console.log(arrow);
         });
-        console.log("left-3");
     } else {
         return;
-        console.log("else");
     }
 });

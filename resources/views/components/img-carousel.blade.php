@@ -8,7 +8,7 @@
             <h1 class="text-white">don't show top reated movies</h1>
         
     @endif  --}}
-<div class="w-full overflow-hidden absolute">
+<div class="w-full overflow-hidden relative">
 
         <span id="left-arrow" class="absolute top-1/4 left-1 text-6xl font-inter font-bold text-white cursor-pointer z-10  ">&#139</span>
         <span id="right-arrow" class="absolute top-1/4 right-1 text-6xl font-inter font-bold text-white cursor-pointer z-10 ">&#155</span>

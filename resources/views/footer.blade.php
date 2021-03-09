@@ -1,24 +1,21 @@
 @extends('layout/layout')
-@section('footer')
+@section('content')
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="footer.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" class="poppins">
-    <title>Footer</title>
-</head>
-<body>
+<div class="bg-midnight-800 font-poppins text-white text-center absolute inset-x-0 bottom-0 h-16">
+
     
-    <footer>
+    <footer class="m-5"> 
 
-    <img id="imdb" src="imdb.png" alt="imdb">
-    <img id ="cat" src="cat.png" alt="cat">
-    <a id="about" href="#">About us</a>
-
+            <img class="inline object-contain md:object-scale-down" src="../img/imdb.png" alt="imdb">
+            <img class="inline object-contain md:object-scale-down" src="../img/cat.png" alt="cat">
+        <p class="inline text-white">  
+           <a href="#">About us</a>
+        </p>
     </footer> 
 
-</body>
-</html>
+    
+
+
+
+</div>
+@endsection 

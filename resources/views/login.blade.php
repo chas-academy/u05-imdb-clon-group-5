@@ -2,7 +2,7 @@
 @section('content')
     
 
-    <div class="max-w-screen-xl m-auto  bg-midnight">
+    <div class="bg-midnight">
     <section class="flex mt-12 justify-center">
         <div class="m-4">
         <h1 class="text-white font-inter text-center text-3xl sm:text-5xl lg:text-7xl">
@@ -30,7 +30,7 @@
         </div>
     </div>
 
-    
+
 
 @endsection
 

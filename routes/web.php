@@ -19,6 +19,8 @@ Route::get('/', function () {
 });
 
 
+
+
 Route::get('/',[MovieController::class, 'movieCarousel']);
 
 

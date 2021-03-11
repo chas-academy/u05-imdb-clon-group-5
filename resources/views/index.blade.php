@@ -37,7 +37,7 @@
      showing</h1>
     </div>
 <div>
-    <x-img-carousel data="0" :movies="$movies"/>
+    <x-img-carousel data="2" :movies="$movies"/>
 </div>
               
 </div>
@@ -49,17 +49,9 @@
     <span class="font-bold uppercase">movies</span>
      </h1>
 </div>
-<x-img-carousel data="0" :movies="$movies"/>
+<x-img-carousel data="1" :movies="$movies"/>
 
         
-
-
-
-
-
- 
-
-
 
 
 @endsection

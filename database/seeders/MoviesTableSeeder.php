@@ -236,7 +236,7 @@ class MoviesTableSeeder extends Seeder
             'year' => 2009,
             'runtime' => 00.22,
             'release_date'  => '2021-02-13',
-            'img' => 'Three different but related families face trials and tribulations in their own uniquely comedic ways'
+            'img' => 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.amazon.com%2FModern-Family-White-Portrait-Poster%2Fdp%2FB004J8CDPO&psig=AOvVaw0N3DXkhsEJNH50pjojhoH-&ust=1615570893511000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCOi9_NzkqO8CFQAAAAAdAAAAABAJ'
         ]);
 
         DB::table('movies')->insert([

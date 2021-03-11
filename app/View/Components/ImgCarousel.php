@@ -18,7 +18,7 @@ class ImgCarousel extends Component
    
     public $movies;
     public $featuredMovies;
-    public function __construct($movies, $data)
+    public function __construct($movies,  string $data)
     {
         //
         $this->movies = $movies;

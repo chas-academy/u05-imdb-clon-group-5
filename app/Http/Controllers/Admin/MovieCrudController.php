@@ -43,8 +43,9 @@ class MovieCrudController extends CrudController
 
         CRUD::column('title');
         CRUD::column('director');
-        CRUD::column('year');
-        CRUD::column('runtime');
+        // CRUD::column('genres');
+        // $this->crud->Movie::class->genre();
+        CRUD::column('runtime')->type('time');
         CRUD::column('img')->type('image');
         CRUD::column('created_at');
         CRUD::column('updated_at');
@@ -71,6 +72,8 @@ class MovieCrudController extends CrudController
         CRUD::field('title');
         CRUD::field('director');
         CRUD::field('writer');
+        //RS
+        CRUD::field('genre');
         //Changed text to easymade
         CRUD::field('description')->type('easymde');
         CRUD::field('year')->type('number');
@@ -78,6 +81,7 @@ class MovieCrudController extends CrudController
         CRUD::field('release_date')->type('date_picker');
         //From images storage to url temporary
         CRUD::field('img')->type('url');
+        CRUD::field('video_url')->type('url');
 
         /**
          * Fields can be defined using the fluent syntax or array syntax:

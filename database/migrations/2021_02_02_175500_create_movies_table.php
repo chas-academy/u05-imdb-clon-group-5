@@ -24,6 +24,8 @@ class CreateMoviesTable extends Migration
             $table->year('year')->nullable();
             $table->time('runtime')->nullable();
             $table->date('release_date')->nullable();
+            //Added video_url -> Tatjana
+            $table->longtext('video_url')->nullable();
             $table->longText('img')->nullable();
             $table->timestamps();
         });

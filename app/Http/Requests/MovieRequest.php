@@ -35,11 +35,13 @@ class MovieRequest extends FormRequest
             'title' => 'required|min:5|max:100',
             'director' => 'required|min:5|max:50',
             'writer' => 'required|min:5|max:50',
+            'genre' => 'required',
             'description' => 'required',
             'year' => 'required',
             'runtime' => 'required',
             'release_date' => 'required',
-            'img' => 'required'
+            'img' => 'required',
+            'video_url' => 'required'
         ];
     }
 

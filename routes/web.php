@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\mainController;
+use App\Http\Controllers\MovieController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,13 +14,13 @@ use App\Http\Controllers\mainController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-
-
 Route::get('/', function () {	
-    return view('raise_your_awareness');	
+    return view('index');	
 });
 
+Route::get('/',[MovieController::class, 'movieCarousel']);
+
+Route::get('/movie-info', function() { return view('movie-info'); });
 
 //Storage to the DB
 Route::post('/save', [mainController::class, 'save'])->name('save');

@@ -15,7 +15,7 @@ use App\Http\Controllers\MovieController;
 |
 */
 Route::get('/', function () {	
-    return view('index');
+    return view('index');	
 });
 
 Route::get('/',[MovieController::class, 'movieCarousel']);

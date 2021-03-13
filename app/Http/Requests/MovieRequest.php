@@ -39,7 +39,8 @@ class MovieRequest extends FormRequest
             'year' => 'required',
             'runtime' => 'required',
             'release_date' => 'required',
-            'img' => 'required'
+            'img' => 'required',
+            'featured' => 'required'
         ];
     }
 

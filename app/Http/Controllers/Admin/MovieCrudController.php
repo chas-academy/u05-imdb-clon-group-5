@@ -78,6 +78,7 @@ class MovieCrudController extends CrudController
         CRUD::field('release_date')->type('date_picker');
         //From images storage to url temporary
         CRUD::field('img')->type('url');
+        CRUD::field('featured')->type('check');
 
         /**
          * Fields can be defined using the fluent syntax or array syntax:

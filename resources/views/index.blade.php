@@ -51,6 +51,8 @@
 </div>
 <x-img-carousel data="1" :movies="$movies"/>
 
+<x-img-carousel data="3" :movies="$movies"/>
+
         
 
 

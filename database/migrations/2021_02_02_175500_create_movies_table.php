@@ -25,7 +25,9 @@ class CreateMoviesTable extends Migration
             $table->time('runtime')->nullable();
             $table->date('release_date')->nullable();
             $table->longText('img')->nullable();
+            $table->boolean('featured')->default(false);
             $table->timestamps();
+            
         });
     }
 

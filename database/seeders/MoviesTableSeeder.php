@@ -32,7 +32,8 @@ class MoviesTableSeeder extends Seeder
             'year' => 2021,
             'runtime' => 04.25,
             'release_date'  => '2021-02-13',
-            'img' => 'https://m.media-amazon.com/images/M/MV5BYjI3NDg0ZTEtMDEwYS00YWMyLThjYjktMTNlM2NmYjc1OGRiXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_FMjpg_UY864_.jpg'
+            'img' => 'https://m.media-amazon.com/images/M/MV5BYjI3NDg0ZTEtMDEwYS00YWMyLThjYjktMTNlM2NmYjc1OGRiXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_FMjpg_UY864_.jpg',
+            'featured' => 1,
             ]);
 
        DB::table('movies')->insert([
@@ -44,7 +45,8 @@ class MoviesTableSeeder extends Seeder
             'year' => 2020,
             'runtime' => 00.51,
             'release_date'  => '2021-02-13',
-            'img' => 'https://s3-us-west-2.amazonaws.com/flx-editorial-wordpress/wp-content/uploads/2020/06/10173331/the-falcon-and-the-winter-soldier-700x380.jpg'
+            'img' => 'https://s3-us-west-2.amazonaws.com/flx-editorial-wordpress/wp-content/uploads/2020/06/10173331/the-falcon-and-the-winter-soldier-700x380.jpg',
+            'featured' => 1,
             ]);
 
        DB::table('movies')->insert([
@@ -56,7 +58,8 @@ class MoviesTableSeeder extends Seeder
             'year' => 2021,
             'runtime' => 00.54,
             'release_date'  => '2021-02-13',
-            'img' => 'https://m.media-amazon.com/images/M/MV5BMjEzMDAxOTUyMV5BMl5BanBnXkFtZTgwNzAxMzYzOTE@._V1_UX182_CR0,0,182,268_AL_.jpg'
+            'img' => 'https://m.media-amazon.com/images/M/MV5BMjEzMDAxOTUyMV5BMl5BanBnXkFtZTgwNzAxMzYzOTE@._V1_UX182_CR0,0,182,268_AL_.jpg',
+            'featured' => 0,
         ]);
 
        DB::table('movies')->insert([
@@ -68,7 +71,8 @@ class MoviesTableSeeder extends Seeder
             'year' => 2021,
             'runtime' => 01.00,
             'release_date'  => '2021-02-13',
-            'img' => 'https://m.media-amazon.com/images/M/MV5BZGJhNWRiOWQtMjI4OS00ZjcxLTgwMTAtMzQ2ODkxY2JkOTVlXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_UX182_CR0,0,182,268_AL_.jpg'
+            'img' => 'https://m.media-amazon.com/images/M/MV5BZGJhNWRiOWQtMjI4OS00ZjcxLTgwMTAtMzQ2ODkxY2JkOTVlXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_UX182_CR0,0,182,268_AL_.jpg',
+            'featured' => 0,
         ]);
 
        DB::table('movies')->insert([
@@ -80,7 +84,8 @@ class MoviesTableSeeder extends Seeder
             'year' => 2020,
             'runtime' => 01.58,
             'release_date'  => '2021-02-13',
-            'img' => 'https://m.media-amazon.com/images/M/MV5BMjg5MDFiOGMtNDE1OS00NjQ5LThjZGEtZjExMjAwOTZiYTQ1XkEyXkFqcGdeQXVyNzk4OTQyODU@._V1_UX182_CR0,0,182,268_AL_.jpg'
+            'img' => 'https://m.media-amazon.com/images/M/MV5BMjg5MDFiOGMtNDE1OS00NjQ5LThjZGEtZjExMjAwOTZiYTQ1XkEyXkFqcGdeQXVyNzk4OTQyODU@._V1_UX182_CR0,0,182,268_AL_.jpg',
+            'featured' => 0,
         ]);
 
         DB::table('movies')->insert([
@@ -92,7 +97,8 @@ class MoviesTableSeeder extends Seeder
             'year' => 2019,
             'runtime' => 01.30,
             'release_date'  => '2021-02-13',
-            'img' => 'https://m.media-amazon.com/images/M/MV5BOGY2MDAxNTEtNjJhOC00ZjNmLWIyYzAtNzQ4OGY2MDBkYTc2XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_UX182_CR0,0,182,268_AL_.jpg'
+            'img' => 'https://m.media-amazon.com/images/M/MV5BOGY2MDAxNTEtNjJhOC00ZjNmLWIyYzAtNzQ4OGY2MDBkYTc2XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_UX182_CR0,0,182,268_AL_.jpg',
+            'featured' => 1,
         ]);
 
         DB::table('movies')->insert([
@@ -104,7 +110,8 @@ class MoviesTableSeeder extends Seeder
             'year' => 2021,
             'runtime' => 01.32,
             'release_date'  => '2021-02-13',
-            'img' => 'https://m.media-amazon.com/images/M/MV5BMmYwZWVkYTQtZTk2YS00Y2IzLTk2NDYtZTc2YzhiZGNkMDMzXkEyXkFqcGdeQXVyMjM2NjkyNDU@._V1_UY268_CR3,0,182,268_AL_.jpg'
+            'img' => 'https://m.media-amazon.com/images/M/MV5BMmYwZWVkYTQtZTk2YS00Y2IzLTk2NDYtZTc2YzhiZGNkMDMzXkEyXkFqcGdeQXVyMjM2NjkyNDU@._V1_UY268_CR3,0,182,268_AL_.jpg',
+            'featured' => 0,
         ]);
 
         DB::table('movies')->insert([
@@ -116,7 +123,8 @@ class MoviesTableSeeder extends Seeder
             'year' => 2020,
             'runtime' => 01.33,
             'release_date'  => '2021-02-13',
-            'img' => 'https://m.media-amazon.com/images/M/MV5BMDY2MDdlNDEtZmViZC00MzE3LTk5ZjAtOTg2OWVjODUyNWVjXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_UX182_CR0,0,182,268_AL_.jpg'
+            'img' => 'https://m.media-amazon.com/images/M/MV5BMDY2MDdlNDEtZmViZC00MzE3LTk5ZjAtOTg2OWVjODUyNWVjXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_UX182_CR0,0,182,268_AL_.jpg',
+            'featured' => 0,
         ]);
 
         DB::table('movies')->insert([
@@ -128,7 +136,8 @@ class MoviesTableSeeder extends Seeder
             'year' => 2014,
             'runtime' => 01.39,
             'release_date'  => '2021-02-13',
-            'img' => 'https://m.media-amazon.com/images/M/MV5BYmM4MDljZmQtOTk1NC00MjhhLTliODItMjVjN2JhNDBjZWU3XkEyXkFqcGdeQXVyMzUyNTk3MDg@._V1_UY268_CR9,0,182,268_AL_.jpg'
+            'img' => 'https://m.media-amazon.com/images/M/MV5BYmM4MDljZmQtOTk1NC00MjhhLTliODItMjVjN2JhNDBjZWU3XkEyXkFqcGdeQXVyMzUyNTk3MDg@._V1_UY268_CR9,0,182,268_AL_.jpg',
+            'featured' => 0,
         ]);
 
         DB::table('movies')->insert([
@@ -140,7 +149,8 @@ class MoviesTableSeeder extends Seeder
             'year' => 2014,
             'runtime' => 00.47,
             'release_date'  => '2021-02-13',
-            'img' => 'https://m.media-amazon.com/images/M/MV5BYjJiZmE5ZDgtYWUxZi00MWI1LTg2MmEtZmUwZGE2YzRkNTE5XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_UX182_CR0,0,182,268_AL_.jpg'
+            'img' => 'https://m.media-amazon.com/images/M/MV5BYjJiZmE5ZDgtYWUxZi00MWI1LTg2MmEtZmUwZGE2YzRkNTE5XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_UX182_CR0,0,182,268_AL_.jpg',
+            'featured' => 0,
         ]);
 
         DB::table('movies')->insert([
@@ -152,7 +162,8 @@ class MoviesTableSeeder extends Seeder
             'year' => 2015,
             'runtime' => 00.22,
             'release_date'  => '2021-02-13',
-            'img' => 'https://m.media-amazon.com/images/M/MV5BNWQ1ZmM3MTQtNTVhZC00MWVlLWI5ZjgtYmZiYWQxZjUzZWM0XkEyXkFqcGdeQXVyMzQ2MDI5NjU@._V1_UX182_CR0,0,182,268_AL_.jpg'
+            'img' => 'https://m.media-amazon.com/images/M/MV5BNWQ1ZmM3MTQtNTVhZC00MWVlLWI5ZjgtYmZiYWQxZjUzZWM0XkEyXkFqcGdeQXVyMzQ2MDI5NjU@._V1_UX182_CR0,0,182,268_AL_.jpg',
+            'featured' => 1,
         ]);
 
         DB::table('movies')->insert([
@@ -164,7 +175,8 @@ class MoviesTableSeeder extends Seeder
             'year' => 2015,
             'runtime' => 00.40,
             'release_date'  => '2021-02-13',
-            'img' => 'https://m.media-amazon.com/images/M/MV5BZDhlMzY0ZGItZTcyNS00ZTAxLWIyMmYtZGQ2ODg5OWZiYmJkXkEyXkFqcGdeQXVyODkzNTgxMDg@._V1_UX182_CR0,0,182,268_AL_.jpg'
+            'img' => 'https://m.media-amazon.com/images/M/MV5BZDhlMzY0ZGItZTcyNS00ZTAxLWIyMmYtZGQ2ODg5OWZiYmJkXkEyXkFqcGdeQXVyODkzNTgxMDg@._V1_UX182_CR0,0,182,268_AL_.jpg',
+            'featured' => 0,
         ]);
 
         DB::table('movies')->insert([
@@ -176,7 +188,8 @@ class MoviesTableSeeder extends Seeder
             'year' => 2021,
             'runtime' => 01.44,
             'release_date'  => '2021-02-13',
-            'img' => 'https://m.media-amazon.com/images/M/MV5BYmFjNWY5NjQtMTJiNC00NjFlLWIxMGQtNzhmMmQ0MjhiZjQyXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_UX182_CR0,0,182,268_AL_.jpg'
+            'img' => 'https://m.media-amazon.com/images/M/MV5BYmFjNWY5NjQtMTJiNC00NjFlLWIxMGQtNzhmMmQ0MjhiZjQyXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_UX182_CR0,0,182,268_AL_.jpg',
+            'featured' => 0,
         ]);
 
         DB::table('movies')->insert([
@@ -188,7 +201,8 @@ class MoviesTableSeeder extends Seeder
             'year' => 2021,
             'runtime' => 02.16,
             'release_date'  => '2021-02-13',
-            'img' => 'https://m.media-amazon.com/images/M/MV5BZTUxN2M3ZWYtMzc1MC00NTc4LWFhZDItMzViZDg2NmFjMzBhXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_UY268_CR4,0,182,268_AL_.jpg'
+            'img' => 'https://m.media-amazon.com/images/M/MV5BZTUxN2M3ZWYtMzc1MC00NTc4LWFhZDItMzViZDg2NmFjMzBhXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_UY268_CR4,0,182,268_AL_.jpg',
+            'featured' => 0,
         ]);
 
         DB::table('movies')->insert([
@@ -200,7 +214,8 @@ class MoviesTableSeeder extends Seeder
             'year' => 2011,
             'runtime' => 00.57,
             'release_date'  => '2021-02-13',
-            'img' => 'https://m.media-amazon.com/images/M/MV5BYTRiNDQwYzAtMzVlZS00NTI5LWJjYjUtMzkwNTUzMWMxZTllXkEyXkFqcGdeQXVyNDIzMzcwNjc@._V1_UY268_CR7,0,182,268_AL_.jpg'
+            'img' => 'https://m.media-amazon.com/images/M/MV5BYTRiNDQwYzAtMzVlZS00NTI5LWJjYjUtMzkwNTUzMWMxZTllXkEyXkFqcGdeQXVyNDIzMzcwNjc@._V1_UY268_CR7,0,182,268_AL_.jpg',
+            'featured' => 0,
         ]);
 
         DB::table('movies')->insert([
@@ -212,7 +227,8 @@ class MoviesTableSeeder extends Seeder
             'year' => 2020,
             'runtime' => 02.35,
             'release_date'  => '2021-02-13',
-            'img' => 'https://m.media-amazon.com/images/M/MV5BMzUzYjhkZWMtMzE1NS00YjUxLTliOTItN2FkOWUyY2U2YzhiXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_UX182_CR0,0,182,268_AL_.jpg'
+            'img' => 'https://m.media-amazon.com/images/M/MV5BMzUzYjhkZWMtMzE1NS00YjUxLTliOTItN2FkOWUyY2U2YzhiXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_UX182_CR0,0,182,268_AL_.jpg',
+            'featured' => 1,
         ]);
 
         DB::table('movies')->insert([
@@ -224,7 +240,8 @@ class MoviesTableSeeder extends Seeder
             'year' => 2021,
             'runtime' => 02.26,
             'release_date'  => '2021-02-13',
-            'img' => 'https://m.media-amazon.com/images/M/MV5BYjVkMmU1NGItZjM4MC00ODM1LWEyOTEtY2Y1NTg0YjRhYjEwXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_UX182_CR0,0,182,268_AL_.jpg'
+            'img' => 'https://m.media-amazon.com/images/M/MV5BYjVkMmU1NGItZjM4MC00ODM1LWEyOTEtY2Y1NTg0YjRhYjEwXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_UX182_CR0,0,182,268_AL_.jpg',
+            'featured' => 0,
         ]);
 
         DB::table('movies')->insert([
@@ -236,7 +253,8 @@ class MoviesTableSeeder extends Seeder
             'year' => 2009,
             'runtime' => 00.22,
             'release_date'  => '2021-02-13',
-            'img' => 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.amazon.com%2FModern-Family-White-Portrait-Poster%2Fdp%2FB004J8CDPO&psig=AOvVaw0N3DXkhsEJNH50pjojhoH-&ust=1615570893511000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCOi9_NzkqO8CFQAAAAAdAAAAABAJ'
+            'img' => 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.amazon.com%2FModern-Family-White-Portrait-Poster%2Fdp%2FB004J8CDPO&psig=AOvVaw0N3DXkhsEJNH50pjojhoH-&ust=1615570893511000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCOi9_NzkqO8CFQAAAAAdAAAAABAJ',
+            'featured' => 1,
         ]);
 
         DB::table('movies')->insert([
@@ -248,7 +266,8 @@ class MoviesTableSeeder extends Seeder
             'year' => 2017,
             'runtime' => 00.46,
             'release_date'  => '2021-02-13',
-            'img' => 'https://m.media-amazon.com/images/M/MV5BODIwYmE0MGQtYmNhMS00ZjM4LWJkMzAtNjg5YzI4MzZjMjg3XkEyXkFqcGdeQXVyNjU2ODM5MjU@._V1_UX182_CR0,0,182,268_AL_.jpg'
+            'img' => 'https://m.media-amazon.com/images/M/MV5BODIwYmE0MGQtYmNhMS00ZjM4LWJkMzAtNjg5YzI4MzZjMjg3XkEyXkFqcGdeQXVyNjU2ODM5MjU@._V1_UX182_CR0,0,182,268_AL_.jpg',
+            'featured' => 0,
         ]);
 
 
@@ -261,7 +280,8 @@ class MoviesTableSeeder extends Seeder
             'year' => 2005,
             'runtime' => 00.42,
             'release_date'  => '2021-02-13',
-            'img' => 'https://m.media-amazon.com/images/M/MV5BNGE2ZmFkZTYtNjRiOS00ZjE3LThjOWMtZTViZjRmNDFjNTQwXkEyXkFqcGdeQXVyNjg4NzAyOTA@._V1_UX182_CR0,0,182,268_AL_.jpg'
+            'img' => 'https://m.media-amazon.com/images/M/MV5BNGE2ZmFkZTYtNjRiOS00ZjE3LThjOWMtZTViZjRmNDFjNTQwXkEyXkFqcGdeQXVyNjg4NzAyOTA@._V1_UX182_CR0,0,182,268_AL_.jpg',
+            'featured' => 0,
         ]);
     }
 }

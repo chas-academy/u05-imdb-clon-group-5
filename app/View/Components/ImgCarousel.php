@@ -17,12 +17,12 @@ class ImgCarousel extends Component
      */
    
     public $movies;
-    public $featuredMovies;
+    public $moviedata;
     public function __construct($movies,  string $data)
     {
         //
         $this->movies = $movies;
-        $this->featuredMovies = $data;
+        $this->moviedata = $data;
  
 
            

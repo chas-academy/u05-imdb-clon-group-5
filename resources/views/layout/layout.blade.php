@@ -12,14 +12,10 @@
 </head>
 
 <body class="bg-midnight-700  max-w-screen-xl m-auto">
-<<<<<<< HEAD
-    
-=======
     {{-- add navigation here --}}
 
     
 
->>>>>>> Development
     
      @yield('content') 
 

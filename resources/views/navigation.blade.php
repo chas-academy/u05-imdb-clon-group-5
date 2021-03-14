@@ -65,13 +65,11 @@
                     </p>
                 </div> -->
 
-
                 <div class="lg:mt-6">
                     <span style="font-size:30px;cursor:pointer" class="" onclick="openNav()">
                         <img class="md:w-8 ml-3 mt-3 mr-2 lg:mt-1 lg:mr-3 lg:w-24" src="./img/navigation_logo.svg" alt="Navigation Logo" title="Navigation Logo">
                     </span>
                 </div>
-
 
                 <div id="myNav" class="overlay h-0 w-full fixed z-10 top-0 left-0 bg-gray-800 overflow-y-hidden duration-75 no-underline text-4xl text-gray-600 block duration-75 focus:ring-gray-200 overflow-y-auto text-xl text-5xl top-1 right-2">
                     <div class="hidden sm:hidden lg:flex">
@@ -80,14 +78,14 @@
                             <img class=" lg:w-11 lg:mr-7 lg:mt-3.5 pt-1.5 mr-2 w-4" src="./img/close_x.svg" alt="close Logo" title="close Logo">
                         </a>
                     </div>
-                    <div class="overlay-content relative top-10 w-full text-center mt-8">
-                        <a class="p-2 no-underline text-4xl text-white block duration-75 hover:bg-gray-200 focus:ring-gray-200 text-xl top-1 right-2" href="#">movies</a>
-                        <a class="p-2 no-underline text-4xl text-white block duration-75 hover:bg-gray-200 focus:ring-gray-200 text-xl top-1 right-2" href="#">Tv shows</a>
-                        <a class="p-2 no-underline text-4xl text-white block duration-75 hover:bg-gray-200 focus:ring-gray-200 text-xl top-1 right-2" href="#">Genre</a>
-                        <a class="p-2 no-underline text-4xl text-white block duration-75 hover:bg-gray-200 focus:ring-gray-200 text-xl top-1 right-2" href="#">Watchlist</a>
+                    <div class="overlay-content relative top-10 w-full text-center mt-8"> <!-- style="margin-top: 10rem; -->
+                        <a class="p-2 no-underline text-4xl text-white block duration-75 hover:bg-gray-200 focus:ring-gray-200 text-xl top-1 right-2" style="margin-bottom: 0.25rem;" href="#">movies</a>
+                        <a class="p-2 no-underline text-4xl text-white block duration-75 hover:bg-gray-200 focus:ring-gray-200 text-xl top-1 right-2" style="margin-bottom: 0.25rem;" href="#">Tv shows</a>
+                        <a class="p-2 no-underline text-4xl text-white block duration-75 hover:bg-gray-200 focus:ring-gray-200 text-xl top-1 right-2" style="margin-bottom: 0.25rem;" href="#">Genre</a>
+                        <a class="p-2 no-underline text-4xl text-white block duration-75 hover:bg-gray-200 focus:ring-gray-200 text-xl top-1 right-2" style="margin-bottom: 0.25rem;" href="#">Watchlist</a>
 
 
-                        <div class="p-2 w-full justify-center inline-flex">
+                        <div class="p-2 w-full justify-center inline-flex ml-3">
                             <div class="bg-white flex items-center rounded-full shadow-xl h-8">
                                 <input class="rounded-l-full w-full py-4 px-6 bg-gradient-to-l from-blue-500 to-blue-300 text-gray-200 leading-tight focus:outline-none h-8 text-xl" id="search" type="text" placeholder="Search">
 
@@ -96,12 +94,12 @@
                                         Go
                                     </button>
                                 </div>
+                            </div>
 
-                                <div class="lg:hidden">
-                                    <a href="javascript:void(0)" class="closebtn relative top-10 w-full text-center mt-8-3 sm:" onclick="closeNav()" style="right: 10rem;top:5rem;">
-                                        <img class="" src="./img/close_x.svg" alt="close Logo" title="close Logo" class="relative top-10 right 10 w-full text-center mt-8">
-                                    </a>
-                                </div>
+                            <div class="lg:hidden">
+                                <a href="javascript:void(0)" class="closebtn relative top-10 w-full text-center mt-8-3 sm:" onclick="closeNav()" style="right: 10rem;top:5rem;">
+                                    <img class="" src="./img/close_x.svg" alt="close Logo" title="close Logo" class="relative top-10 right 10 w-full text-center mt-8">
+                                </a>
                             </div>
                         </div>
                     </div>

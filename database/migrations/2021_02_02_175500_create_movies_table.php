@@ -29,6 +29,10 @@ class CreateMoviesTable extends Migration
             $table->longText('img')->nullable();
             $table->timestamps();
         });
+
+        Artisan::call('db:seed', [
+            '--class' => MoviesTableSeeder::class,
+        ]);
     }
 
     /**

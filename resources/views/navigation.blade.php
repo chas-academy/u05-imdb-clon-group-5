@@ -57,7 +57,7 @@
                         </a>
                     </h1>
                 </div>
-
+<nav>
                 <!-- Naviagation -->
                 <!-- <div>
                     <p id="burgerbtn" class="w-13 mt-4 md:mt-5">
@@ -86,7 +86,7 @@
                         <a class="p-2 no-underline text-4xl text-white block duration-75 hover:bg-gray-200 focus:ring-gray-200 text-xl top-1 right-2" style="margin-bottom: 0.25rem;" href="#">Watchlist</a> -->
 
                         <div class="containerx">
-                            <a class="imagex p-2 no-underline text-4xl text-white block duration-75 hover:bg-gray-200 focus:ring-gray-200 text-xl top-1 right-2" style="margin-bottom: 0.25rem;" href="#">movies</a>
+                            <a class="imagex p-2 no-underline text-4xl text-white block duration-75 hover:bg-gray-800 focus:ring-gray-200 text-xl top-1 right-2" style="margin-bottom: 0.25rem;" href="#">movies</a>
                             <div class="overlayx">
                                 <div class="textx">
                                     <a href="#" class="">
@@ -98,7 +98,7 @@
 
 
                         <div class="containerx">
-                            <a class="imagex p-2 no-underline text-4xl text-white block duration-75 hover:bg-gray-200 focus:ring-gray-200 text-xl top-1 right-2" style="margin-bottom: 0.25rem;" href="#">Tv shows</a>
+                            <a class="imagex p-2 no-underline text-4xl text-white block duration-75 hover:bg-gray-800 focus:ring-gray-200 text-xl top-1 right-2" style="margin-bottom: 0.25rem;" href="#">Tv shows</a>
                             <div class="overlayx">
                                 <div class="textx">
                                     <a href="#" class="">
@@ -110,7 +110,7 @@
 
 
                         <div class="containerx">
-                            <a class="imagex p-2 no-underline text-4xl text-white block duration-75 hover:bg-gray-200 focus:ring-gray-200 text-xl top-1 right-2" style="margin-bottom: 0.25rem;" href="#">Genre</a>
+                            <a class="imagex p-2 no-underline text-4xl text-white block duration-75 hover:bg-gray-800 focus:ring-gray-200 text-xl top-1 right-2" style="margin-bottom: 0.25rem;" href="#">Genre</a>
                             <div class="overlayx">
                                 <div class="textx">
                                     <a href="#" class="">
@@ -122,7 +122,7 @@
 
 
                         <div class="containerx">
-                            <a class="imagex p-2 no-underline text-4xl text-white block duration-75 hover:bg-gray-200 focus:ring-gray-200 text-xl top-1 right-2" style="margin-bottom: 0.25rem;" href="#">Watchlist</a>
+                            <a class="imagex p-2 no-underline text-4xl text-white block duration-75 hover:bg-gray-800 focus:ring-gray-200 text-xl top-1 right-2" style="margin-bottom: 0.25rem;" href="#">Watchlist</a>
                             <div class="overlayx">
                                 <div class="textx">
                                     <a href="#" class="">
@@ -153,7 +153,7 @@
                             bottom: 0;
                             left: 100%;
                             right: 0;
-                            background-color: #008CBA;
+                            background-color: rgba(31, 41, 55, var(--tw-bg-opacity));
                             overflow: hidden;
                             width: 0;
                             height: 100%;
@@ -215,7 +215,10 @@
                     </div>
                 </div>
             </div>
-<!-- 
+
+</nav>
+
+            <!-- 
             <div class="bg-white shadow p-4 flex">
                 <span class="w-auto flex justify-end items-center text-gray-500 p-2">
                     <i class="material-icons text-3xl">search</i>

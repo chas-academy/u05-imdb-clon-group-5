@@ -88,7 +88,11 @@
                         <div class="containerx">
                             <a class="imagex p-2 no-underline text-4xl text-white block duration-75 hover:bg-gray-200 focus:ring-gray-200 text-xl top-1 right-2" style="margin-bottom: 0.25rem;" href="#">movies</a>
                             <div class="overlayx">
-                                <div class="textx">Image Taking Over</div>
+                                <div class="textx">
+                                    <a href="#" class="">
+                                        <img class="" src="./img/movies-hover-frame.svg" alt="movies-hover-frame" title="movies-hover-frame">
+                                    </a>
+                                </div>
                             </div>
                         </div>
 
@@ -96,7 +100,11 @@
                         <div class="containerx">
                             <a class="imagex p-2 no-underline text-4xl text-white block duration-75 hover:bg-gray-200 focus:ring-gray-200 text-xl top-1 right-2" style="margin-bottom: 0.25rem;" href="#">Tv shows</a>
                             <div class="overlayx">
-                                <div class="textx">Image Taking Over</div>
+                                <div class="textx">
+                                    <a href="#" class="">
+                                        <img class="" src="./img/tv-shows-hover-frame.svg" alt="tv-shows-hover-frame" title="tv-shows-hover-frame">
+                                    </a>
+                                </div>
                             </div>
                         </div>
 
@@ -104,7 +112,11 @@
                         <div class="containerx">
                             <a class="imagex p-2 no-underline text-4xl text-white block duration-75 hover:bg-gray-200 focus:ring-gray-200 text-xl top-1 right-2" style="margin-bottom: 0.25rem;" href="#">Genre</a>
                             <div class="overlayx">
-                                <div class="textx">Image Taking Over</div>
+                                <div class="textx">
+                                    <a href="#" class="">
+                                        <img class="" src="./img/genre-hover-frame.svg" alt="genre-hover-frame" title="genre-hover-frame">
+                                    </a>
+                                </div>
                             </div>
                         </div>
 
@@ -112,7 +124,11 @@
                         <div class="containerx">
                             <a class="imagex p-2 no-underline text-4xl text-white block duration-75 hover:bg-gray-200 focus:ring-gray-200 text-xl top-1 right-2" style="margin-bottom: 0.25rem;" href="#">Watchlist</a>
                             <div class="overlayx">
-                                <div class="textx">Image Taking Over</div>
+                                <div class="textx">
+                                    <a href="#" class="">
+                                        <img class="" src="./img/watchlist-hover-frame.svg" alt="watchlist-hover-frame" title="watchlist-hover-frame">
+                                    </a>
+                                </div>
                             </div>
                         </div>
 
@@ -169,7 +185,8 @@
                             </div> -->
 
 
-                    <div class="p-2 w-full justify-center inline-flex ml-3" style="margin-top: 4rem;"> <!-- added style -->
+                    <div class="p-2 w-full justify-center inline-flex ml-3" style="margin-top: 4rem;">
+                        <!-- added style -->
 
                         <div class="bg-white flex items-center rounded-full shadow-xl h-8">
                             <input class="rounded-l-full w-full py-4 px-6 bg-gradient-to-l from-blue-500 to-blue-300 text-gray-200 leading-tight focus:outline-none h-8 text-xl" id="search" type="text" placeholder="Search">
@@ -179,7 +196,7 @@
                                 <button class="lg:w-24 top-1/2 left-1/2 bg-white text-indigo-700 rounded-full p-2 hover:bg-blue-400 focus:outline-none w-12 h-6 flex items-center justify-center text-xl">
                                     Go
                                 </button>
-                            </form>
+                                </form>
                             </div>
                         </div>
 

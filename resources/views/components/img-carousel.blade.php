@@ -14,7 +14,7 @@
                {{-- Check if we are sending variabel from to the component and if rating is grater or = 7
                     This is for top-rated now carousel --}}
                 @if ($moviedata == 1 and $movie->rating >= 7 )
-                        <div class="imgSlide bg-midnight-800   min-w-max relative left-0 text-center font-bold my-3 mr-4 text-white duration-75">
+                        <div class="imgSlide bg-midnight-800 min-w-max relative left-0 text-center font-bold my-3 mr-4 text-white duration-75">
                             <img class="w-36 h-48" src="{{$movie->img}}"> 
                             <h4 class="text-xs text-left px-1 py-1">&#9734 {{$movie->rating}}</h4>
                             <h1 class="text-left text-xs px-1 font-inter font-bold">{{$movie->title }}</h1>
@@ -30,10 +30,10 @@
                     show featured movies this is all movies at this point --}}
                 @elseif($moviedata == 2 and $movie->featured == 1)
                 
-                    <div class="imgSlide  bg-midnight-800   min-w-max relative left-0 text-center font-bold my-3 mr-4 text-white duration-75">
+                    <div class="imgSlide  bg-midnight-800 h-72  min-w-max relative left-0 text-center font-bold my-3 mr-4 text-white duration-75">
                         <img class="w-36 h-48" src="{{$movie->img}}"> 
                         <h4 class="text-xs text-left px-1 py-1">&#9734 {{$movie->rating}}</h4>
-                        <h1 class=" text-left text-xs px-1 font-inter font-bold">{{$movie->title }}</h1>
+                        <h1 class=" text-left text-xs px-1 font-inter font-bold w-32">{{$movie->title }}</h1>
                         <div class="flex mt-2 px-1">
                         <a class="text-xs font-poppins font-light" href="#">Trailer</a>
                         <a  class="text-xs pl-9 font-poppins font-light" href="#">read more</a>

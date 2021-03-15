@@ -78,47 +78,134 @@
                             <img class=" lg:w-11 lg:mr-7 lg:mt-3.5 pt-1.5 mr-2 w-4" src="./img/close_x.svg" alt="close Logo" title="close Logo">
                         </a>
                     </div>
-                    <div class="overlay-content relative top-10 w-full text-center mt-8"> <!-- style="margin-top: 10rem; -->
-                        <a class="p-2 no-underline text-4xl text-white block duration-75 hover:bg-gray-200 focus:ring-gray-200 text-xl top-1 right-2" style="margin-bottom: 0.25rem;" href="#">movies</a>
+                    <div class="overlay-content relative top-10 w-full text-center mt-8">
+                        <!-- style="margin-top: 10rem; -->
+                        <!-- <a class="p-2 no-underline text-4xl text-white block duration-75 hover:bg-gray-200 focus:ring-gray-200 text-xl top-1 right-2" style="margin-bottom: 0.25rem;" href="#">movies</a>
                         <a class="p-2 no-underline text-4xl text-white block duration-75 hover:bg-gray-200 focus:ring-gray-200 text-xl top-1 right-2" style="margin-bottom: 0.25rem;" href="#">Tv shows</a>
                         <a class="p-2 no-underline text-4xl text-white block duration-75 hover:bg-gray-200 focus:ring-gray-200 text-xl top-1 right-2" style="margin-bottom: 0.25rem;" href="#">Genre</a>
-                        <a class="p-2 no-underline text-4xl text-white block duration-75 hover:bg-gray-200 focus:ring-gray-200 text-xl top-1 right-2" style="margin-bottom: 0.25rem;" href="#">Watchlist</a>
+                        <a class="p-2 no-underline text-4xl text-white block duration-75 hover:bg-gray-200 focus:ring-gray-200 text-xl top-1 right-2" style="margin-bottom: 0.25rem;" href="#">Watchlist</a> -->
 
-
-                        <div class="p-2 w-full justify-center inline-flex ml-3">
-                            <div class="bg-white flex items-center rounded-full shadow-xl h-8">
-                                <input class="rounded-l-full w-full py-4 px-6 bg-gradient-to-l from-blue-500 to-blue-300 text-gray-200 leading-tight focus:outline-none h-8 text-xl" id="search" type="text" placeholder="Search">
-
-                                <div class="p-1 h-8  rounded-r-full bg-blue-500">
-                                    <button class="lg:w-24 top-1/2 left-1/2 bg-white text-indigo-700 rounded-full p-2 hover:bg-blue-400 focus:outline-none w-12 h-6 flex items-center justify-center text-xl">
-                                        Go
-                                    </button>
-                                </div>
+                        <div class="containerx">
+                            <a class="imagex p-2 no-underline text-4xl text-white block duration-75 hover:bg-gray-200 focus:ring-gray-200 text-xl top-1 right-2" style="margin-bottom: 0.25rem;" href="#">movies</a>
+                            <div class="overlayx">
+                                <div class="textx">Image Taking Over</div>
                             </div>
+                        </div>
 
-                            <div class="lg:hidden">
-                                <a href="javascript:void(0)" class="closebtn relative top-10 w-full text-center mt-8-3 sm:" onclick="closeNav()" style="right: 10rem;top:5rem;">
-                                    <img class="" src="./img/close_x.svg" alt="close Logo" title="close Logo" class="relative top-10 right 10 w-full text-center mt-8">
-                                </a>
+
+                        <div class="containerx">
+                            <a class="imagex p-2 no-underline text-4xl text-white block duration-75 hover:bg-gray-200 focus:ring-gray-200 text-xl top-1 right-2" style="margin-bottom: 0.25rem;" href="#">Tv shows</a>
+                            <div class="overlayx">
+                                <div class="textx">Image Taking Over</div>
                             </div>
+                        </div>
+
+
+                        <div class="containerx">
+                            <a class="imagex p-2 no-underline text-4xl text-white block duration-75 hover:bg-gray-200 focus:ring-gray-200 text-xl top-1 right-2" style="margin-bottom: 0.25rem;" href="#">Genre</a>
+                            <div class="overlayx">
+                                <div class="textx">Image Taking Over</div>
+                            </div>
+                        </div>
+
+
+                        <div class="containerx">
+                            <a class="imagex p-2 no-underline text-4xl text-white block duration-75 hover:bg-gray-200 focus:ring-gray-200 text-xl top-1 right-2" style="margin-bottom: 0.25rem;" href="#">Watchlist</a>
+                            <div class="overlayx">
+                                <div class="textx">Image Taking Over</div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <style>
+                        .containerx {
+                            /* display:flex;
+                            items-center
+                            justify-content: center; */
+                            position: relative;
+
+                        }
+
+                        .imagex {
+                            display: block;
+                            width: 100%;
+                            height: auto;
+                        }
+
+                        .overlayx {
+                            position: absolute;
+                            bottom: 0;
+                            left: 100%;
+                            right: 0;
+                            background-color: #008CBA;
+                            overflow: hidden;
+                            width: 0;
+                            height: 100%;
+                            transition: .5s ease;
+                        }
+
+                        .containerx:hover .overlayx {
+                            width: 100%;
+                            left: 0;
+                        }
+
+                        .textx {
+                            color: white;
+                            font-size: 20px;
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            -webkit-transform: translate(-50%, -50%);
+                            -ms-transform: translate(-50%, -50%);
+                            transform: translate(-50%, -50%);
+                            white-space: nowrap;
+                        }
+                    </style>
+
+                    <!-- <div class="container">
+                            <a class="image" href="#">Genre</a>
+                            <div class="overlay">
+                                <div class="text">image over3</div>
+                            </div> -->
+
+
+                    <div class="p-2 w-full justify-center inline-flex ml-3" style="margin-top: 4rem;"> <!-- added style -->
+
+                        <div class="bg-white flex items-center rounded-full shadow-xl h-8">
+                            <input class="rounded-l-full w-full py-4 px-6 bg-gradient-to-l from-blue-500 to-blue-300 text-gray-200 leading-tight focus:outline-none h-8 text-xl" id="search" type="text" placeholder="Search">
+                            <!-- <form class="hidden sm:hidden md:flex lg:w-26 lg:mt-1.5 max-w-screen-lg bg-gradient-to-l from-blue-300 to-blue-500 items-center rounded-full shadow-xl md:h-8 p-2">
+                            <img class="w-9 mb-1 mr-auto mt-1" src="./img/magnifier.svg" alt="magnifier" title="magnifier"> -->
+                            <div class="p-1 h-8  rounded-r-full bg-blue-500">
+                                <button class="lg:w-24 top-1/2 left-1/2 bg-white text-indigo-700 rounded-full p-2 hover:bg-blue-400 focus:outline-none w-12 h-6 flex items-center justify-center text-xl">
+                                    Go
+                                </button>
+                            </form>
+                            </div>
+                        </div>
+
+                        <div class="lg:hidden">
+                            <a href="javascript:void(0)" class="closebtn relative top-10 w-full text-center mt-8-3 sm:" onclick="closeNav()" style="right: 10rem;top:5rem;">
+                                <img class="" src="./img/close_x.svg" alt="close Logo" title="close Logo" class="relative top-10 right 10 w-full text-center mt-8">
+                            </a>
                         </div>
                     </div>
                 </div>
-
-                <script>
-                    function openNav() {
-                        document.getElementById("myNav").style.height = "100%";
-                    }
-
-                    function closeNav() {
-                        document.getElementById("myNav").style.height = "0%";
-                    }
-                </script>
             </div>
 
-            <!-- nav -->
+            <script>
+                function openNav() {
+                    document.getElementById("myNav").style.height = "100%";
+                }
 
-            </form>
+                function closeNav() {
+                    document.getElementById("myNav").style.height = "0%";
+                }
+            </script>
+    </div>
+
+    <!-- nav -->
+
+    </form>
     </div>
     </header>
 

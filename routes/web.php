@@ -20,6 +20,10 @@ Route::get('/', function () {
     return view('index');	
 });
 
+Route::get('/choosegenre', function () {  
+    return view('choosegenre');   
+});
+
 
 //Storage to the DB
 Route::post('/save', [mainController::class, 'save'])->name('save');

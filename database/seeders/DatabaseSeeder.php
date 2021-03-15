@@ -18,5 +18,6 @@ class DatabaseSeeder extends Seeder
         \App\Models\Rating::factory(10)->create();
         \App\Models\Review::factory(10)->create();
         \App\Models\Watchlist::factory(10)->create();
+        \App\Models\Watchlistitem::factory(10)->create();
     }
 }

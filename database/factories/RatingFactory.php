@@ -26,7 +26,7 @@ class RatingFactory extends Factory
         return [
             'rating' => Arr::random($rating),
             // 'user_id' => User::factory(),
-            'user_id' => \App\Models\User::inRandomOrder()->id,
+            'user_id' => \App\Models\User::inRandomOrder()->first()->id,
             'movies_id' => \App\Models\Movie::inRandomOrder()->first()->id
         ];
     }

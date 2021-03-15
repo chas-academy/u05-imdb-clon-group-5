@@ -1,5 +1,9 @@
 <?php
-
+////////////////////////////////////
+//                                //
+//Added some rules to the request!//
+//                                //
+////////////////////////////////////
 namespace App\Http\Requests;
 
 use App\Http\Requests\Request;
@@ -26,7 +30,18 @@ class MovieRequest extends FormRequest
     public function rules()
     {
         return [
-            // 'name' => 'required|min:5|max:255'
+
+            //Added some rules to the request!
+            'title' => 'required|min:5|max:100',
+            'director' => 'required|min:5|max:50',
+            'writer' => 'required|min:5|max:50',
+            'genre' => 'required',
+            'description' => 'required',
+            'year' => 'required',
+            'runtime' => 'required',
+            'release_date' => 'required',
+            'img' => 'required',
+            'video_url' => 'required'
         ];
     }
 

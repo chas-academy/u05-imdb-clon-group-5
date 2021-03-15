@@ -1,8 +1,9 @@
 @extends('layout/layout')
 @section('content')
 
-<div class="overflow-x-hidden relative m-auto max-w-screen-xl bg-midnight">
-    <img class="w-full h-full" src="../img/hero-bg.svg">
+<div class="relative m-auto bg-midnight">
+    <img class="w-full h-full" src="../img/hero-page-bg.jpg">
+
 
         <img class="w-11/12 h-11/12 inset-center" src="../img/hero-movie-bg.svg">
       
@@ -22,22 +23,25 @@
                PLAY
            </a>
                </div>
-       
+
+        </div>
+    </div>
+    
+    
+</div> 
+
+
+              
 </div>
 
+
+<x-img-carousel :movies="$movies"/>
         
 
-          
 
 
-
-
-
-
-
-
-
-
-
-   
 @endsection
+
+
+
+

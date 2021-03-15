@@ -188,10 +188,16 @@
                     <div class="p-2 w-full justify-center inline-flex ml-3" style="margin-top: 4rem;">
                         <!-- added style -->
 
-                        <div class="bg-white flex items-center rounded-full shadow-xl h-8">
-                            <input class="rounded-l-full w-full py-4 px-6 bg-gradient-to-l from-blue-500 to-blue-300 text-gray-200 leading-tight focus:outline-none h-8 text-xl" id="search" type="text" placeholder="Search">
+                        <div class="rounded-l-full bg-white flex items-center rounded-full shadow-xl h-8">                            
+                            <span class="rounded-l-full w-12 h-8 flex justify-end items-center text-gray-500 p-2 bg-blue-300" style="padding: 0rem;">
+                                <img class="w-20 mb-1 mr-auto mt-1 bg-blue-300 h-8 " style="position: relative;left: 0.75rem;width: 2rem;" src=" ./img/magnifier.svg" alt="magnifier" title="magnifier"> 
+                            </span>
+
+                            <input class="w-full py-4 px-6 bg-gradient-to-l from-blue-500 to-blue-300 text-gray-200 leading-tight focus:outline-none h-8 text-xl" id="search" type="text" placeholder="Search">
                             <!-- <form class="hidden sm:hidden md:flex lg:w-26 lg:mt-1.5 max-w-screen-lg bg-gradient-to-l from-blue-300 to-blue-500 items-center rounded-full shadow-xl md:h-8 p-2">
                             <img class="w-9 mb-1 mr-auto mt-1" src="./img/magnifier.svg" alt="magnifier" title="magnifier"> -->
+
+
                             <div class="p-1 h-8  rounded-r-full bg-blue-500">
                                 <button class="lg:w-24 top-1/2 left-1/2 bg-white text-indigo-700 rounded-full p-2 hover:bg-blue-400 focus:outline-none w-12 h-6 flex items-center justify-center text-xl">
                                     Go
@@ -199,6 +205,7 @@
                                 </form>
                             </div>
                         </div>
+                        
 
                         <div class="lg:hidden">
                             <a href="javascript:void(0)" class="closebtn relative top-10 w-full text-center mt-8-3 sm:" onclick="closeNav()" style="right: 10rem;top:5rem;">
@@ -208,6 +215,25 @@
                     </div>
                 </div>
             </div>
+<!-- 
+            <div class="bg-white shadow p-4 flex">
+                <span class="w-auto flex justify-end items-center text-gray-500 p-2">
+                    <i class="material-icons text-3xl">search</i>
+                </span>
+                <input class="w-full rounded p-2" type="text" placeholder="Try 'Los Angeles'">
+                <button class="bg-red-400 hover:bg-red-300 rounded text-white p-2 pl-4 pr-4">
+                    <p class="font-semibold text-xs">Search</p>
+                </button>
+            </div> -->
+
+            <!-- <div class="relative text-gray-600">
+  <input type="search" name="serch" placeholder="Search" class="bg-white h-10 px-5 pr-10 rounded-full text-sm focus:outline-none">
+  <button type="submit" class="absolute right-0 top-0 mt-3 mr-4">
+    <svg class="h-4 w-4 fill-current" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 56.966 56.966" style="enable-background:new 0 0 56.966 56.966;" xml:space="preserve" width="512px" height="512px">
+      <path d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23  s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92  c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17  s-17-7.626-17-17S14.61,6,23.984,6z"/>
+    </svg>
+  </button>
+</div> -->
 
             <script>
                 function openNav() {

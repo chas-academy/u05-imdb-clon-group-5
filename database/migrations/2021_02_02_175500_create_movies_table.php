@@ -19,7 +19,7 @@ class CreateMoviesTable extends Migration
             $table->string('title', 100);
             $table->string('director', 50)->nullable();
             $table->string('writer', 50)->nullable();
-            //Changed description text -> longText.
+            $table->unsignedSmallInteger('rating')->nullable();
             $table->longText('description')->nullable();
             $table->year('year')->nullable();
             $table->time('runtime')->nullable();
@@ -27,7 +27,6 @@ class CreateMoviesTable extends Migration
             $table->longText('img')->nullable();
             $table->boolean('featured')->default(false);
             $table->timestamps();
-            
         });
     }
 

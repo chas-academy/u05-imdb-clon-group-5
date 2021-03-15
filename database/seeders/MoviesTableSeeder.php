@@ -1,12 +1,6 @@
 <?php
 
-////////////////////////////////////////////////////////////
-//                                                        //
-// Seeder info written by Tatjana                         //
-//  - Suited for the imdb DB by Jorge                     //
-// * Run: php artisan db:seed --class="MoviesTableSeeder" //
-//                                                        //
-////////////////////////////////////////////////////////////
+
 
 namespace Database\Seeders;
 
@@ -40,7 +34,7 @@ class MoviesTableSeeder extends Seeder
             'director' => 'Kari Skogland',
             'writer' => 'John Wick',
             'description' => 'Following the events of "Avengers: Endgame," Sam Wilson/Falcon (Anthony Mackie) and Bucky Barnes/Winter Soldier (Sebastian Stan) team up in a global adventure that tests their abilities -- and their patience.',
-            'year' => 2020,
+            'year' => 2021,
             'runtime' => 00.51,
             'release_date'  => '2021-02-13',
             'img' => 'https://media.comicbook.com/2020/12/marvel-falcon-and-the-winter-soldier-poster-2021-1248503.jpeg?auto=webp&width=800&height=1185&crop=800:1185,smart',

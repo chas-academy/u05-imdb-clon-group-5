@@ -5,8 +5,6 @@ namespace Database\Factories;
 use App\Models\Rating;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Arr;
-// use App\Models\User;
-// use App\Models\Movie;
 
 class RatingFactory extends Factory
 {
@@ -28,7 +26,7 @@ class RatingFactory extends Factory
         return [
             'rating' => Arr::random($rating),
             // 'user_id' => User::factory(),
-            'user_id' => \App\Models\User::inRandomOrder()->first()->id,
+            'user_id' => \App\Models\User::inRandomOrder()->id,
             'movies_id' => \App\Models\Movie::inRandomOrder()->first()->id
         ];
     }

@@ -4,10 +4,11 @@ namespace App\Models;
 
 use Backpack\CRUD\app\Models\Traits\CrudTrait;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Watchlist extends Model
 {
-    use CrudTrait;
+    use CrudTrait, HasFactory;
 
     /*
     |--------------------------------------------------------------------------
@@ -37,6 +38,10 @@ class Watchlist extends Model
 
     public function watchlistitem() {
         return $this->hasMany('App\Models\Watchlistitems');
+    }
+
+    public function user(){
+        return $this->belongsTo('App\Models\User');
     }
 
     /*

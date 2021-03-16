@@ -185,11 +185,11 @@
                             </div> -->
 
 
-                    <div class="p-2 w-full justify-center inline-flex ml-3" style="margin-top: 4rem;">
+                    <div class="p-2 w-full justify-center inline-flex ml-3" style="margin-top: 3rem;padding-left: 2rem;left: 50%;margin-left: -0.75rem;">
                         <!-- added style -->
 
                         <div class="rounded-l-full bg-white flex items-center rounded-full shadow-xl h-8">                            
-                            <span class="rounded-l-full w-12 h-8 flex justify-end items-center text-gray-500 p-2 bg-blue-300" style="padding: 0rem;">
+                            <span class="rounded-l-full w-12 h-8 flex justify-end items-center text-gray-500 p-2 bg-blue-300 p-1.5 md:left0" style="padding: 0rem;">
                                 <img class="w-20 mb-1 mr-auto mt-1 bg-blue-300 h-8 " style="position: relative;left: 0.75rem;width: 2rem;" src=" ./img/magnifier.svg" alt="magnifier" title="magnifier"> 
                             </span>
 
@@ -207,12 +207,17 @@
                         </div>
                         
 
-                        <div class="lg:hidden">
+                        <!-- <div class="lg:hidden mt-2">
                             <a href="javascript:void(0)" class="closebtn relative top-10 w-full text-center mt-8-3 sm:" onclick="closeNav()" style="right: 10rem;top:5rem;">
-                                <img class="" src="./img/close_x.svg" alt="close Logo" title="close Logo" class="relative top-10 right 10 w-full text-center mt-8">
+                                <img class="relative sm:left-1" src="./img/close_x.svg" alt="close Logo" title="close Logo" class="relative top-10 right 10 w-full text-center mt-8">
+                            </a>
+                        </div> -->
+                    </div>
+                    <div class="lg:hidden mt-2">
+                            <a href="javascript:void(0)" class="closebtn relative top-10 w-full text-center mt-8-3 sm:" onclick="closeNav()">
+                                <img class="relative sm:left-1" src="./img/close_x.svg" alt="close Logo" title="close Logo" style="left: 50%; margin-left: -1.5rem;">
                             </a>
                         </div>
-                    </div>
                 </div>
             </div>
 

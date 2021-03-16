@@ -13,7 +13,7 @@
     <div class="container mx-auto border-b bg-gray-800 border-gray-800 p-0.25">
         <!-- style="max-width: 64rem; -->
         <header class="">
-            <div class="container w-full flex items-center justify-between md:h-1" style="height: 3.5rem" ;>
+            <div class="container w-full flex items-center justify-between md:h-1" style="height: 3.5rem";>
 
                 <!-- Logo -->
                 <div class="flex items-center justify-between mb-4 md:mb-0">
@@ -84,52 +84,46 @@
                         <a class="p-2 no-underline text-4xl text-white block duration-75 hover:bg-gray-200 focus:ring-gray-200 text-xl top-1 right-2" style="margin-bottom: 0.25rem;" href="#">Tv shows</a>
                         <a class="p-2 no-underline text-4xl text-white block duration-75 hover:bg-gray-200 focus:ring-gray-200 text-xl top-1 right-2" style="margin-bottom: 0.25rem;" href="#">Genre</a>
                         <a class="p-2 no-underline text-4xl text-white block duration-75 hover:bg-gray-200 focus:ring-gray-200 text-xl top-1 right-2" style="margin-bottom: 0.25rem;" href="#">Watchlist</a> -->
+                    <div>
 
-                        <div class="containerx">
-                            <a class="imagex p-2 no-underline text-4xl text-white block duration-75 hover:bg-gray-800 focus:ring-gray-200 text-xl top-1 right-2" style="margin-bottom: 0.25rem;" href="#">movies</a>
-                            <div class="overlayx">
-                                <div class="textx">
-                                    <a href="#" class="">
-                                        <img class="" src="./img/movies-hover-frame.svg" alt="movies-hover-frame" title="movies-hover-frame">
-                                    </a>
-                                </div>
+                    <div class="containerx">
+                          <a class="imagex p-2 no-underline text-4xl text-white block duration-75 hover:bg-gray-800 focus:ring-gray-200 text-xl top-1 right-2" style="margin-bottom: 0.25rem;" href="#">Movies
+                            <div class="hidden sm:hidden lg:flex overlayx">
+                              <div class="hidden sm:hidden lg:flex textx">
+                                <img class="" src="./img/movies-hover-frame.svg" alt="movies-hover-frame" title="movies-hover-frame">
+                              </div>
                             </div>
+                          </a>
                         </div>
 
-
                         <div class="containerx">
-                            <a class="imagex p-2 no-underline text-4xl text-white block duration-75 hover:bg-gray-800 focus:ring-gray-200 text-xl top-1 right-2" style="margin-bottom: 0.25rem;" href="#">Tv shows</a>
-                            <div class="overlayx">
-                                <div class="textx">
-                                    <a href="#" class="">
-                                        <img class="" src="./img/tv-shows-hover-frame.svg" alt="tv-shows-hover-frame" title="tv-shows-hover-frame">
-                                    </a>
-                                </div>
+                          <a class="imagex p-2 no-underline text-4xl text-white block duration-75 hover:bg-gray-800 focus:ring-gray-200 text-xl top-1 right-2" style="margin-bottom: 0.25rem;" href="#">Tv shows
+                            <div class="hidden sm:hidden lg:flex overlayx">
+                              <div class="hidden sm:hidden lg:flex  textx">
+                                <img class="" src="./img/tv-shows-hover-frame.svg" alt="tv-shows-hover-frame" title="tv-shows-hover-frame">
+                              </div>
                             </div>
+                          </a>
                         </div>
 
-
                         <div class="containerx">
-                            <a class="imagex p-2 no-underline text-4xl text-white block duration-75 hover:bg-gray-800 focus:ring-gray-200 text-xl top-1 right-2" style="margin-bottom: 0.25rem;" href="#">Genre</a>
-                            <div class="overlayx">
-                                <div class="textx">
-                                    <a href="#" class="">
-                                        <img class="" src="./img/genre-hover-frame.svg" alt="genre-hover-frame" title="genre-hover-frame">
-                                    </a>
-                                </div>
+                          <a class="imagex p-2 no-underline text-4xl text-white block duration-75 hover:bg-gray-800 focus:ring-gray-200 text-xl top-1 right-2" style="margin-bottom: 0.25rem;" href="#">Genre
+                            <div class="hidden sm:hidden lg:flex overlayx">
+                              <div class="hidden sm:hidden lg:flex textx">
+                                <img class="" src="./img/genre-hover-frame.svg" alt="genre-hover-frame" title="genre-hover-frame">
+                              </div>
                             </div>
+                          </a>
                         </div>
 
-
                         <div class="containerx">
-                            <a class="imagex p-2 no-underline text-4xl text-white block duration-75 hover:bg-gray-800 focus:ring-gray-200 text-xl top-1 right-2" style="margin-bottom: 0.25rem;" href="#">Watchlist</a>
-                            <div class="overlayx">
-                                <div class="textx">
-                                    <a href="#" class="">
-                                        <img class="" src="./img/watchlist-hover-frame.svg" alt="watchlist-hover-frame" title="watchlist-hover-frame">
-                                    </a>
-                                </div>
+                          <a class="imagex p-2 no-underline text-4xl text-white block duration-75 hover:bg-gray-800 focus:ring-gray-200 text-xl top-1 right-2" style="margin-bottom: 0.25rem;" href="#">Watchlist
+                            <div class="hidden sm:hidden lg:flex overlayx l">
+                              <div class="hidden sm:hidden lg:flex textx">
+                                <img class="" src="./img/watchlist-hover-frame.svg" alt="watchlist-hover-frame" title="watchlist-hover-frame">
+                              </div>
                             </div>
+                          </a>
                         </div>
 
                     </div>
@@ -153,12 +147,14 @@
                             bottom: 0;
                             left: 100%;
                             right: 0;
-                            background-color: rgba(31, 41, 55, var(--tw-bg-opacity));
+                            /* background-color:rgba(31, 41, 55, var(--tw-bg-opacity));  */
                             overflow: hidden;
                             width: 0;
                             height: 100%;
                             transition: .5s ease;
+                            display: block;
                         }
+
 
                         .containerx:hover .overlayx {
                             width: 100%;

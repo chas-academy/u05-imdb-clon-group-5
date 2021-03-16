@@ -22,7 +22,8 @@ class GenreitemFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'genres_id' => \App\Models\Genre::inRandomOrder()->first()->id,
+            'movies_id' => \App\Models\Movie::inRandomOrder()->first()->id
         ];
     }
 }

@@ -19,7 +19,7 @@
                 <div class="flex items-center justify-between mb-4 md:mb-0">
                     <h1 class="">
                         <a class="x1 mt-2" href="#">
-                            <img class="md:w-24 mt-8 md:mt-4 lg:w-24 ml-2 lg:mt-5" src="./img/imdb_logo.svg">
+                            <img class="md:w-24 mt-8 md:mt-6 lg:w-24 ml-2 lg:mt-5" src="./img/imdb_logo.svg">
                         </a>
                     </h1>
                 </div>
@@ -46,7 +46,7 @@
 
                 <div class="lg:mt-6 lg:mr-4 lg:w-16 lg:ml-3 mt-4">
                     <span style="font-size:30px;cursor:pointer;width: 6rem;" onclick="openNav()">
-                        <img class="md:w-16 md:mt-5 ml-3 mt-3 mr-2 lg:mt-1 lg:mr-3 lg:w-24" src="./img/navigation_logo.svg" alt="Navigation Logo" title="Navigation Logo">
+                        <img class="md:w-16 md:mt-1 ml-3 mt-0.25 mr-2 lg:mb-2 lg:mr-3 lg:w-24" src="./img/navigation_logo.svg" alt="Navigation Logo" title="Navigation Logo">
                     </span>
                 </div>
 

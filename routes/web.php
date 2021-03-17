@@ -23,9 +23,6 @@ Route::get('/', function () {
 Route::get('/', [MovieController::class, 'movieCarousel']);
 
 
-Route::get('/', function () {
-    return view('index');
-});
 
 Route::get('/', [MovieController::class, 'movieCarousel']);
 

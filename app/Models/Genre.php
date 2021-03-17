@@ -35,10 +35,10 @@ class Genre extends Model
     |--------------------------------------------------------------------------
     */
 
-    public function genreitem() {
-        return $this->hasMany('App\Models\Genreitem');
+    public function movies() {
+        return $this->belongsToMany('App\Models\Movie', 'genre_movie', 'genre_id');
     }
-    
+
     /*
     |--------------------------------------------------------------------------
     | SCOPES

@@ -14,10 +14,9 @@
 <body class="bg-midnight-500  max-w-screen-xl m-auto">
     {{-- add navigation here --}}
 
-    
 
     
-     @yield('content') 
+    @yield('content')  
 
   
 
@@ -25,11 +24,13 @@
 
    
     
+  
+
  
-   
+     <x-footer-component/>
+  
 
   
-</div>
 </body>
 </html>
 

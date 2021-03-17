@@ -29,6 +29,7 @@ class MoviesTableSeeder extends Seeder
             'featured' => 1,
         ]);
 
+
         DB::table('movies')->insert([
             'title' => 'The Falcon and the Winter Soldier',
             'director' => 'Kari Skogland',
@@ -41,6 +42,7 @@ class MoviesTableSeeder extends Seeder
             'featured' => 1,
         ]);
 
+
         DB::table('movies')->insert([
             'title' => 'Stranger Things',
             'director' => 'Matt Duffer',
@@ -51,6 +53,8 @@ class MoviesTableSeeder extends Seeder
             'release_date'  => '2021-02-13',
             'img' => 'https://m.media-amazon.com/images/M/MV5BMjEzMDAxOTUyMV5BMl5BanBnXkFtZTgwNzAxMzYzOTE@._V1_UX182_CR0,0,182,268_AL_.jpg',
             'featured' => 0,
+            'video_url' => 'https://www.youtube.com/watch?v=b9EkMc79ZSU',
+            'img' => 'https://m.media-amazon.com/images/M/MV5BMjEzMDAxOTUyMV5BMl5BanBnXkFtZTgwNzAxMzYzOTE@._V1_UX182_CR0,0,182,268_AL_.jpg'
         ]);
 
         DB::table('movies')->insert([
@@ -61,8 +65,9 @@ class MoviesTableSeeder extends Seeder
             'year' => 2021,
             'runtime' => 01.00,
             'release_date'  => '2021-02-13',
-            'img' => 'https://m.media-amazon.com/images/M/MV5BZGJhNWRiOWQtMjI4OS00ZjcxLTgwMTAtMzQ2ODkxY2JkOTVlXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_UX182_CR0,0,182,268_AL_.jpg',
             'featured' => 0,
+            'video_url' => 'https://www.youtube.com/watch?v=4TZb7YfK-JI',
+            'img' => 'https://m.media-amazon.com/images/M/MV5BZGJhNWRiOWQtMjI4OS00ZjcxLTgwMTAtMzQ2ODkxY2JkOTVlXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_UX182_CR0,0,182,268_AL_.jpg'
         ]);
 
         DB::table('movies')->insert([
@@ -75,7 +80,10 @@ class MoviesTableSeeder extends Seeder
             'release_date'  => '2021-02-13',
             'img' => 'https://m.media-amazon.com/images/M/MV5BMjg5MDFiOGMtNDE1OS00NjQ5LThjZGEtZjExMjAwOTZiYTQ1XkEyXkFqcGdeQXVyNzk4OTQyODU@._V1_UX182_CR0,0,182,268_AL_.jpg',
             'featured' => 0,
+            'video_url' => 'https://www.youtube.com/watch?v=Y0JZVfQFqos',
+            'img' => 'https://m.media-amazon.com/images/M/MV5BMjg5MDFiOGMtNDE1OS00NjQ5LThjZGEtZjExMjAwOTZiYTQ1XkEyXkFqcGdeQXVyNzk4OTQyODU@._V1_UX182_CR0,0,182,268_AL_.jpg'
         ]);
+
 
         DB::table('movies')->insert([
             'title' => 'The Vigil',
@@ -87,6 +95,8 @@ class MoviesTableSeeder extends Seeder
             'release_date'  => '2021-02-13',
             'img' => 'https://m.media-amazon.com/images/M/MV5BOGY2MDAxNTEtNjJhOC00ZjNmLWIyYzAtNzQ4OGY2MDBkYTc2XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_UX182_CR0,0,182,268_AL_.jpg',
             'featured' => 1,
+            'video_url' => 'https://www.youtube.com/watch?v=JarbtubycQg',
+            'img' => 'https://m.media-amazon.com/images/M/MV5BOGY2MDAxNTEtNjJhOC00ZjNmLWIyYzAtNzQ4OGY2MDBkYTc2XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_UX182_CR0,0,182,268_AL_.jpg'
         ]);
 
         DB::table('movies')->insert([
@@ -99,6 +109,8 @@ class MoviesTableSeeder extends Seeder
             'release_date'  => '2021-02-13',
             'img' => 'https://m.media-amazon.com/images/M/MV5BMmYwZWVkYTQtZTk2YS00Y2IzLTk2NDYtZTc2YzhiZGNkMDMzXkEyXkFqcGdeQXVyMjM2NjkyNDU@._V1_UY268_CR3,0,182,268_AL_.jpg',
             'featured' => 0,
+            'video_url' => 'https://www.youtube.com/watch?v=CdYUTKDs8Y4',
+            'img' => 'https://m.media-amazon.com/images/M/MV5BMmYwZWVkYTQtZTk2YS00Y2IzLTk2NDYtZTc2YzhiZGNkMDMzXkEyXkFqcGdeQXVyMjM2NjkyNDU@._V1_UY268_CR3,0,182,268_AL_.jpg'
         ]);
 
         DB::table('movies')->insert([
@@ -111,7 +123,10 @@ class MoviesTableSeeder extends Seeder
             'release_date'  => '2021-02-13',
             'img' => 'https://m.media-amazon.com/images/M/MV5BMDY2MDdlNDEtZmViZC00MzE3LTk5ZjAtOTg2OWVjODUyNWVjXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_UX182_CR0,0,182,268_AL_.jpg',
             'featured' => 0,
+            'video_url' => 'https://www.youtube.com/watch?v=qfj2rINpoEI',
+            'img' => 'https://m.media-amazon.com/images/M/MV5BMDY2MDdlNDEtZmViZC00MzE3LTk5ZjAtOTg2OWVjODUyNWVjXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_UX182_CR0,0,182,268_AL_.jpg'
         ]);
+
 
         DB::table('movies')->insert([
             'title' => 'Run',
@@ -123,6 +138,8 @@ class MoviesTableSeeder extends Seeder
             'release_date'  => '2021-02-13',
             'img' => 'https://m.media-amazon.com/images/M/MV5BYmM4MDljZmQtOTk1NC00MjhhLTliODItMjVjN2JhNDBjZWU3XkEyXkFqcGdeQXVyMzUyNTk3MDg@._V1_UY268_CR9,0,182,268_AL_.jpg',
             'featured' => 0,
+            'video_url' => 'https://www.youtube.com/watch?v=0Dhh7q9Us5c',
+            'img' => 'https://m.media-amazon.com/images/M/MV5BYmM4MDljZmQtOTk1NC00MjhhLTliODItMjVjN2JhNDBjZWU3XkEyXkFqcGdeQXVyMzUyNTk3MDg@._V1_UY268_CR9,0,182,268_AL_.jpg'
         ]);
 
         DB::table('movies')->insert([
@@ -135,6 +152,8 @@ class MoviesTableSeeder extends Seeder
             'release_date'  => '2021-02-13',
             'img' => 'https://m.media-amazon.com/images/M/MV5BYjJiZmE5ZDgtYWUxZi00MWI1LTg2MmEtZmUwZGE2YzRkNTE5XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_UX182_CR0,0,182,268_AL_.jpg',
             'featured' => 0,
+            'video_url' => 'https://www.youtube.com/watch?v=sj9J2ecsSpo',
+            'img' => 'https://m.media-amazon.com/images/M/MV5BYjJiZmE5ZDgtYWUxZi00MWI1LTg2MmEtZmUwZGE2YzRkNTE5XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_UX182_CR0,0,182,268_AL_.jpg'
         ]);
 
         DB::table('movies')->insert([
@@ -147,6 +166,8 @@ class MoviesTableSeeder extends Seeder
             'release_date'  => '2021-02-13',
             'img' => 'https://m.media-amazon.com/images/M/MV5BNWQ1ZmM3MTQtNTVhZC00MWVlLWI5ZjgtYmZiYWQxZjUzZWM0XkEyXkFqcGdeQXVyMzQ2MDI5NjU@._V1_UX182_CR0,0,182,268_AL_.jpg',
             'featured' => 1,
+            'video_url' => 'https://www.youtube.com/watch?v=W0uWS6CnC2o',
+            'img' => 'https://m.media-amazon.com/images/M/MV5BNWQ1ZmM3MTQtNTVhZC00MWVlLWI5ZjgtYmZiYWQxZjUzZWM0XkEyXkFqcGdeQXVyMzQ2MDI5NjU@._V1_UX182_CR0,0,182,268_AL_.jpg'
         ]);
 
         DB::table('movies')->insert([
@@ -159,6 +180,8 @@ class MoviesTableSeeder extends Seeder
             'release_date'  => '2021-02-13',
             'img' => 'https://m.media-amazon.com/images/M/MV5BZDhlMzY0ZGItZTcyNS00ZTAxLWIyMmYtZGQ2ODg5OWZiYmJkXkEyXkFqcGdeQXVyODkzNTgxMDg@._V1_UX182_CR0,0,182,268_AL_.jpg',
             'featured' => 0,
+            'video_url' => 'https://www.youtube.com/watch?v=aOC8E8z_ifw',
+            'img' => 'https://m.media-amazon.com/images/M/MV5BZDhlMzY0ZGItZTcyNS00ZTAxLWIyMmYtZGQ2ODg5OWZiYmJkXkEyXkFqcGdeQXVyODkzNTgxMDg@._V1_UX182_CR0,0,182,268_AL_.jpg'
         ]);
 
         DB::table('movies')->insert([
@@ -171,6 +194,8 @@ class MoviesTableSeeder extends Seeder
             'release_date'  => '2021-02-13',
             'img' => 'https://m.media-amazon.com/images/M/MV5BYmFjNWY5NjQtMTJiNC00NjFlLWIxMGQtNzhmMmQ0MjhiZjQyXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_UX182_CR0,0,182,268_AL_.jpg',
             'featured' => 0,
+            'video_url' => 'https://www.youtube.com/watch?v=ZHtPm8v-yNw',
+            'img' => 'https://m.media-amazon.com/images/M/MV5BYmFjNWY5NjQtMTJiNC00NjFlLWIxMGQtNzhmMmQ0MjhiZjQyXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_UX182_CR0,0,182,268_AL_.jpg'
         ]);
 
         DB::table('movies')->insert([
@@ -183,6 +208,8 @@ class MoviesTableSeeder extends Seeder
             'release_date'  => '2021-02-13',
             'img' => 'https://m.media-amazon.com/images/M/MV5BZTUxN2M3ZWYtMzc1MC00NTc4LWFhZDItMzViZDg2NmFjMzBhXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_UY268_CR4,0,182,268_AL_.jpg',
             'featured' => 0,
+            'video_url' => 'https://www.youtube.com/watch?v=H1WYnJF1Pwo',
+            'img' => 'https://m.media-amazon.com/images/M/MV5BZTUxN2M3ZWYtMzc1MC00NTc4LWFhZDItMzViZDg2NmFjMzBhXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_UY268_CR4,0,182,268_AL_.jpg'
         ]);
 
         DB::table('movies')->insert([
@@ -195,6 +222,8 @@ class MoviesTableSeeder extends Seeder
             'release_date'  => '2021-02-13',
             'img' => 'https://m.media-amazon.com/images/M/MV5BYTRiNDQwYzAtMzVlZS00NTI5LWJjYjUtMzkwNTUzMWMxZTllXkEyXkFqcGdeQXVyNDIzMzcwNjc@._V1_UY268_CR7,0,182,268_AL_.jpg',
             'featured' => 0,
+            'video_url' => 'https://www.youtube.com/watch?v=gcTkNV5Vg1E',
+            'img' => 'https://m.media-amazon.com/images/M/MV5BYTRiNDQwYzAtMzVlZS00NTI5LWJjYjUtMzkwNTUzMWMxZTllXkEyXkFqcGdeQXVyNDIzMzcwNjc@._V1_UY268_CR7,0,182,268_AL_.jpg'
         ]);
 
         DB::table('movies')->insert([
@@ -207,6 +236,8 @@ class MoviesTableSeeder extends Seeder
             'release_date'  => '2021-02-13',
             'img' => 'https://m.media-amazon.com/images/M/MV5BMzUzYjhkZWMtMzE1NS00YjUxLTliOTItN2FkOWUyY2U2YzhiXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_UX182_CR0,0,182,268_AL_.jpg',
             'featured' => 1,
+            'video_url' => 'https://www.youtube.com/watch?v=ZaaQoutaEj8',
+            'img' => 'https://m.media-amazon.com/images/M/MV5BMzUzYjhkZWMtMzE1NS00YjUxLTliOTItN2FkOWUyY2U2YzhiXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_UX182_CR0,0,182,268_AL_.jpg'
         ]);
 
         DB::table('movies')->insert([
@@ -219,6 +250,8 @@ class MoviesTableSeeder extends Seeder
             'release_date'  => '2021-02-13',
             'img' => 'https://m.media-amazon.com/images/M/MV5BYjVkMmU1NGItZjM4MC00ODM1LWEyOTEtY2Y1NTg0YjRhYjEwXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_UX182_CR0,0,182,268_AL_.jpg',
             'featured' => 0,
+            'video_url' => 'https://www.youtube.com/watch?v=CGZmwsK58M8',
+            'img' => 'https://m.media-amazon.com/images/M/MV5BYjVkMmU1NGItZjM4MC00ODM1LWEyOTEtY2Y1NTg0YjRhYjEwXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_UX182_CR0,0,182,268_AL_.jpg'
         ]);
 
         DB::table('movies')->insert([
@@ -231,6 +264,8 @@ class MoviesTableSeeder extends Seeder
             'release_date'  => '2021-02-13',
             'img' => 'https://i.pinimg.com/originals/d3/d1/4c/d3d14c8d2e51805536839dc6eab90e70.jpg',
             'featured' => 1,
+            'video_url' => 'https://www.youtube.com/watch?v=X0lRjbrH-L8',
+            'img' => 'Three different but related families face trials and tribulations in their own uniquely comedic ways'
         ]);
 
         DB::table('movies')->insert([
@@ -243,6 +278,8 @@ class MoviesTableSeeder extends Seeder
             'release_date'  => '2021-02-13',
             'img' => 'https://m.media-amazon.com/images/M/MV5BODIwYmE0MGQtYmNhMS00ZjM4LWJkMzAtNjg5YzI4MzZjMjg3XkEyXkFqcGdeQXVyNjU2ODM5MjU@._V1_UX182_CR0,0,182,268_AL_.jpg',
             'featured' => 0,
+            'video_url' => 'https://www.youtube.com/watch?v=ZEfnpFuzxnE',
+            'img' => 'https://m.media-amazon.com/images/M/MV5BODIwYmE0MGQtYmNhMS00ZjM4LWJkMzAtNjg5YzI4MzZjMjg3XkEyXkFqcGdeQXVyNjU2ODM5MjU@._V1_UX182_CR0,0,182,268_AL_.jpg'
         ]);
 
 

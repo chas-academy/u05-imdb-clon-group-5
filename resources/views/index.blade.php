@@ -56,6 +56,11 @@
         
 
 
+<x-img-carousel data="2" :movies="$movies"/>
+        
+
+
+
 @endsection
 
 

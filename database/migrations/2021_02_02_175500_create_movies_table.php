@@ -15,15 +15,24 @@ class CreateMoviesTable extends Migration
     {
         Schema::create('movies', function (Blueprint $table) {
             $table->id();
-            $table->string('title', 30);
-            $table->unsignedTinyInteger('rating')->nullable();
-            $table->string('director', 30)->nullable();
-            $table->string('writer', 30)->nullable();
-            $table->text('description')->nullable();
-            $table->string('img-url')->nullable();
-            // $table->foreignId('genre-id')->constrained();
+            //Titles and names can be greater than 30.
+            $table->string('title', 100);
+            $table->string('director', 50)->nullable();
+            $table->string('writer', 50)->nullable();
+            //Changed description text -> longText.
+            $table->longText('description')->nullable();
+            $table->year('year')->nullable();
+            $table->time('runtime')->nullable();
+            $table->date('release_date')->nullable();
+            //Added video_url -> Tatjana
+            $table->longtext('video_url')->nullable();
+            $table->longText('img')->nullable();
             $table->timestamps();
         });
+
+        Artisan::call('db:seed', [
+            '--class' => MoviesTableSeeder::class,
+        ]);
     }
 
     /**

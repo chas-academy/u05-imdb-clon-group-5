@@ -27,7 +27,7 @@
   
 
  
-     <x-footer-component/>
+     <x-footer_component/>
   
 
   

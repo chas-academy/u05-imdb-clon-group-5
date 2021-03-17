@@ -47,16 +47,10 @@
                     <div class="imgSlide bg-midnight-800   min-w-max relative left-0 text-center font-bold my-3 mr-4 text-white duration-75">
                         <img class="w-36 h-48" src="{{$movie->img}}"> 
                     
-<<<<<<< HEAD
                     </div>
 
                 @endif
 
-=======
-                </div>
-          
-                
->>>>>>> Development
                 @endforeach
             </section>
 

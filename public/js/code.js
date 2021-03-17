@@ -1,10 +1,9 @@
-const slideLeft = document.getElementById("left-arrow");
-const slideRight = document.getElementById("right-arrow");
+const slideLeft = document.querySelector(".left-arrow");
+const slideRight = document.querySelector(".right-arrow");
 const imgSlide = document.querySelectorAll(".imgSlide");
 
 /* arrow variables */
 let arrow = 0;
-console.log("ingen klick");
 /* right arrow for img carousel  */
 slideRight.addEventListener("click", () => {
     imgSlide.forEach((imgSlide) => {

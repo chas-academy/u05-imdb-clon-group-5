@@ -14,13 +14,21 @@ use App\Http\Controllers\MovieController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', function () {	
-    return view('index');	
+
+Route::get('/', function () {
+    return view('index');
 });
 
-Route::get('/',[MovieController::class, 'movieCarousel']);
 
-Route::get('/movie-info', function() { return view('movie-info'); });
+
+
+
+
+Route::get('/', [MovieController::class, 'movieCarousel']);
+
+Route::get('/movie-info', function () {
+    return view('movie-info');
+});
 
 //Storage to the DB
 Route::post('/save', [mainController::class, 'save'])->name('save');
@@ -31,7 +39,7 @@ Route::post('/check', [mainController::class, 'check'])->name('check');
 Route::get('logout', [mainController::class, 'logout'])->name('logout');
 
 //AuthCheck controller..
-Route::group(['middleware'=>['authCheck']], function() {
+Route::group(['middleware' => ['authCheck']], function () {
 
     //Here should we add all files to force the user to be logged in.
     //Remeber to update authCheck middleware (only the pages located here)!!

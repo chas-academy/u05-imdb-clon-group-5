@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="bg-midnight-700" lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,7 +11,7 @@
     <title>Movie-db</title>
 </head>
 
-<body class="bg-midnight-700  max-w-screen-xl m-auto">
+<body class="bg-midnight-500  max-w-screen-xl m-auto">
     {{-- add navigation here --}}
 
 
@@ -27,7 +27,7 @@
   
 
  
-     <x-footer-component/>
+     <x-footer_component/>
   
 
   

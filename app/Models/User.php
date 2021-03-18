@@ -6,23 +6,20 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
-use Illuminate\Support\Facades\Hash;
 
 class User extends Authenticatable
 {
-    use \Backpack\CRUD\app\Models\Traits\CrudTrait;
     use HasFactory, Notifiable;
 
     /**
      * The attributes that are mass assignable.
      *
      * @var array
-     */    
+     */
     protected $fillable = [
         'name',
         'email',
         'password',
-        'is_admin', // Set here to make update possible in adminpanel (Backpack) for is_admin attribute in DB.
     ];
 
     /**
@@ -43,13 +40,4 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
-
-    // A mutator that hash a password created in adminpanel (Backpack).
-    public function setPasswordAttribute($value) {
-        $this->attributes['password'] = Hash::make($value);
-    }
-
-    public function watchlist(){
-        return $this->hasOne('App\Models\Watchlist');
-    }
 }

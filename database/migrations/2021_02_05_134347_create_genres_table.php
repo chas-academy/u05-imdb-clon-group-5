@@ -19,8 +19,17 @@ class CreateGenresTable extends Migration
             $table->timestamps();
         });
 
-        Artisan::call('db:seed', [
-            '--class' => GenresTableSeeder::class,
+        DB::table('genres')->insert([
+        ['genre' => 'action'], 
+        ['genre' => 'comedy'],
+        ['genre' => 'thriller'],
+        ['genre' => 'romance'],
+        ['genre' => 'horror'],
+        ['genre' => 'adventure'],
+        ['genre' => 'scifi'],
+        ['genre' => 'drama'],
+        ['genre' => 'mystery'],
+        ['genre' => 'fantasy'],
         ]);
     }
 

@@ -13,8 +13,7 @@ class CreateGenreItemsTable extends Migration
      */
     public function up()
     {
-        Schema::create('genreitems', function (Blueprint $table) {
-            $table->id();
+        Schema::create('genre-items', function (Blueprint $table) {
             $table->foreignId('genres_id')->constrained();
             $table->foreignId('movies_id')->constrained();
             $table->timestamps();
@@ -28,6 +27,6 @@ class CreateGenreItemsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('genreitems');
+        Schema::dropIfExists('genre-items');
     }
 }

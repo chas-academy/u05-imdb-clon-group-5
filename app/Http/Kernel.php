@@ -1,11 +1,5 @@
 <?php
-///////////////////////////////////////////////////////////////////
-//* Add your name if you changed something                      *//
-//* Contributors:                                               *//
-//*     - Jorge Pereda = ['authCheck']                          *//
-//*     - ...                                                   *//
-//* Do not forget to add the comments above the code you wrote! *//
-///////////////////////////////////////////////////////////////////
+
 namespace App\Http;
 
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
@@ -60,9 +54,6 @@ class Kernel extends HttpKernel
      */
     protected $routeMiddleware = [
         'auth' => \App\Http\Middleware\Authenticate::class,
-        //I just added authCheck here for session reasons.
-        'authCheck' => \App\Http\Middleware\authCheck::class,
-
         'auth.basic' => \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
         'cache.headers' => \Illuminate\Http\Middleware\SetCacheHeaders::class,
         'can' => \Illuminate\Auth\Middleware\Authorize::class,

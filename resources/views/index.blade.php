@@ -7,7 +7,7 @@
         <div class="max-w-xl mb-6">
           <div>
             <p class="inline-block text-red-600 py-px mb-4 text-xs font-semibold tracking-wider uppercase rounded-full">
-              Brand Movies
+              Brand new Movies
             </p>
           </div>
           <h2 class="max-w-lg mb-6 font-poppins text-3xl text-gray-200 font-bold tracking-tight sm:text-4xl sm:leading-none ">
@@ -16,7 +16,7 @@
             <span class="inline-block text-red-600">&nbsp;Review</span>
           </h2>
           <p class="text-base text-gray-200 md:text-lg">
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae. explicabo.
+            Movie Database is a new movie database on the Internet. Our focus is on English-language films, but also contains information on non-English films, low-budget and television films, TV series.
           </p>
         </div>
        
@@ -55,25 +55,23 @@
 <div>
     <x-img-carousel data="2" :movies="$movies"/>
 </div>
-              
-</div>
-
-{{-- carousel-top-rated --}}
 <div class="ml-2">
-<h1 class="font-bold font-inter text-4xl text-red-500 mt-4 sm:text-5xl">Top rated</h1>
-<h1 class="text-white text-4xl font-inter sm:text-5xl">
-    <span class="font-bold uppercase">movies</span>
-     </h1>
+    <h1 class="font-bold font-inter text-4xl text-red-500 mt-4 sm:text-5xl">Top rated</h1>
+    <h1 class="text-white text-4xl font-inter sm:text-5xl">
+        <span class="font-bold uppercase">movies</span>
+         </h1>
+    </div>
+    <x-img-carousel data="1" :movies="$movies"/>
+    
+    <x-img-carousel data="3" :movies="$movies"/>
+    
+            
+    
+    
+    <x-img-carousel data="2" :movies="$movies"/>   
 </div>
-<x-img-carousel data="1" :movies="$movies"/>
-
-<x-img-carousel data="3" :movies="$movies"/>
-
-        
 
 
-<x-img-carousel data="2" :movies="$movies"/>
-        
 
 
 

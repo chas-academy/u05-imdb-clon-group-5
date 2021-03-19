@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="bg-midnight-700" lang="en">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,15 +11,18 @@
     <title>Movie-db</title>
 </head>
 
-<body class="bg-midnight-500  max-w-screen-xl m-auto">
+<body class="bg-midnight-500">
     {{-- add navigation here --}}
+    <div class=" max-w-screen-xl m-auto">
+
+
 
 
     
     @yield('content')  
 
   
-
+</div>
  
 
    

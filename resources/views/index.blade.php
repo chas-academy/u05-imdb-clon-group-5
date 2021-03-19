@@ -1,6 +1,6 @@
 @extends('layout/layout')
 @section('content')
-
+  {{--   Heropage --}}
 <div class="relative m-auto bg-midnight">
     <img class="w-full h-full" src="../img/hero-page-bg.jpg">
 
@@ -29,13 +29,34 @@
     
     
 </div> 
-
-
+{{-- carousel-featured-now --}}
+<div class="ml-2">
+<h1 class="font-bold text-4xl font-inter text-red-500  sm:text-5xl">Featured</h1>
+<h1 class="text-white text-4xl font-inter sm:text-5xl">
+    <span class="font-bold">Now</span>
+     showing</h1>
+    </div>
+<div>
+    <x-img-carousel data="2" :movies="$movies"/>
+</div>
               
 </div>
 
+{{-- carousel-top-rated --}}
+<div class="ml-2">
+<h1 class="font-bold font-inter text-4xl text-red-500 mt-4 sm:text-5xl">Top rated</h1>
+<h1 class="text-white text-4xl font-inter sm:text-5xl">
+    <span class="font-bold uppercase">movies</span>
+     </h1>
+</div>
+<x-img-carousel data="1" :movies="$movies"/>
 
-<x-img-carousel :movies="$movies"/>
+<x-img-carousel data="3" :movies="$movies"/>
+
+        
+
+
+<x-img-carousel data="2" :movies="$movies"/>
         
 
 

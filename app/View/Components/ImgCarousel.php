@@ -8,18 +8,23 @@ use Illuminate\View\Component;
 class ImgCarousel extends Component
 {
    
+
+
     /**
      * Create a new component instance.
      *
      * @return void
      */
-  
-   public $movies;
-    public function __construct( $movies)
+   
+    public $movies;
+    public $moviedata;
+    public function __construct($movies,  string $data)
     {
         //
-  
-       $this->movies = $movies;
+        $this->movies = $movies;
+        $this->moviedata = $data;
+ 
+
            
     }
 

@@ -1,4 +1,4 @@
-<div class="relative m-auto w-full">
+<div class="relative m-auto w-full max-w-screen-xl">
   <a href="#">
     <img class="w-full" src="../img/landskape-dark.jpg" alt="background landscape">
     <div class="top-4 md:top-6 left-6 md:left-24 absolute font-inter uppercase font-bold ">

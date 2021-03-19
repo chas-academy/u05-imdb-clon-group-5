@@ -70,7 +70,7 @@
 </div>
 
 
-
+@include('raise_your_awareness')
 
 
 @endsection

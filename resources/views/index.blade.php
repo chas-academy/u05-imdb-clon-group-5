@@ -7,13 +7,13 @@
         <div class="max-w-xl mb-6">
           <div>
             <p class="inline-block text-red-600 py-px mb-4 text-xs font-semibold tracking-wider uppercase rounded-full">
-              Brand new
+              Brand Movies
             </p>
           </div>
           <h2 class="max-w-lg mb-6 font-poppins text-3xl text-gray-200 font-bold tracking-tight sm:text-4xl sm:leading-none ">
-            Everything you<br class="hidden md:block" />
-            can imagine
-            <span class="inline-block text-red-600">is real</span>
+            <span class="uppercase">Find Your Movie</span><br class="hidden md:block" />
+            Search, View, 
+            <span class="inline-block text-red-600">&nbsp;Review</span>
           </h2>
           <p class="text-base text-gray-200 md:text-lg">
             Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae. explicabo.

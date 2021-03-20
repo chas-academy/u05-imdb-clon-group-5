@@ -21,7 +21,13 @@ Route::get('/', function () {
     return view('index');
 });
 
+Route::get('/login-user', function () {
+    return view('login-user');
+});
 
+Route::get('/register', function () {
+    return view('register');
+});
 
 Route::get('/watchlist', [WatchlistController::class, 'show']);
 

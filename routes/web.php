@@ -30,6 +30,7 @@ Route::get('/register', function () {
 });
 
 Route::get('/watchlist', [WatchlistController::class, 'show']);
+Route::delete('/watchlist/{id}', [WatchlistController::class, 'destroy']);
 
 
 Route::get('/', [MovieController::class, 'movieCarousel']);

@@ -12,13 +12,18 @@
   
     <div class="flex text-white bg-dianne mt-4 mb-4 rounded">
       <div class="flex-1">
-        <span class="w-36 h-6 absolute bg-green-700 font-inter text-center font-bold text-white">+ Watchlist</span>
+        <!-- Delete button -->
+        <form id="delete-form" action="/watchlist/{{ $movie->id }}" method="POST">
+          @csrf
+          @method('DELETE')        
+          <input class="w-36 h-6 absolute bg-mojo font-inter text-center font-bold text-white cursor-pointer" type="submit" name="delete" value="- Watchlist">
+        </form>
         <img class="w-36 h-48" src="{{ $movie->img }}" alt="movie-poster">
       </div>
       <ul class="flex-1">
         <li class="font-bold text-base">{{ $movie->title }}</li>
         <li>{{ $movie->rating }}</li>
-        <li class="text-sm line-clamp-1">{{ $movie->description }}</li>
+        <li class="text-sm line-clamp-3">{{ $movie->description }}</li>
         <li>Your review</li>
         <li>your review text</li>
       </ul>
@@ -27,7 +32,12 @@
     <div class="flex flex-wrap justify-center bg-dianne p-1 rounded">
       @foreach ($movies as $movie)
         <div class="flex-initial relative m-0.5">
-          <span class="w-36 h-6 absolute bg-green-700 font-inter text-center font-bold text-white">+ Watchlist</span>
+          <!-- Delete button -->
+            <form id="delete-form" action="/watchlist/{{ $movie->id }}" method="POST">
+              @csrf
+              @method('DELETE')        
+              <input class="w-36 h-6 absolute bg-mojo font-inter text-center font-bold text-white cursor-pointer" type="submit" name="delete" value="- Watchlist">
+            </form>
           <img class="w-36 h-48" src="{{ $movie->img }}" alt="movie-poster">
         </div>
       @endforeach

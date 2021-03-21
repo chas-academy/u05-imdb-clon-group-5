@@ -62,4 +62,23 @@ class WatchlistController extends Controller
         return view('watchlist', array('movies' => $movies, 'movie' => $movie));
         
     }
+
+    public function destroy($id)
+    {
+        $user_id = 9;
+        $watchlist = User::find($user_id)->watchlist;
+        $watchlistitems = Watchlistitem::where('watchlists_id', $watchlist->id)->where('movies_id', $id)->get();
+
+        for ($i=0; $i < count($watchlistitems); $i++) {
+            $watchlistitem_id = Watchlistitem::findorfail($watchlistitems[$i]->id);
+            $watchlistitem_id->delete();
+        }
+
+        // $watchlistitem_id = Watchlistitem::findorfail($watchlistitems[0]->id);
+        // dd($watchlistitem_id);
+
+        // $watchlistitem = Watchlistitem::findorfail($id);
+        // $watchlistitems->delete();
+        return redirect('watchlist');
+    }
 }

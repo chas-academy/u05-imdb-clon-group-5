@@ -7,8 +7,8 @@ use App\Models\User;
 
 class UserController extends Controller
 {
-    public function show() {
-        $movies = User::all()->watchlist()-get();
-        dd($movies);
-    }
+    // public function show() {
+    //     $movies = User::all()->watchlist()-get();
+    //     dd($movies);
+    // }
 }

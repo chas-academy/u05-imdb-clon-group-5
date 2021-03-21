@@ -19,6 +19,10 @@ Route::get('/', function () {
     return view('index');
 });
 
+Route::get('/movies', function () {
+    return view('movies');
+});
+
 Route::get('/login-user', function () {
     return view('login-user');
 });
@@ -27,10 +31,15 @@ Route::get('/register', function () {
     return view('register');
 });
 
+Route::get('/genre', function () {
+    return view('genre');
+});
+
 
 
 
 Route::get('/', [MovieController::class, 'movieCarousel']);
+
 
 Route::get('/movie-info', function () {
     return view('movie-info');

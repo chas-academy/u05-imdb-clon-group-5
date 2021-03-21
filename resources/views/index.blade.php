@@ -46,7 +46,7 @@
 
 
 
-<div class="ml-2">
+ <div class="ml-2">
 <h1 class="font-bold text-4xl font-inter text-red-500  sm:text-5xl">Featured</h1>
 <h1 id="scroll-down" class="text-white text-4xl font-inter sm:text-5xl">
     <span class="font-bold">Now</span>
@@ -60,13 +60,13 @@
     <h1 class="text-white text-4xl font-inter sm:text-5xl">
         <span class="font-bold uppercase">movies</span>
          </h1>
-    </div>
-    <x-img-carousel data="1" :movies="$movies"/>
+    </div> 
+    <x-img-carousel data="3" :movies="$movies"/>
+
     
 
     
-    
-    <x-img-carousel data="2" :movies="$movies"/>   
+
 </div>
 
 

@@ -36,6 +36,14 @@ class Review extends Model
     |--------------------------------------------------------------------------
     */
 
+    public function movie() {
+        return $this->belongsTo('App\Models\Movie', 'reviews', 'user_id', 'movie_id');
+    }
+
+    public function user(){
+        return $this->belongsTo('App\Models\User');
+    }
+
     /*
     |--------------------------------------------------------------------------
     | SCOPES

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Movie;
+use App\Models\Review;
 use App\Models\Watchlist;
 use App\Models\Watchlistitem;
 use Illuminate\Support\Facades\Auth;
@@ -12,7 +13,7 @@ use Illuminate\Support\Facades\Auth;
 
 class WatchlistController extends Controller
 {
-    public function show(Request $request)
+    public function show()
     {
         $user_id = 9;
         // $id = null;
@@ -59,7 +60,11 @@ class WatchlistController extends Controller
         
         // dd($movie);
 
-        return view('watchlist', array('movies' => $movies, 'movie' => $movie));
+        $reviews = User::find($user_id)->review;
+        
+        
+
+        return view('watchlist', array('movies' => $movies, 'movie' => $movie, 'reviews' => $reviews));
         
     }
 

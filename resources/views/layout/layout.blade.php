@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="css/glide.core.css">
     <link rel="stylesheet" href="css/glide.theme.css">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    {{-- <script defer src="{{ asset('js/code.js')}}"></script> --}}
     <script defer src="{{ asset('js/glide.js')}}"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
  

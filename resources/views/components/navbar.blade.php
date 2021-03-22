@@ -101,52 +101,6 @@
 
                         </div>
 
-                        <!-- Styling for the hover slides -->
-                        <style>
-                            .containerx {
-                                /* display:flex;
-                            items-center
-                            justify-content: center; */
-                                position: relative;
-                            }
-
-                            .imagex {
-                                display: block;
-                                width: 100%;
-                                height: auto;
-                            }
-
-                            .overlayx {
-                                position: absolute;
-                                bottom: 0;
-                                left: 100%;
-                                right: 0;
-                                /* background-color:rgba(31, 41, 55, var(--tw-bg-opacity));  */
-                                overflow: hidden;
-                                width: 0;
-                                height: 100%;
-                                transition: .5s ease;
-                                display: block;
-                            }
-
-                            .containerx:hover .overlayx {
-                                width: 100%;
-                                left: 0;
-                            }
-
-                            .textx {
-                                color: white;
-                                font-size: 20px;
-                                position: absolute;
-                                top: 50%;
-                                left: 50%;
-                                -webkit-transform: translate(-50%, -50%);
-                                -ms-transform: translate(-50%, -50%);
-                                transform: translate(-50%, -50%);
-                                white-space: nowrap;
-                            }
-                        </style>
-
                         <!-- Search nav open -->
 
                         <div class="p-2 w-full justify-center inline-flex ml-3" style="margin-top: 3rem;padding-left: 2rem;left: 50%;margin-left: -0.75rem;">
@@ -175,17 +129,6 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- JS for nav -->
-                <script>
-                    function openNav() {
-                        document.getElementById("myNav").style.height = "100%";
-                    }
-
-                    function closeNav() {
-                        document.getElementById("myNav").style.height = "0%";
-                    }
-                </script>
 
             </div>
         </header>

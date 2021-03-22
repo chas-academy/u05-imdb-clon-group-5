@@ -60,7 +60,7 @@
         
 
 
-
+@include('explore') 
 @endsection
 
 

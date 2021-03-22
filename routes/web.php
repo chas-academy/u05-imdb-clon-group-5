@@ -19,8 +19,8 @@ Route::get('/', function () {
     return view('index');
 });
 
-
-
+ //explore
+Route::get('/explore', [mainController::class, 'mInfo']);
 
 
 

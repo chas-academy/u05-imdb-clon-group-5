@@ -8,8 +8,13 @@
 ///////////////////////////////////////////////////////////////////
 namespace App\Http\Controllers;
 
+use App\Models\Genre;
+use App\Models\GenreMovie;
+use App\Models\Movie;
 use Illuminate\Http\Request;
 use App\Models\User;
+use Illuminate\Support\Arr;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 
 class mainController extends Controller
@@ -76,6 +81,16 @@ class mainController extends Controller
             session()->pull('LoggedUser');
             return redirect('login');
         }
+    }
+    //explore
+    function mInfo() {
+        
+        $infoMovies = DB::select('  SELECT movies.title,  genre_movie.genre_id
+                                    FROM movies
+                                    JOIN genre_movie
+                                    ON movies.id = genre_movie.id
+                                    WHERE genre_movie.genre_id=1');
+        return view('explore', ['infoMovies' => $infoMovies]);
     }
 
     //WARNING!!

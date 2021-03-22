@@ -16,7 +16,8 @@
 </head>
 
 <body class="bg-midnight-500">
-    {{-- add navigation here --}}
+@component('components.navbar')
+@endcomponent
     <div class=" max-w-screen-xl m-auto">
 
        

@@ -11,6 +11,13 @@
       'Widget' => 'Backpack\\CRUD\\app\\Library\\Widget',
     ),
   ),
+  'backpack/generators' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Backpack\\Generators\\GeneratorsServiceProvider',
+    ),
+  ),
   'creativeorange/gravatar' => 
   array (
     'providers' => 
@@ -45,6 +52,13 @@
     'providers' => 
     array (
       0 => 'Fruitcake\\Cors\\CorsServiceProvider',
+    ),
+  ),
+  'laracasts/generators' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Laracasts\\Generators\\GeneratorsServiceProvider',
     ),
   ),
   'laravel/sail' => 

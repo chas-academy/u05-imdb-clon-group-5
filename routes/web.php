@@ -19,8 +19,14 @@ Route::get('/', function () {
     return view('index');
 });
 
- //explore
-Route::get('/explore', [mainController::class, 'mInfo']);
+Route::get('/login-user', function () {
+    return view('login-user');
+});
+
+Route::get('/register', function () {
+    return view('register');
+});
+
 
 
 

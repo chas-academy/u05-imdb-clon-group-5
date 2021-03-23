@@ -1,6 +1,8 @@
 @extends('layout/layout')
 @section('content')
 
+<div class="mt-8">
+
 
  <video class="w-full" controls src="../img/thedig.mp4"></video> 
 
@@ -27,6 +29,7 @@
 
     @include('choosegenre')
 
+</div>
 
 
 @endsection

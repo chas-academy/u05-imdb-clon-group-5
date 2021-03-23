@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,26 +18,25 @@
 </head>
 
 <body class="bg-midnight-500">
-@component('components.navbar')
-@endcomponent
-    <div class=" max-w-screen-xl m-auto">
+    <x-navbar/>
+    <div class="max-w-screen-xl m-auto">
 
-       
-    @yield('content')  
 
-  
-</div>
- 
+        @yield('content')
 
-   
-    
-  
 
- 
-     <x-footer_component/>
-  
+    </div>
 
-  
+
+
+
+
+
+
+    <x-footer_component/>
+
+
+
 </body>
-</html>
 
+</html>

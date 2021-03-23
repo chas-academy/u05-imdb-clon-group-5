@@ -19,10 +19,6 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/navigation', function () {
-    return view('navigation');
-});
-
 Route::get('/login-user', function () {
     return view('login-user');
 });
@@ -30,7 +26,6 @@ Route::get('/login-user', function () {
 Route::get('/register', function () {
     return view('register');
 });
-
 
 
 

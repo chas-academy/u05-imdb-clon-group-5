@@ -1,4 +1,6 @@
 
+
+
 <div class="glide">
     <div class="glide__arrows" data-glide-el="controls">
         <button class="glide__arrow glide__arrow--left text-8xl" data-glide-dir="<">&#139</button>
@@ -15,7 +17,7 @@
                 @if ($moviedata == 1 and $movie->rating >= 7 )
           
                 <li class="glide__slide">
-                    <a href="#"><img src="{{$movie->img}}"/></a>
+                    <a href="#"><img class="w-36 h-48" src="{{$movie->img}}"/></a>
                 </li>   
 
 

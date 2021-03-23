@@ -41,6 +41,7 @@ Route::get('/', [MovieController::class, 'movieCarousel']);
 
 
 
+
 Route::get('/movie-info', function () {
     return view('movie-info');
 });

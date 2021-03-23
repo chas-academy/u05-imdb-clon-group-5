@@ -27,7 +27,7 @@ Route::get('/register', function () {
     return view('register');
 });
 
-
+Route::get('/search/', 'SearchController@search')-name('search');
 
 Route::get('/', [MovieController::class, 'movieCarousel']);
 

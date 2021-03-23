@@ -34,7 +34,6 @@ Route::get('/genre', function () {
 });
 
 
-
 Route::get('/', [MovieController::class, 'movieCarousel']);
 
 

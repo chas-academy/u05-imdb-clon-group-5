@@ -445,7 +445,7 @@ class MoviesTableSeeder extends Seeder
             'year' => 2021,
             'runtime' => 01.49,
             'release_date'  => '2021-02-12',
-            'img' => 'https://lh3.googleusercontent.com/proxy/ji9M-bLH-X6wsd4FfkyN_MY1diZ2TrViGeXqebxFpJp7KvaXznyHHcxRklaWdXgnb7x1WR6eifAoPR7XyjU3W5jwUXkGH6E85_JpudAtAu1-hQ',
+            'img' => 'https://images-na.ssl-images-amazon.com/images/I/817WzLEQtqL._SY606_.jpg',
             'featured' => 0,
         ]);
         DB::table('movies')->insert([
@@ -481,7 +481,7 @@ class MoviesTableSeeder extends Seeder
             'year' => 2021,
             'runtime' => 01.55,
             'release_date'  => '2021-03-03',
-            'img' => 'https://img.moviepostershop.com/minari-movie-poster-2021-1000780669.jpg',
+            'img' => 'https://media-cache.cinematerial.com/p/500x/30rje07p/minari-movie-poster.jpg?v=1601479163',
             'featured' => 0,
         ]);
         DB::table('movies')->insert([
@@ -649,7 +649,7 @@ class MoviesTableSeeder extends Seeder
             'year' => 2017,
             'runtime' => 02.21,
             'release_date'  => '2017-06-02',
-            'img' => 'https://img.moviepostershop.com/wonder-woman-movie-poster-2017-1020777371.jpg',
+            'img' => 'https://cdn11.bigcommerce.com/s-ydriczk/images/stencil/original/products/88197/90726/Wonder-Woman-Advance-Style-B-Wonder-Poster-buy-original-movie-posters-at-starstills__91230.1494347007.jpg?c=2',
             'featured' => 0,
         ]);
         DB::table('movies')->insert([
@@ -1021,7 +1021,7 @@ class MoviesTableSeeder extends Seeder
             'year' => 2015,
             'runtime' => 01.55,
             'release_date'  => '2015-06-26',
-            'img' => 'https://lh3.googleusercontent.com/proxy/pR-uKfk6SyC4wLUxf3MnJQaD6aPteS7UJAg7P1lRTMRxreJWDcjqmye5uql83OEn7SZeswyG6lSFJEM_-7h6geSnPv1Exuy2O4yHnuIs',
+            'img' => 'https://m.media-amazon.com/images/M/MV5BMjEwMDg3MDk1NF5BMl5BanBnXkFtZTgwNjYyODA1NTE@._V1_.jpg',
             'featured' => 0,
         ]);
         DB::table('movies')->insert([
@@ -1165,7 +1165,7 @@ class MoviesTableSeeder extends Seeder
             'year' => 2019,
             'runtime' => 01.37,
             'release_date'  => '2019-12-27',
-            'img' => 'https://lh3.googleusercontent.com/proxy/XNgRlYEUQ74OaNfVQplwHcdATt4jQ0pfnmVNYG5ysRJB2FGDZjttM9pIBLibeAGTsJCHoRkPNRHYzWZyRON4x6u353r67k34cau495XrQOT3',
+            'img' => 'https://m.media-amazon.com/images/M/MV5BZThhM2Y1NjItMGE1NS00NWQ4LTliM2ItZDA5ZDNjYjk0YTE0XkEyXkFqcGdeQXVyMzQwMTY2Nzk@._V1_.jpg',
             'featured' => 0,
         ]);
         DB::table('movies')->insert([
@@ -1297,7 +1297,7 @@ class MoviesTableSeeder extends Seeder
             'year' => 2019,
             'runtime' => 02.49,
             'release_date'  => '2019-09-06',
-            'img' => 'https://lh3.googleusercontent.com/proxy/D3VhP4uDaC57AWOgDKVHaFiQ_xMQQ5prthtET8Plp2TtgmfyxAj340HsFjkWTC3Ef1SImCJtJ78L98rYFYCnorTcCUeOZW78oCNe6k07fIcrYkSQPvOztjzv',
+            'img' => 'https://m.media-amazon.com/images/M/MV5BYTJlNjlkZTktNjEwOS00NzI5LTlkNDAtZmEwZDFmYmM2MjU2XkEyXkFqcGdeQXVyNjg2NjQwMDQ@._V1_.jpg',
             'featured' => 0,
         ]);
         DB::table('movies')->insert([

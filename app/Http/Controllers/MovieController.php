@@ -7,10 +7,14 @@ use Illuminate\Http\Request;
 
 class MovieController extends Controller
 {
-
-   public function movieCarousel()
+   public function movies()
    {
       $movies = DB::select('select * from movies');
-      return view('index', ['movies' => $movies]);
+      return $movies;
+   }
+   public function movieCarousel()
+   {
+      $moviesFromDB = $this->movies();
+      return view('index', ['movies' => $moviesFromDB]);
    }
 }

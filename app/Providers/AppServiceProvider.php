@@ -2,10 +2,12 @@
 
 namespace App\Providers;
 
+
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\Facades\DB;
+
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -26,7 +28,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $movies = DB::select('select * from movies');
+        $movies = DB::table('movies')->get();
         View::share('movies', $movies);
     }
 }

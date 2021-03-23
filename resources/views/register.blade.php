@@ -34,12 +34,12 @@
             <div class="flex items-center justify-between mt-4">
                 <span class="w-1/5 border-b dark:border-gray-600 lg:w-1/4"></span>
 
-                <a href="#" class="text-xs text-center text-gray-500 uppercase dark:text-gray-400 hover:underline">Log In</a>
+                <a href="#" class="text-xs text-center text-gray-500 uppercase dark:text-gray-400 hover:underline">REGISTER</a>
 
                 <span class="w-1/5 border-b dark:border-gray-400 lg:w-1/4"></span>
             </div>
 
-            <form action="{{ route('check') }}" method="post">
+            <form action="{{ route('save') }}" method="post">
                 <div class="results">
                     @if (Session::get('success'))
                         <div class="alert alert-success">
@@ -55,6 +55,17 @@
                 </div>
 
                 @csrf
+
+                <div class="mt-4">
+                    <label class="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-200">Name</label>
+                    <input type="text" class="block w-full px-4 py-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring" name="name" value="{{ old('name') }}" placeholder="Your Name">
+                </div>
+
+                <div class="px-4 py-2 -mx-3">
+                    <div class="mx-3">
+                        <span class="font-semibold text-red-500 dark:text-red-400"><p class="text-sm text-gray-600 dark:text-gray-200">@error('name') {{ $message }} @enderror</p></span>
+                    </div>
+                </div>
 
                 <div class="mt-4">
                     <label class="block mb-2 text-sm font-medium text-gray-600 dark:text-gray-200">Email</label>
@@ -79,7 +90,7 @@
                 </div>
 
                 <div class="mt-8">
-                    <button type="submit" class="w-full px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-gray-700 rounded hover:bg-gray-600 focus:outline-none focus:bg-gray-600">Sign In</button>
+                    <button type="submit" class="w-full px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-gray-700 rounded hover:bg-gray-600 focus:outline-none focus:bg-gray-600">Sign Up</button>
                 </div>
             </form>
 

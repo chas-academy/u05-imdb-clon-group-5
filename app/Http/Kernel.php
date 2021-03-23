@@ -62,6 +62,8 @@ class Kernel extends HttpKernel
         'auth' => \App\Http\Middleware\Authenticate::class,
         //I just added authCheck here for session reasons.
         'authCheck' => \App\Http\Middleware\authCheck::class,
+        'isLogged' => \App\Http\Middleware\authCheck::class,
+        'loggedIn' => \App\Http\Middleware\loggedIn::class,
 
         'auth.basic' => \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
         'cache.headers' => \Illuminate\Http\Middleware\SetCacheHeaders::class,

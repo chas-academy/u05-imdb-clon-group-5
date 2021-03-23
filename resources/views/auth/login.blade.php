@@ -34,7 +34,7 @@
             <div class="flex items-center justify-between mt-4">
                 <span class="w-1/5 border-b dark:border-gray-600 lg:w-1/4"></span>
 
-                <a href="#" class="text-xs text-center text-gray-500 uppercase dark:text-gray-400 hover:underline">Log In</a>
+                <a href="#" class="text-xs text-center text-gray-500 uppercase dark:text-gray-400 hover:underline">REGISTER</a>
 
                 <span class="w-1/5 border-b dark:border-gray-400 lg:w-1/4"></span>
             </div>
@@ -91,3 +91,31 @@
     </div>
 @endsection
 
+                        <h4>Login</h4>
+                        <form action="{{ route('check') }}" method="post">
+                        @csrf
+                        <div class="results">
+                            @if(Session::get('fail'))
+                                <div class="alert alert-danger">
+                                    {{ Session::get('fail') }}
+                                </div>
+                            @endif
+                        </div>
+                            <div class="form-group">
+                                <label>Email</label>
+                                <input type="text" class="form-control" name="email" value="{{ old('email') }}" placeholder="Your Email">
+                                <span class="text-danger">
+                                    @error('email') {{ $message }} @enderror
+                                </span>
+                            </div>
+                            <div class="form-group">
+                                <label>Password</label>
+                                <input type="password" class="form-control" name="password" placeholder="******">
+                                <span class="text-danger">
+                                    @error('password') {{ $message }} @enderror
+                                </span>
+                            </div>
+                            <button type="submit" class="btn btn-block btn-primary">Sign In</button>
+                            <br>
+                            <a href="/register">I don't have any account, create new</a>
+                        </form>

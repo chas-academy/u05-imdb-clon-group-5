@@ -19,17 +19,27 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/login-user', function () {
-    return view('login-user');
+Route::get('/movies', function () {
+    return view('movies');
 });
+
+
 
 Route::get('/register', function () {
     return view('register');
 });
 
+Route::get('/genre', function () {
+    return view('genre');
+});
 
 
 Route::get('/', [MovieController::class, 'movieCarousel']);
+
+
+
+
+
 
 Route::get('/movie-info', function () {
     return view('movie-info');
@@ -44,19 +54,21 @@ Route::post('/check', [mainController::class, 'check'])->name('check');
 Route::get('logout', [mainController::class, 'logout'])->name('logout');
 
 //AuthCheck controller..
-Route::group(['middleware' => ['authCheck']], function () {
+/* Route::group(['middleware' => ['authCheck']], function () { */
 
-    //Here should we add all files to force the user to be logged in.
-    //Remeber to update authCheck middleware (only the pages located here)!!
-    Route::get('/login',    [mainController::class, 'login'])->name('login');
-    Route::get('/register', [mainController::class, 'register'])->name('register');
+//Here should we add all files to force the user to be logged in.
+//Remeber to update authCheck middleware (only the pages located here)!!
 
-    //User Panel
-    Route::get('/user',     [mainController::class, 'profile']);
-    Route::get('/user/settings',    [mainController::class, 'settings']);
-    Route::get('/user/mywatchs',    [mainController::class, 'mywatchs']);
-    Route::get('/user/myratings',   [mainController::class, 'myratings']);
-    Route::get('/user/mymovies',    [mainController::class, 'mymovies']);
+Route::get('/login', [mainController::class, 'login'])->name('login');
+Route::get('/register', [mainController::class, 'register'])->name('register');
+
+//User Panel
+Route::get('/user',     [mainController::class, 'profile']);
+Route::get('/user/settings',    [mainController::class, 'settings']);
+Route::get('/user/mywatchs',    [mainController::class, 'mywatchs']);
+Route::get('/user/myratings',   [mainController::class, 'myratings']);
+Route::get('/user/mymovies',    [mainController::class, 'mymovies']);
     //More user pages to add...
 
-});
+/* });
+ */

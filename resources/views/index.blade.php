@@ -61,7 +61,7 @@
         <span class="font-bold uppercase">movies</span>
          </h1>
     </div> 
-    <x-img-carousel data="3" :movies="$movies"/>
+    <x-img-carousel data="1" :movies="$movies"/>
 
     
 

@@ -1,12 +1,5 @@
 
 
-  
-   
-
-    
-    
-
-                
 
 <div class="glide">
     <div class="glide__arrows" data-glide-el="controls">
@@ -24,59 +17,32 @@
                 @if ($moviedata == 1 and $movie->rating >= 7 )
           
                 <li class="glide__slide">
-                    
-                        <a href="#"><img src="{{$movie->img}}"/></a>
-                   
+                    <a href="#"><img class="w-36 h-48" src="{{$movie->img}}"/></a>
                 </li>   
 
 
-
-
-
-
-            
                 {{-- Check if we are sending variabel from to the component
                     show featured movies this is all movies at this point --}}
                 @elseif($moviedata == 2 and $movie->featured == 1)
-            
                 <li class="glide__slide">
                     <div class="bg-midnight-800 w-36 min-w-max text-center font-bold text-white">
                         <a href="#"><img class="w-36 h-48" src="{{$movie->img}}"/></a>
-                     
+                        
                     </div> 
                 </li>   
               
-                     
-                
-              
-                          
-
-
-                       
-                        
-
-
-
-
-
-
+    
                 {{-- Check if we are sending variabel from to the component
                     show only movie img --}}
                 @elseif($moviedata == 3)
-                     {{-- <div class="imgSlide bg-midnight-800   min-w-max relative left-0 text-center font-bold my-3 mr-4 text-white duration-75">
-                        <img class="w-36 h-48" src="{{$movie->img}}"> 
-                    
-                    </div>  --}}
-                  
                     <li class="glide__slide">
                         <div class="bg-midnight-800 w-36 min-w-max text-center font-bold text-white">
                             <a href="#"><img class="w-36 h-48" src="{{$movie->img}}"/></a>
-                         
                         </div> 
                     </li>   
 
                 @endif
-
+               
                 @endforeach
 
             </ul>

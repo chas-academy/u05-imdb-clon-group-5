@@ -7,7 +7,7 @@
 -->
 
 <nav class="font-sans bg-gray-900 text-white">
-    <div class="container mx-auto border-b bg-gray-800 border-gray-800 p-0.25">
+    <div class="container mx-auto border-b bg-gray-900 border-gray-900 p-0.25">
         <!-- style="max-width: 64rem; -->
         <header class="h-16">
             <div class="container w-full flex items-center justify-between md:h-1" style="height: 3.5rem" ;>
@@ -60,7 +60,7 @@
                         <div class="lg:mt-24 md:10">
 
                             <div class="containerx mt-7">
-                                <a class="imagex p-2 no-underline text-4xl lg:text-6xl text-white block duration-75 hover:bg-gray-800 focus:ring-gray-200top-1 right-2 lg:mb-2 md:mb-1 sm:mb-1 xl:text-8xl" href="#">Movies
+                                <a class="imagex p-2 no-underline text-4xl lg:text-6xl text-white block duration-75 hover:bg-gray-800 focus:ring-gray-200top-1 right-2 lg:mb-2 md:mb-1 sm:mb-1 xl:text-8xl" href="/movies">Movies
                                     <div class="hidden sm:hidden lg:flex overlayx">
                                         <div class="hidden sm:hidden lg:flex textx">
                                             <img class="" src="./img/movies-hover.svg" alt="movies-hover-frame" title="movies-hover-frame">

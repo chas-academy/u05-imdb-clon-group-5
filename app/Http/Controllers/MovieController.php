@@ -14,7 +14,11 @@ class MovieController extends Controller
    }
    public function movieCarousel()
    {
+
+      $infoMovies = DB::select('  SELECT * FROM movies LIMIT 12');
+      $watchlist = DB::select('  SELECT * from watchlistitems join movies on watchlistitems.movies_id=movies.id limit 12');
+
       $moviesFromDB = $this->movies();
-      return view('index', ['movies' => $moviesFromDB]);
+      return view('index', ['movies' => $moviesFromDB, 'infoMovies' => $infoMovies, 'watchlist' => $watchlist]);
    }
 }

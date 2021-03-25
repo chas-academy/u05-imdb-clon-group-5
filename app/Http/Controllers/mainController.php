@@ -8,8 +8,13 @@
 ///////////////////////////////////////////////////////////////////
 namespace App\Http\Controllers;
 
+use App\Models\Genre;
+use App\Models\GenreMovie;
+use App\Models\Movie;
 use Illuminate\Http\Request;
 use App\Models\User;
+use Illuminate\Support\Arr;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 
 class mainController extends Controller
@@ -82,6 +87,7 @@ class mainController extends Controller
             return redirect('login');
         }
     }
+
 
     //WARNING!!
     //Remember all functions added here are the ones inside web authCheck!

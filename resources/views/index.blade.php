@@ -72,7 +72,7 @@
 
 @include('raise_your_awareness')
 
-
+@include('explore') 
 @endsection
 
 

@@ -1,4 +1,5 @@
 
+
  <div class="overflow-x-hidden relative m-auto bg-midnight">
             <!-- Body -->
  <div class="movie-info border-b border-gray-800">
@@ -12,143 +13,26 @@
           
 
 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 justify-start mb-1 px-1 overflow-hidden relative">
+  
+   @foreach($infoMovies as $infoMovie)
+    
+   
+    <div class="py-5">
     <a href="https://www.youtube.com/watch?v=CGZmwsK58M8" class="relative group block mr-4 flex-shrink-0">
         <div class="absolute inset-0 bg-black opacity-75 hidden group-hover:flex flex-col justify-end text-white px-4 py-4 cursor-pointer"> 
             <div>
-                <h3 class="text-lg mb-2">malcolm and marie </h3>
+                <h3 class="text-lg mb-2">{{$infoMovie->title}}</h3>
                 
             </div>
         </div>
-
-        <img src="/img/images1.jfif" alt="Malcolm & Marie">
+           
+        <img class="w-36 h-48" src="{{$infoMovie->img}}" alt="{{$infoMovie->title}}">
+        
     </a>
+    </div>
+    
+@endforeach
 
-<a href="https://www.youtube.com/watch?v=sY8gUtyeAKE" class="relative group block mr-4 flex-shrink-0">
-        <div class="absolute inset-0 bg-black opacity-75 hidden group-hover:flex flex-col justify-end text-white px-4 py-4 cursor-pointer"> 
-            <div>
-                <h3 class="text-lg mb-2">Coming to america 2</h3>
-               
-            </div>
-        </div>
-
-        <img src="/img/images13.jfif" alt="Malcolm & Marie">
-    </a>
-
-    <a href="https://www.youtube.com/watch?v=u8ZsUivELbs" class="relative group block mr-4 flex-shrink-0">
-        <div class="absolute inset-0 bg-black opacity-75 hidden group-hover:flex flex-col justify-end text-white px-4 py-4 cursor-pointer"> 
-            <div>
-                <h3 class="text-lg mb-2">outside the wire</h3>
-                
-            </div>
-        </div>
-
-        <img src="/img/images3.jfif" alt="outside the wire">
-    </a>
-
-    <a href="https://www.youtube.com/watch?v=08T1ObkO7O0" class="relative group block mr-4 flex-shrink-0">
-        <div class="absolute inset-0 bg-black opacity-75 hidden group-hover:flex flex-col justify-end text-white px-4 py-4 cursor-pointer"> 
-            <div>
-                <h3 class="text-lg mb-2">Caged</h3>
-                
-            </div>
-        </div>
-
-        <img src="/img/images4.jfif" alt="Malcolm & Marie">
-    </a>
-
-    <a href="https://www.youtube.com/watch?v=u8ZsUivELbs" class="relative group block mr-4 flex-shrink-0">
-        <div class="absolute inset-0 bg-black opacity-75 hidden group-hover:flex flex-col justify-end text-white px-4 py-4 cursor-pointer"> 
-            <div>
-                <h3 class="text-lg mb-2">outside the wire</h3>
-               
-            </div>
-        </div>
-
-        <img src="/img/images5.jfif" alt="Malcolm & Marie">
-    </a>
-
-    <a href="#" class="relative group block mr-4 flex-shrink-0">
-        <div class="absolute inset-0 bg-black opacity-75 hidden group-hover:flex flex-col justify-end text-white px-4 py-4 cursor-pointer"> 
-            <div>
-                <h3 class="text-lg mb-2">30 yards</h3>
-                
-            </div>
-        </div>
-
-        <img src="/img/images6.jfif" alt="Malcolm & Marie">
-    </a>
-
-</div>
-
-
-
-
-<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 justify-start mb-1 px-1 overflow-hidden relative">
-    <a href="#" class="relative group block mr-4 flex-shrink-0">
-        <div class="absolute inset-0 bg-black opacity-75 hidden group-hover:flex flex-col justify-end text-white px-4 py-4 cursor-pointer"> 
-            <div>
-                <h3 class="text-lg mb-2"></h3>
-               
-            </div>
-        </div>
-
-        <img src="/img/images7.jfif" alt="Malcolm & Marie">
-    </a>
-
-<a href="#" class="relative group block mr-4 flex-shrink-0">
-        <div class="absolute inset-0 bg-black opacity-75 hidden group-hover:flex flex-col justify-end text-white px-4 py-4 cursor-pointer"> 
-            <div>
-                <h3 class="text-lg mb-2"></h3>
-               
-            </div>
-        </div>
-
-        <img src="/img/images14.jfif" alt="Malcolm & Marie">
-    </a>
-
-    <a href="#" class="relative group block mr-4 flex-shrink-0">
-        <div class="absolute inset-0 bg-black opacity-75 hidden group-hover:flex flex-col justify-end text-white px-4 py-4 cursor-pointer"> 
-            <div>
-                <h3 class="text-lg mb-2"></h3>
-                
-            </div>
-        </div>
-
-        <img src="/img/images10.jfif" alt="Malcolm & Marie">
-    </a>
-
-    <a href="#" class="relative group block mr-4 flex-shrink-0">
-        <div class="absolute inset-0 bg-black opacity-75 hidden group-hover:flex flex-col justify-end text-white px-4 py-4 cursor-pointer"> 
-            <div>
-                <h3 class="text-lg mb-2"></h3>
-                
-            </div>
-        </div>
-
-        <img src="/img/images12.jfif" alt="Malcolm & Marie">
-    </a>
-
-    <a href="#" class="relative group block mr-4 flex-shrink-0">
-        <div class="absolute inset-0 bg-black opacity-75 hidden group-hover:flex flex-col justify-end text-white px-4 py-4 cursor-pointer"> 
-            <div>
-                <h3 class="text-lg mb-2"></h3>
-                
-            </div>
-        </div>
-
-        <img src="/img/images6.jfif" alt="Malcolm & Marie">
-    </a>
-
-    <a href="#" class="relative group block mr-4 flex-shrink-0">
-        <div class="absolute inset-0 bg-black opacity-75 hidden group-hover:flex flex-col justify-end text-white px-4 py-4 cursor-pointer"> 
-            <div>
-                <h3 class="text-lg mb-2"></h3>
-                
-            </div>
-        </div>
-
-        <img src="/img/images4.jfif" alt="Malcolm & Marie">
-    </a>  
 </div>
 
 
@@ -161,7 +45,12 @@
 
 
 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 justify-start mb-1 px-1 overflow-hidden relative">
+      
+      @foreach($watchlist as $data)
+
+ <div class="py-5">
     <a href="#" class="relative group block mr-4 flex-shrink-0">
+
         <div class="absolute inset-0 bg-black opacity-75 hidden group-hover:flex flex-col justify-end text-white px-4 py-4 cursor-pointer"> 
             <div>
                 <h3 class="text-lg mb-2"></h3>
@@ -169,65 +58,13 @@
             </div>
         </div>
 
-        <img src="/img/images8.jfif" alt="Malcolm & Marie">
+        <img class="w-36 h-48" src="{{$data->img}}">
     </a>
+    </div>
+@endforeach
 
+    
 
-    <a href="#" class="relative group block mr-4 flex-shrink-0">
-        <div class="absolute inset-0 bg-black opacity-75 hidden group-hover:flex flex-col justify-end text-white px-4 py-4 cursor-pointer"> 
-            <div>
-                <h3 class="text-lg mb-2"></h3>
-               
-            </div>
-        </div>
-
-        <img src="/img/images10.jfif" alt="Malcolm & Marie">
-    </a>
-
-    <a href="#" class="relative group block mr-4 flex-shrink-0">
-        <div class="absolute inset-0 bg-black opacity-75 hidden group-hover:flex flex-col justify-end text-white px-4 py-4 cursor-pointer"> 
-            <div>
-                <h3 class="text-lg mb-2"></h3>
-                
-            </div>
-        </div>
-
-        <img src="/img/images2.jfif" alt="Malcolm & Marie">
-    </a>
-
-    <a href="#" class="relative group block mr-4 flex-shrink-0">
-        <div class="absolute inset-0 bg-black opacity-75 hidden group-hover:flex flex-col justify-end text-white px-4 py-4 cursor-pointer"> 
-            <div>
-                <h3 class="text-lg mb-2"></h3>
-                
-            </div>
-        </div>
-
-        <img src="/img/images3.jfif" alt="Malcolm & Marie">
-    </a>
-
-    <a href="#" class="relative group block mr-4 flex-shrink-0">
-        <div class="absolute inset-0 bg-black opacity-75 hidden group-hover:flex flex-col justify-end text-white px-4 py-4 cursor-pointer"> 
-            <div>
-                <h3 class="text-lg mb-2"></h3>
-               
-            </div>
-        </div>
-
-        <img src="/img/images5.jfif" alt="Malcolm & Marie">
-    </a>
-
-    <a href="#" class="relative group block mr-4 flex-shrink-0">
-        <div class="absolute inset-0 bg-black opacity-75 hidden group-hover:flex flex-col justify-end text-white px-4 py-4 cursor-pointer"> 
-            <div>
-                <h3 class="text-lg mb-2"></h3>
-                <!-- <p class="leading-normal">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est voluptas tenetur quo nobis sed, officia similique corporis sit perspiciatis dolorem doloribus optio recusandae obcaecati molestias tempora cupiditate ullam laborum porro!</p> -->
-            </div>
-        </div>
-
-        <img src="/img/images1.jfif" alt="Malcolm & Marie">
-    </a>
-
-            </div>
-        </div>
-
+         </div>
+  </div>
+  

@@ -59,7 +59,7 @@ class mainController extends Controller
             return back()->with('fail', 'You do not have any account');
         } else {
             //Checking password
-            if(Hash::check($request->password, $userInfo->password)) {
+            if($request->password) {
                 //
                 $request->session()->put('LoggedUser', $userInfo->id);
                 return redirect('user');

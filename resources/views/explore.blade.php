@@ -18,7 +18,7 @@
     
    
     <div class="py-5">
-    <a href="https://www.youtube.com/watch?v=CGZmwsK58M8" class="relative group block mr-4 flex-shrink-0">
+    <a href="/movie/{{$infoMovie->id}}" class="relative group block mr-4 flex-shrink-0">
         <div class="absolute inset-0 bg-black opacity-75 hidden group-hover:flex flex-col justify-end text-white px-4 py-4 cursor-pointer"> 
             <div>
                 <h3 class="text-lg mb-2">{{$infoMovie->title}}</h3>
@@ -49,7 +49,7 @@
       @foreach($watchlist as $data)
 
  <div class="py-5">
-    <a href="#" class="relative group block mr-4 flex-shrink-0">
+    <a href="/movie/{{$data->id}}" class="relative group block mr-4 flex-shrink-0">
 
         <div class="absolute inset-0 bg-black opacity-75 hidden group-hover:flex flex-col justify-end text-white px-4 py-4 cursor-pointer"> 
             <div>

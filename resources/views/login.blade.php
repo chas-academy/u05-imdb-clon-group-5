@@ -1,39 +1,43 @@
-@extends('layout/layout')
+
+@extends('layout/layout') 
 @section('content')
-    
 
-    <div class="bg-midnight">
-    <section class="flex mt-12 justify-center">
-        <div class="m-4">
-        <h1 class="text-white font-inter text-center text-3xl sm:text-5xl lg:text-7xl">
-        Express Your Movie
-        </h1>
-        <h1 class="text-white font-poppins text-center text-3xl sm:text-5xl lg:text-7xl">Habits</h1>
+
+<h4 class="text-center mt-20 text-white font-inter text-5xl">Login</h4>
+<form class="text-white m-auto" action="{{ route('check') }}" method="post">
+@if(Session::get('fail'))
+    <div class="">
+        {{ Session::get('fail') }}
+@endif
+@csrf
+    <div class="text-center mt-20">
+        <h1 class="text-2xl mb-1">Email</h1>
+        <input type="text" class="w-96 h-9 p-2 rounded-lg text-black" name="email" value="{{ old('email') }}" placeholder="Your Email">
         
-        <img class="lg:m-auto md:w-auto" src="../img/Couch.svg">
-        
     </div>
-    </section>
+    <div class="text-center text-red-500">
+        <span>@error('email'){{ $message }} @enderror</span>
+    </div>
     
-
-        <div class="flex justify-center">
-        <a href="../admin/login" class="w-4/5 text-sm  text-center bg-blue-600 uppercase  text-white font-bold rounded-full border shadow-lg py-4 px-20 hover:bg-blue-800 transition ease-in-out duration-500 sm:w-6/12 lg:text-2xl lg:w-96">
-            login
-        </a>
+    <div class="text-center mt-5">
+        <h1 class="text-2xl mb-1">Password</h1>
+        <input type="password" class="w-96 h-9 p-2 rounded-lg text-black" name="password" placeholder="********">
+       
     </div>
-
-    
-    <div class="mt-5 mb-7 flex items-center justify-center">
-        <a href="../admin/register" class="text-xs w-4/5 text-center bg-white uppercase  text-gray-600 font-bold rounded-full border shadow-lg py-2 px-20 hover:bg-blue-100 transition ease-in-out duration-500 sm:w-6/12 lg:text-xl lg:w-96">
-        sign up
-        </a>
-        </div>
+    <div class="text-center text-red-500">
+        <span>@error('password'){{ $message }} @enderror</span>
     </div>
+   
+    <div class="text-center mt-4">
+        <button type="submit">Sign In</button>
+    </div>
+ 
+
+ 
+</form>
+<div class="text-center mt-2">
+<a class="text-white text-center" href="{{ route('register') }}">Create Account</a>
+</div>
 
 
-
-@endsection
-
-
-
-
+ @endsection

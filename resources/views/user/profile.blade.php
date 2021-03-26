@@ -21,9 +21,9 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                 {{--    <td>{{ $LoggedUserInfo['name'] }}</td>
+                                    <td>{{ $LoggedUserInfo['name'] }}</td>
                                     <td>{{ $LoggedUserInfo['email'] }}</td>
-                                    <td><a href="{{ route('logout') }}">Log Out</a></td> --}}
+                                    <td><a href="{{ route('logout') }}">Log Out</a></td>
                                 </tr>
                             </tbody>
                         </table>

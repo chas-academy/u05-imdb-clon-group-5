@@ -1,5 +1,11 @@
 <?php
 
+//////////////////////////////////////////////////////////////////
+//                                                              //
+//  - Suited for the imdb DB by Jorge                           //
+// * Run: php artisan db:seed --class="MoviesTableSeeder"       //
+//                                                              //
+//////////////////////////////////////////////////////////////////
 
 
 namespace Database\Seeders;

@@ -82,8 +82,10 @@ class mainController extends Controller
             return redirect('login');
         }
     }
+    
     //WARNING!!
     //Remember all functions added here are the ones inside web authCheck!
+    
     function profile() {
         $data = ['LoggedUserInfo'=>User::where('id','=', session('LoggedUser'))->first()];
         return view('user.profile', $data);
@@ -92,7 +94,7 @@ class mainController extends Controller
         $data = ['LoggedUserInfo'=>User::where('id','=', session('LoggedUser'))->first()];
         return view('user.settings', $data);
     }
-    //Thommi - dsjfhdsjfhdsfjs
+
     function myWatchs() {
         $data = ['LoggedUserInfo'=>User::where('id','=', session('LoggedUser'))->first()];
         return view('user.mywatchs', $data);
@@ -105,9 +107,10 @@ class mainController extends Controller
         $data = ['LoggedUserInfo'=>User::where('id','=', session('LoggedUser'))->first()];
         return view('user.mymovies', $data);
     }
-    //WARNING!!
-    //Remember all functions added here are the ones inside web authCheck!
-    //SELECT * FROM genre_movie INNER JOIN movies ON genre_movie.genre_id = movies.id ORDER BY genre_movie.genre_id DESC
+    
+    
+    //Extras
+    
     public function getInfo($id) {
         $page = DB::select("SELECT  movies.id,
                                     movies.title,
@@ -121,9 +124,9 @@ class mainController extends Controller
                                     INNER JOIN genre_movie ON genre_movie.movie_id = movies.id
                                     INNER JOIN genres ON genre_movie.genre_id = genres.id WHERE movies.id = $id
                                     GROUP BY movies.id, movies.title, movies.year");
-        // dd($page);
         return view('movie', array('page' => $page));
     }
+    
     public function getGenre($id) {
         $genreList  =   DB::select('SELECT  movies.id,
                                             movies.title,
@@ -133,7 +136,6 @@ class mainController extends Controller
                                             INNER JOIN genre_movie ON genre_movie.movie_id = movies.id
                                             INNER JOIN genres ON genre_movie.genre_id = genres.id WHERE genre_movie.genre_id='.$id.'
                                             GROUP BY movies.id, movies.title, movies.img');
-        // dd($genreList);
         return view('genre', array('genreList' => $genreList));
     }
 
@@ -144,8 +146,6 @@ class mainController extends Controller
 
     function store(Request $request)
     {
-
-       // $Review = User::where('id', $id)->firstOrFail();
         $Review = new Review;
         $Review->title = $request->title;
         $Review->text = $request->text;

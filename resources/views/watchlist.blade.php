@@ -9,7 +9,7 @@
       <div class="flex text-white bg-dianne mt-4 mb-4 p-1 font-poppins gap-0.5 rounded max-w-screen-md">
         <div class="flex-1 sm:flex-none flex justify-end">
           <!-- Delete button -->
-          <form id="delete-form" action="/watchlist/{{ $movie->id }}" method="POST">
+          <form class="delete-form" action="/watchlist/{{ $movie->id }}" method="POST">
             @csrf
             @method('DELETE')        
             <input class="w-36 h-6 absolute bg-mojo font-inter text-center font-bold text-white cursor-pointer" type="submit" name="delete" value="- Watchlist">
@@ -18,7 +18,18 @@
         </div>
         <ul class="flex-1 sm:flex-auto">
           <li class="font-bold text-base">{{ $movie->title }}</li>
-          <li class="text-sm"><div class="flex items-center"><img class="object-none mx-0.5" src="../img/rating-star.png">{{ $movie->rating }}/10</div></li>
+          <li class="flex text-sm">
+            <div class="flex items-center">
+              <img class="object-none mx-0.5" src="../img/rating-star.png">{{ $movie->rating }}/10
+            </div>
+            <div class="flex items-center ml-1">
+              @foreach ($ratings as $rating)
+                @if ($rating->movies_id === $movie->id)
+                  User: <img class="object-none mx-0.5" src="../img/rating-star.png">{{ $rating->rating }}/10
+                @endif
+              @endforeach
+            </div>          
+          </li>
           <li class="text-sm line-clamp-3">{{ $movie->description }}</li>
 
           @foreach ($reviews as $review)
@@ -36,7 +47,7 @@
         @foreach ($movies as $movie)
           <div class="flex-initial relative m-0.5">
             <!-- Delete button -->
-              <form id="delete-form" action="/watchlist/{{ $movie->id }}" method="POST">
+              <form class="delete-form" action="/watchlist/{{ $movie->id }}" method="POST">
                 @csrf
                 @method('DELETE')        
                 <input class="w-36 h-6 absolute bg-mojo font-inter text-center font-bold text-white cursor-pointer" type="submit" name="delete" value="- Watchlist">

@@ -31,9 +31,11 @@ Route::get('/movies', function () {
 Route::get('/register', function () {
     return view('register');
 });
-
+Route::post('/watchlist', [WatchlistController::class, 'store']);
 Route::get('/watchlist', [WatchlistController::class, 'show']);
+
 Route::delete('/watchlist/{id}', [WatchlistController::class, 'destroy']);
+
 Route::get('/genre', function () {
     return view('genre');
 });

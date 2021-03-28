@@ -11,14 +11,31 @@ use App\Models\Watchlistitem;
 
 class WatchlistController extends Controller
 {
+    public function store(Request $request)
+    {
+        $user_id = $request->session()->get('LoggedUser');
+
+        if (null === User::find($user_id)->watchlist) {
+
+            $watchlist = new Watchlist();
+            $watchlist->user_id = $request->session()->get('LoggedUser');
+
+            $watchlist->save();
+            return redirect('watchlist');
+        }
+        
+        
+    }
+
     public function show(Request $request)
     {
         $user_id = $request->session()->get('LoggedUser');    
-        $watchlist = User::find($user_id)->watchlist;
+        $watchlist = User::find($user_id)->watchlist; 
         $watchlistitems = Watchlistitem::where('watchlists_id', $watchlist->id)->get();
         
         if ($watchlistitems->isEmpty()) {
-            return view('watchlist');
+            $movies = [];
+            return view('watchlist', array('movies' => $movies));
         } else {
             $movie = Movie::find($watchlistitems[0]->movies_id);
         }
@@ -29,8 +46,9 @@ class WatchlistController extends Controller
         }
         
         $reviews = User::find($user_id)->review;
-
-        return view('watchlist', array('movies' => $movies, 'movie' => $movie, 'reviews' => $reviews));
+        $ratings = User::find($user_id)->rating;
+        
+        return view('watchlist', array('movies' => $movies, 'movie' => $movie, 'reviews' => $reviews, 'ratings' => $ratings));
     }
 
     public function destroy(Request $request, $id)

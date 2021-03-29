@@ -31,13 +31,9 @@ class CreateMoviesTable extends Migration
             $table->timestamps();
         });
 
-        // Artisan::call('db:seed', [
-        //     '--class' => MoviesTableSeeder::class,
-        // ]);
-
-        // Artisan::call('db:seed', [
-        //     '--class' => Genre_MoviesTableSeeder::class,
-        // ]);
+        Artisan::call('db:seed', [
+            '--class' => MoviesTableSeeder::class,
+        ]);
     }
 
     /**

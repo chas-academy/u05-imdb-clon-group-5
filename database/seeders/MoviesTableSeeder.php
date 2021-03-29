@@ -60,7 +60,7 @@ class MoviesTableSeeder extends Seeder
             'year' => 2021,
             'runtime' => 00.54,
             'release_date'  => '2021-02-13',
-            'img' => 'https://m.media-amazon.com/images/M/MV5BMjEzMDAxOTUyMV5BMl5BanBnXkFtZTgwNzAxMzYzOTE@._V1_UX182_CR0,0,182,268_AL_.jpg',
+            'img' => 'https://images-na.ssl-images-amazon.com/images/I/A17sLQDQurL._AC_SL1500_.jpg',
             'featured' => 0,
             'video_url' => 'https://www.youtube.com/watch?v=b9EkMc79ZSU',
             'img' => 'https://m.media-amazon.com/images/M/MV5BMjEzMDAxOTUyMV5BMl5BanBnXkFtZTgwNzAxMzYzOTE@._V1_UX182_CR0,0,182,268_AL_.jpg'

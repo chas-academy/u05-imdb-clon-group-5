@@ -19,9 +19,12 @@ Route::get('/', function () {
     return view('index');
 });
 
-//Jag vet inte var den kommer ifrån men jag låter den kvar.
+
 Route::get('/movies', function () {
     return view('movies');
+});
+Route::get('/genre', function () {
+    return view('genre');
 });
 
 Route::get('/', [MovieController::class, 'movieCarousel']);
@@ -29,10 +32,10 @@ Route::get('/', [MovieController::class, 'movieCarousel']);
 /***************************************************************
 
     - Jorge => authCheck middleware + movie{id} + genre{id}
-        * Mehrdad => review form
-        * Tatjana => review form
+ * Mehrdad => review form
+ * Tatjana => review form
 
-***************************************************************/
+ ***************************************************************/
 
 Route::get('review', [mainController::class, 'review']);
 
@@ -53,7 +56,7 @@ Route::post('/check', [mainController::class, 'check'])->name('check');
 Route::get('logout', [mainController::class, 'logout'])->name('logout');
 
 //AuthCheck controller..
-Route::group(['middleware'=>['authCheck']], function() {
+Route::group(['middleware' => ['authCheck']], function () {
 
     //Here should we add all files to force the user to be logged in.
     //Remeber to update authCheck middleware (only the pages located here)!!
@@ -69,5 +72,3 @@ Route::group(['middleware'=>['authCheck']], function() {
     //More user pages to add...
 
 });
-
-

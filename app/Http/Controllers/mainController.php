@@ -23,15 +23,18 @@ use Illuminate\Support\Facades\Auth;
 class mainController extends Controller
 {
 
-    function login() {
+    function login()
+    {
         //
         return view('login');
     }
-    function register() {
+    function register()
+    {
         //
         return view('register');
     }
-    function save(Request $request) {
+    function save(Request $request)
+    {
         //Validating the request before sending.
         $request->validate([
             'name'      =>  'required',
@@ -39,29 +42,30 @@ class mainController extends Controller
             'password'  =>  'required|min:5|max:12'
         ]);
         $imdb = DB::table('users')
-                    ->insert([
-                        'name'      =>  $request->name,
-                        'email'     =>  $request->email,
-                        'password'  =>  Hash::make($request->password)
-                    ]);
-        if($imdb) {
+            ->insert([
+                'name'      =>  $request->name,
+                'email'     =>  $request->email,
+                'password'  =>  Hash::make($request->password)
+            ]);
+        if ($imdb) {
             //
             return redirect('user');
-        } else{
+        } else {
             //
             return back()->with('fail', 'Something went wrong, try again');
         }
     }
-    function check(Request $request) {
+    function check(Request $request)
+    {
         // return $request->input();
         $request->validate([
             'email'     =>  'required|email',
             'password'  =>  'required|min:5|max:12'
         ]);
         $userInfo   =   DB::table('users')
-                            ->where('email', $request->email)
-                            ->first();
-        if(!$userInfo) {
+            ->where('email', $request->email)
+            ->first();
+        if (!$userInfo) {
             return back()->with('fail', 'You do not have any account');
         } else {
             //Checking password
@@ -71,48 +75,62 @@ class mainController extends Controller
                 return redirect('user');
             } else {
                 //If the passsword is incorrect, then...
-                return back()->with('fail','Incorrect password');
+                return back()->with('fail', 'Incorrect password');
             }
         }
     }
-    function logout(){
+    function logout()
+    {
         //Just killing the session here :D
-        if(session()->has('LoggedUser')) {
+        if (session()->has('LoggedUser')) {
             session()->pull('LoggedUser');
             return redirect('login');
         }
     }
-    
+
     //WARNING!!
     //Remember all functions added here are the ones inside web authCheck!
-    
-    function profile() {
-        $data = ['LoggedUserInfo'=>User::where('id','=', session('LoggedUser'))->first()];
+
+    function profile()
+    {
+        $data = ['LoggedUserInfo' => User::where('id', '=', session('LoggedUser'))->first()];
         return view('user.profile', $data);
     }
-    function Settings() {
-        $data = ['LoggedUserInfo'=>User::where('id','=', session('LoggedUser'))->first()];
+    function Settings()
+    {
+        $data = ['LoggedUserInfo' => User::where('id', '=', session('LoggedUser'))->first()];
         return view('user.settings', $data);
     }
 
-    function myWatchs() {
-        $data = ['LoggedUserInfo'=>User::where('id','=', session('LoggedUser'))->first()];
+    function myWatchs()
+    {
+        $data = ['LoggedUserInfo' => User::where('id', '=', session('LoggedUser'))->first()];
         return view('user.mywatchs', $data);
     }
-    function myRatings() {
-        $data = ['LoggedUserInfo'=>User::where('id','=', session('LoggedUser'))->first()];
+    function myRatings()
+    {
+        $data = ['LoggedUserInfo' => User::where('id', '=', session('LoggedUser'))->first()];
         return view('user.myratings', $data);
     }
-    function myMovies() {
-        $data = ['LoggedUserInfo'=>User::where('id','=', session('LoggedUser'))->first()];
+    function myMovies()
+    {
+        $data = ['LoggedUserInfo' => User::where('id', '=', session('LoggedUser'))->first()];
         return view('user.mymovies', $data);
     }
-    
-    
+
+
     //Extras
-    
-    public function getInfo($id) {
-        $page = DB::select("SELECT  movies.id,
+
+    public function getInfo($id)
+    {
+        $page = Movie::findorfail($id);
+        $reviews = Review::where('movie_id', $id)->paginate(4);
+        return view('movie', array('page' => $page, 'reviews' => $reviews));
+
+
+
+
+        /*  $page = DB::select("SELECT  movies.id,
                                     movies.title,
                                     movies.director,
                                     movies.description,
@@ -123,23 +141,24 @@ class mainController extends Controller
                                     FROM movies
                                     INNER JOIN genre_movie ON genre_movie.movie_id = movies.id
                                     INNER JOIN genres ON genre_movie.genre_id = genres.id WHERE movies.id = $id
-                                    GROUP BY movies.id, movies.title, movies.year");
-        return view('movie', array('page' => $page));
+                                    GROUP BY movies.id, movies.title, movies.year"); */
     }
-    
-    public function getGenre($id) {
+
+    public function getGenre($id)
+    {
         $genreList  =   DB::select('SELECT  movies.id,
                                             movies.title,
                                             movies.img,
                                             group_concat(genres.genre) AS genre
                                             FROM movies
                                             INNER JOIN genre_movie ON genre_movie.movie_id = movies.id
-                                            INNER JOIN genres ON genre_movie.genre_id = genres.id WHERE genre_movie.genre_id='.$id.'
+                                            INNER JOIN genres ON genre_movie.genre_id = genres.id WHERE genre_movie.genre_id=' . $id . '
                                             GROUP BY movies.id, movies.title, movies.img');
         return view('genre', array('genreList' => $genreList));
     }
 
-    function review() {
+    function review()
+    {
         //
         return view('review');
     }
@@ -154,5 +173,4 @@ class mainController extends Controller
         $Review->save();
         return redirect('movie')->with('status', 'Succsess');
     }
-
 }

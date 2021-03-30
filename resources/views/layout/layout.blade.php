@@ -32,11 +32,10 @@
 
 
 
+    
+
 
     <x-footer_component/>
-
-
-
 </body>
 
 </html>

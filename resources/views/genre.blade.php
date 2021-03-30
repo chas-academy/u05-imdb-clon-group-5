@@ -48,7 +48,11 @@
 
 </div>
 
-
+<div class="mt-2">
+    <a href="/">
+        <img class="relative sm:left-1" src="../img/close_logo_x.svg" alt="close Logo" title="close Logo" style="left: 50%; margin-left: -1.5rem;">
+    </a>
+</div>
 
 
 @endsection

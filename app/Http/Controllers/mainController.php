@@ -17,6 +17,8 @@ use App\Models\Genre;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
+use App\Models\Rating;
+use App\Models\Genreitem;
 
 
 
@@ -119,29 +121,23 @@ class mainController extends Controller
     }
 
 
-    //Extras
+
 
     public function getInfo($id)
     {
         $page = Movie::findorfail($id);
         $reviews = Review::where('movie_id', $id)->paginate(4);
-        return view('movie', array('page' => $page, 'reviews' => $reviews));
+        $genres = [];
+        $genreitems = Genreitem::where('movies_id', $id)->get();
+        for ($i = 0; $i < count($genreitems); $i++) {
+            $genres[$i] = Genre::find($genreitems[$i])->first();
+        }
+        $ratings = [];
+        for ($i = 0; $i < count($reviews); $i++) {
+            $ratings[$i] = Rating::where('user_id', $reviews[$i]->user_id)->where('movies_id', $id)->first();
+        }
 
-
-
-
-        /*  $page = DB::select("SELECT  movies.id,
-                                    movies.title,
-                                    movies.director,
-                                    movies.description,
-                                    movies.writer,
-                                    movies.year,
-                                    movies.img,
-                                    group_concat(concat(' <a href=''/genre/' , genres.genre , ''' class=''hover:underline italic''>' , genres.genre , '</a>')) AS genre
-                                    FROM movies
-                                    INNER JOIN genre_movie ON genre_movie.movie_id = movies.id
-                                    INNER JOIN genres ON genre_movie.genre_id = genres.id WHERE movies.id = $id
-                                    GROUP BY movies.id, movies.title, movies.year"); */
+        return view('movie', array('page' => $page, 'reviews' => $reviews, 'ratings' => $ratings, 'genres' => $genres));
     }
 
     public function getGenre($id)
@@ -163,7 +159,7 @@ class mainController extends Controller
         return view('review');
     }
 
-    function store(Request $request)
+    /*     function store(Request $request)
     {
         $Review = new Review;
         $Review->title = $request->title;
@@ -172,5 +168,5 @@ class mainController extends Controller
         $Review->movie_id = !null;
         $Review->save();
         return redirect('movie')->with('status', 'Succsess');
-    }
+    } */
 }

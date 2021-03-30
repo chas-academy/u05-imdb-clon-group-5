@@ -17,7 +17,7 @@ class User extends Authenticatable
      * The attributes that are mass assignable.
      *
      * @var array
-     */    
+     */
     protected $fillable = [
         'name',
         'email',
@@ -45,11 +45,17 @@ class User extends Authenticatable
     ];
 
     // A mutator that hash a password created in adminpanel (Backpack).
-    public function setPasswordAttribute($value) {
+    public function setPasswordAttribute($value)
+    {
         $this->attributes['password'] = Hash::make($value);
     }
 
-    public function watchlist(){
+    public function watchlist()
+    {
         return $this->hasOne('App\Models\Watchlist');
+    }
+    public function rating()
+    {
+        return $this->hasMany('App\Models\Rating');
     }
 }

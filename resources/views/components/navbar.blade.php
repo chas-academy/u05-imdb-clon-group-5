@@ -1,10 +1,4 @@
-<!--
-///////////////////////////////////////
-//                                   //
-//     Created by: Mehrdad Amini     //
-//                                   //
-///////////////////////////////////////
--->
+
 
 <nav class="font-sans bg-gray-900 text-white">
     <div class="container mx-auto border-b bg-gray-900 border-gray-900 p-0.25">

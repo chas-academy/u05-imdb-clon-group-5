@@ -24,8 +24,8 @@ class ReviewFactory extends Factory
         return [
             'user_id' => \App\Models\User::inRandomOrder()->first()->id,
             'movie_id' => \App\Models\Movie::inRandomOrder()->first()->id,
-            'review-title' => $this->faker->sentence($nbWords = 6, $variableNbWords = true),
-            'review-text' => $this->faker->text($maxNbChars = 200)
+            'reviewTitle' => $this->faker->sentence($nbWords = 6, $variableNbWords = true),
+            'reviewText' => $this->faker->text($maxNbChars = 200)
         ];
     }
 }

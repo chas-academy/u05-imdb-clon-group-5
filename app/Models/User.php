@@ -49,7 +49,16 @@ class User extends Authenticatable
         $this->attributes['password'] = Hash::make($value);
     }
 
+    // Relationships
     public function watchlist(){
         return $this->hasOne('App\Models\Watchlist');
+    }
+
+    public function review(){
+        return $this->hasMany('App\Models\Review');
+    }
+
+    public function rating(){
+        return $this->hasMany('App\Models\Rating');
     }
 }

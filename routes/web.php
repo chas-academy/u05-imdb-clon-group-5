@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\mainController;
 use App\Http\Controllers\MovieController;
+use App\Http\Controllers\WatchlistController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,6 +25,21 @@ Route::get('/', function () {
 Route::get('/movies', function () {
     return view('movies');
 });
+
+
+
+Route::get('/register', function () {
+    return view('register');
+});
+Route::post('/watchlist', [WatchlistController::class, 'store']);
+Route::get('/watchlist', [WatchlistController::class, 'show']);
+
+Route::delete('/watchlist/{id}', [WatchlistController::class, 'destroy']);
+
+Route::get('/genre', function () {
+    return view('genre');
+});
+
 
 Route::get('/', [MovieController::class, 'movieCarousel']);
 
@@ -69,5 +86,3 @@ Route::group(['middleware'=>['authCheck']], function() {
     //More user pages to add...
 
 });
-
-

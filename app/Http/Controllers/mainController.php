@@ -10,6 +10,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\Rating;
 use App\Models\Review;
 use App\Models\Movie;
 use App\Models\GenreMovie;
@@ -17,6 +18,9 @@ use App\Models\Genre;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
+use App\Models\Watchlist;
+use App\Models\Genreitem;
+
 
 
 
@@ -68,6 +72,16 @@ class mainController extends Controller
             if ($request->password) {
                 //
                 $request->session()->put('LoggedUser', $userInfo->id);
+
+                // Create new watchlist
+                $user_id = $request->session()->get('LoggedUser');
+                if (null === User::find($user_id)->watchlist) {
+                    $watchlist = new Watchlist();
+                    $watchlist->user_id = $request->session()->get('LoggedUser');
+
+                    $watchlist->save();
+                }
+
                 return redirect('user');
             } else {
                 //If the passsword is incorrect, then...

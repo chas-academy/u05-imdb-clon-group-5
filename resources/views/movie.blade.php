@@ -30,39 +30,45 @@
             @foreach ($genres as $genre)
             <span class="text-gray-100 mx-1">{{$genre->genre}}</span>
             @endforeach 
-            
             </div>
         </div>
     </div>
 
-    <section class="flex text-white justify-between font-poppins text-2xl bg-green-600 h-20 items-center">
-        <div class="ml-5 mr-5">
+    <section class="flex text-white justify-between font-poppins text-1xl bg-green-600 h-20 items-center sm:text2">
+       <div class="ml-5 mr-5">
+
+
             @auth
-                <a href="/add" class="font-semibold font-poppins rounded-lg p-2 shadow-md text-white bg-red-500 hover:bg-yellow-700 lg:p-4 lg:text-lg">Add to Watchlist</a>
+            <form class="delete-form" action="/movie/{{ $page->id }}" method="POST">
+                @csrf      
+                <input class="w-36 h-6 absolute bg-mojo font-inter text-center font-bold text-white cursor-pointer" type="submit" name="delete" value="Watchlist">
+              </form>
             @endauth 
+
+
+
             @guest
-                <a href="/login" class="font-semibold font-poppins rounded-lg p-2 shadow-md text-white bg-red-500 hover:bg-yellow-700 lg:p-4 lg:text-lg">Add to Watchlist</a>
+            <form class="delete-form" action="/movie/{{ $page->id }}" method="POST">
+                @csrf      
+                <input class="font-semibold font-poppins rounded-lg p-2 shadow-md text-white bg-red-500 hover:bg-yellow-700 lg:p-4 lg:text-lg" type="submit" name="delete" value="Watchlist">
+              </form>
+               {{--  <a href="/login" class="font-semibold font-poppins rounded-lg p-2 shadow-md text-white bg-red-500 hover:bg-yellow-700 lg:p-4 lg:text-lg">Add to Watchlist</a> --}}
             @endguest  
         </div>
        
                  {{-- Movie information rating and Release date --}}
             
                     <div>
-                        <h2>Release date: {{$page->release_date}}</h2>
+                        <h2 class="mr-2">Release date: {{$page->release_date}}</h2>
                     </div>
                     <div>
                         <h2>Time: {{$page->runtime}}h</h2>
                     </div>  
-                    <div class="text-white mr-20">
+                    <div class="text-white mr-4 sm:mr-20">
                         <h4><span class="text-yellow-400">&#9733;</span> {{$page->rating}}/10</h4>
                     </div>
                 
     </section>
-
-
-
-   
-
 
         <!-- Review -->
         <div class="text-red-600 text-6xl mx-10 py-4">

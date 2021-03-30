@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\mainController;
 use App\Http\Controllers\MovieController;
+use App\Http\Controllers\SearchController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,9 +28,17 @@ Route::get('/register', function () {
     return view('register');
 });
 
-Route::get('/search', [SearchController::class, 'search']);
+// ------ search -----
+
+// Route::get('/search', [SearchController::class, 'search']);
+// Route::get('/search', [mainController::class, 'search']);
+
+Route::post('{uri?}search', [SearchController::class, 'search'])->name('search')->where('uri', '.*');
+
 
 Route::get('/', [MovieController::class, 'movieCarousel']);
+
+Route::get('/leaveAreview', [MovieController::class, 'leaveAreview']);
 
 Route::get('/movie-info', function () {
     return view('movie-info');

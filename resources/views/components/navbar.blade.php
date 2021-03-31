@@ -54,7 +54,7 @@
                                 </a>
                             </div>
                             <div class="containerx mt-7">
-                                <a class="imagex p-2 no-underline text-4xl lg:text-6xl text-white block duration-75 hover:bg-gray-800 focus:ring-gray-200 top-1 right-2 lg:mb-2 md:mb-1 xl:text-8xl" href="/genre">Genre
+                                <a class="imagex p-2 no-underline text-4xl lg:text-6xl text-white block duration-75 hover:bg-gray-800 focus:ring-gray-200 top-1 right-2 lg:mb-2 md:mb-1 xl:text-8xl" href="/genre-list">Genre
                                     <div class="hidden sm:hidden lg:flex overlayx">
                                         <div class="hidden sm:hidden lg:flex textx">
                                             <img class="" src="../img/genre-hover.svg" alt="genre-hover-frame" title="genre-hover-frame">

@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\URL;
+use Illuminate\Support\Facades\Auth;
 use App\Models\User;
 use App\Models\Movie;
 use App\Models\Review;
@@ -11,25 +14,48 @@ use App\Models\Watchlistitem;
 
 class WatchlistController extends Controller
 {
-    public function store(Request $request)
+    // public function store(Request $request)
+    // {
+    //     $user_id = $request->session()->get('LoggedUser');
+
+    //     if (null === User::find($user_id)->watchlist) {
+
+    //         $watchlist = new Watchlist();
+    //         $watchlist->user_id = $request->session()->get('LoggedUser');
+
+    //         $watchlist->save();
+    //         return redirect('watchlist');
+    //     }
+    // }
+
+    public function store(Request $request, $id)
     {
         $user_id = $request->session()->get('LoggedUser');
+        // $watchlists = User::find($user_id)->watchlist;
+        $watchlists = Auth::user()->watchlist;
+        // dd($watchlists);
+        $searchMovie = Watchlistitem::where('watchlists_id', $watchlists->id)->where('movies_id', $id)->get();
 
-        if (null === User::find($user_id)->watchlist) {
-
-            $watchlist = new Watchlist();
-            $watchlist->user_id = $request->session()->get('LoggedUser');
-
-            $watchlist->save();
-            return redirect('watchlist');
+        if ($searchMovie->isEmpty()) {
+            $watchlistitem = new Watchlistitem();
+            $watchlistitem->watchlists_id = $watchlists->id;
+            $watchlistitem->movies_id = $id;
+            $watchlistitem->save();
         }
+
+        return Redirect::to(URL::previous());
     }
 
     public function show(Request $request)
     {
+        // $user = Auth::check();
+        // dd($user);
         $user_id = $request->session()->get('LoggedUser');    
         $watchlist = User::find($user_id)->watchlist; 
+        // $watchlist = Auth::user()->watchlist;
         $watchlistitems = Watchlistitem::where('watchlists_id', $watchlist->id)->get();
+
+        
         
         if ($watchlistitems->isEmpty()) {
             $movies = [];
@@ -44,7 +70,9 @@ class WatchlistController extends Controller
         }
         
         $reviews = User::find($user_id)->review;
+        // $reviews = Auth::user()->review;
         $ratings = User::find($user_id)->rating;
+        // $ratings = Auth::user()->rating;
         
         return view('watchlist', array('movies' => $movies, 'movie' => $movie, 'reviews' => $reviews, 'ratings' => $ratings));
     }

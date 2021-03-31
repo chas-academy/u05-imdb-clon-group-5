@@ -34,15 +34,15 @@ Route::get('/genre', function () {
 Route::get('/register', function () {
     return view('register');
 });
-Route::post('/watchlist', [WatchlistController::class, 'store']);
-Route::get('/watchlist', [WatchlistController::class, 'show']);
 
+
+Route::get('/watchlist', [WatchlistController::class, 'show'])->middleware('authCheck');
+Route::get('/watchlist/{id}', [WatchlistController::class, 'store']);
 Route::delete('/watchlist/{id}', [WatchlistController::class, 'destroy']);
 
 Route::get('/genre', function () {
     return view('genre');
 });
-
 
 Route::get('/', [MovieController::class, 'movieCarousel']);
 
@@ -60,6 +60,7 @@ Route::post('review', [mainController::class, 'store']);
 
 //Movies information
 Route::get('/movie/{id}', [mainController::class, 'getInfo']);
+Route::post('/movie/{id}', [WatchlistController::class, 'store']);
 //Each Genre Information
 Route::get('/genre/{id}', [mainController::class, 'getGenre']);
 

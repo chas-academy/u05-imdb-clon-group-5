@@ -62,6 +62,14 @@ class mainController extends Controller
     }
     function check(Request $request)
     {
+        $credentials = $request->only('email', 'password');
+        
+        //! if (Auth::attempt($credentials)) {
+        //!     $request->session()->regenerate();
+
+        //!     return redirect()->intended('/');
+        //! }
+
         // return $request->input();
         $request->validate([
             'email'     =>  'required|email',
@@ -70,20 +78,19 @@ class mainController extends Controller
         $userInfo   =   DB::table('users')
             ->where('email', $request->email)
             ->first();
-        if (!$userInfo) {
+        if (!Auth::attempt($credentials)) {
             return back()->with('fail', 'You do not have any account');
         } else {
             //Checking password
             if ($request->password) {
                 //
-                $request->session()->put('LoggedUser', $userInfo->id);
+                $request->session()->put('LoggedUser', $userInfo->id);   
 
-                // Create new watchlist
+                // Create new watchlist once
                 $user_id = $request->session()->get('LoggedUser');
                 if (null === User::find($user_id)->watchlist) {
                     $watchlist = new Watchlist();
                     $watchlist->user_id = $request->session()->get('LoggedUser');
-
                     $watchlist->save();
                 }
 
@@ -99,9 +106,21 @@ class mainController extends Controller
         //Just killing the session here :D
         if (session()->has('LoggedUser')) {
             session()->pull('LoggedUser');
+            Auth::logout();
             return redirect('login');
         }
     }
+
+    //! public function logout(Request $request)
+    //! {
+    // !    Auth::logout();
+
+    //!     $request->session()->invalidate();
+
+    //!     $request->session()->regenerateToken();
+
+    //!     return redirect('/');
+    //! }
 
     //WARNING!!
     //Remember all functions added here are the ones inside web authCheck!

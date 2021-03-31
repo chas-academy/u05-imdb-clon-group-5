@@ -39,19 +39,20 @@
 
 
             @auth
-            <form class="delete-form" action="/movie/{{ $page->id }}" method="POST">
+            <form action="/movie/{{ $page->id }}" method="POST">
                 @csrf      
-                <input class="w-36 h-6 absolute bg-mojo font-inter text-center font-bold text-white cursor-pointer" type="submit" name="delete" value="Watchlist">
+                <input class="font-semibold font-poppins rounded-lg p-2 shadow-md text-white bg-red-500 hover:bg-yellow-700 lg:p-4 lg:text-lg cursor-pointer" type="submit" value="Add to Watchlist">
               </form>
             @endauth 
 
 
 
             @guest
-            <form class="delete-form" action="/movie/{{ $page->id }}" method="POST">
+            {{-- <form class="delete-form" action="/movie/{{ $page->id }}" method="POST">
                 @csrf      
+                <input type='hidden' name='complete_todo' value="{{ $page->id }}">
                 <input class="font-semibold font-poppins rounded-lg p-2 shadow-md text-white bg-red-500 hover:bg-yellow-700 lg:p-4 lg:text-lg" type="submit" name="delete" value="Watchlist">
-              </form>
+              </form> --}}
                {{--  <a href="/login" class="font-semibold font-poppins rounded-lg p-2 shadow-md text-white bg-red-500 hover:bg-yellow-700 lg:p-4 lg:text-lg">Add to Watchlist</a> --}}
             @endguest  
         </div>

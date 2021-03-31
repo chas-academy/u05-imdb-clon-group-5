@@ -5,6 +5,7 @@ use App\Http\Controllers\mainController;
 use App\Http\Controllers\MovieController;
 use App\Http\Controllers\WatchlistController;
 use App\Http\Controllers\UserController;
+use App\http\Controllers\GenreController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,9 +26,8 @@ Route::get('/', function () {
 Route::get('/movies', function () {
     return view('movies');
 });
-Route::get('/genre', function () {
-    return view('genre');
-});
+
+
 
 
 
@@ -38,9 +38,6 @@ Route::get('/register', function () {
 
 
 
-Route::get('/genre', function () {
-    return view('genre');
-});
 
 Route::get('/', [MovieController::class, 'movieCarousel']);
 
@@ -53,14 +50,18 @@ Route::get('/', [MovieController::class, 'movieCarousel']);
  ***************************************************************/
 
 Route::get('review', [mainController::class, 'review']);
+/* Route::get('/register', function () {
+    return view('register');
+}); */
 Route::post('review', [mainController::class, 'store']);
 
 //Movies information
 Route::get('/movie/{id}', [mainController::class, 'getInfo']);
-Route::post('/movie/{id}', [WatchlistController::class, 'store']);
+Route::post('/movie/{id}', [mainController::class, 'store']);
 //Each Genre Information
-Route::get('/genre/{id}', [mainController::class, 'getGenre']);
 
+Route::get('/genre/{id}', [GenreController::class, 'genre']);
+Route::get('/genre-list', [GenreController::class, 'genreList']);
 
 //Storage to the DB
 Route::post('/save', [mainController::class, 'save'])->name('save');
@@ -89,5 +90,4 @@ Route::group(['middleware' => ['authCheck']], function () {
     Route::get('/watchlist', [WatchlistController::class, 'show']);
     Route::post('/watchlist/{id}', [WatchlistController::class, 'store']);
     Route::delete('/watchlist/{id}', [WatchlistController::class, 'destroy']);
-
 });

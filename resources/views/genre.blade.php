@@ -1,58 +1,17 @@
 @extends('layout/layout')
 @section('content')
 
-<div class="bg-midnight-500 h-screen py-20">
+  <h1 class="text-white font-poppins font-bold text-6xl text-center mt-10">Comedy</h1>
+  <section style="height: 55vh" class="flex justify-center flex-wrap w-full mt-10">
+@foreach ($moviesgenres as $genre)
 
-    <ul class="font-Inter text-3xl sm:text-6xl text-white text-center">
-        <li class="m-4">
-            <a href="#">Action</a>
-        </li>
+       <a href="/movie/{{$genre->id}}"> <img class="w-36 h-48 m-2" src="{{$genre->img}}" alt="{{$genre->title}}"></a>
 
-        <li class="m-4">
-            <a href="#">Animation</a>
-        </li>
+@endforeach
 
-        <li class="m-4">
-            <a href="#">Comedy</a>
-        </li>
+</section>
 
-        <li class="m-4">
-            <a href="#">Crime</a>
-        </li>
-
-        <li class="m-4">
-            <a href="#">Drama</a>
-        </li>
-
-        <li class="m-4">
-            <a href="#">Fantasy</a>
-        </li>
-
-        <li class="m-4">
-            <a href="#">Horror</a>
-        </li>
-
-        <li class="m-4">
-            <a href="#">Romance</a>
-        </li>
-
-        <li class="m-4">
-            <a href="#">Science Fiction</a>
-        </li>
-
-        <li class="m-4">
-            <a href="#">Thriller</a>
-        </li>
-
-    </ul>
-
-</div>
-
-<div class="mt-2">
-    <a href="/">
-        <img class="relative sm:left-1" src="../img/close_logo_x.svg" alt="close Logo" title="close Logo" style="left: 50%; margin-left: -1.5rem;">
-    </a>
-</div>
 
 
 @endsection
+

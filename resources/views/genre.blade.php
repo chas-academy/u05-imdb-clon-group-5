@@ -1,4 +1,7 @@
+@foreach ($moviesgenres as $genre)
 
-<h1>
-  {{$genres->$genre}}
-</h1>
+    <h1>
+        {{$genre->title}}
+    </h1>
+
+@endforeach

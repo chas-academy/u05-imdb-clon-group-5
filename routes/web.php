@@ -60,6 +60,7 @@ Route::post('review', [mainController::class, 'store']);
 Route::get('/movie/{id}', [mainController::class, 'getInfo']);
 Route::post('/movie/{id}', [mainController::class, 'store']);
 //Each Genre Information
+
 Route::get('/genre/{id}', [GenreController::class, 'genre']);
 Route::get('/genre-list', [GenreController::class, 'genreList']);
 

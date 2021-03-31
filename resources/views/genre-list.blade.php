@@ -6,7 +6,7 @@
     <ul class="font-Inter text-3xl sm:text-6xl text-white text-center">
        @foreach ($genres as $genre)
            <li class="mt-2"><a class="hover:text-red-700" href="/genre/{{$genre->id}}">{{$genre->genre}}</a></li>
-           <li>{{$genre->id}}</li>
+
        @endforeach
     </ul>
 

@@ -20,7 +20,6 @@ class GenreController extends Controller
 
     public function genre()
     {
-
         $genreitems = $this->allGenre();
         Genreitem::where('genres_id', $genreitems)->get();
         return view('genre', array('genres' => $genreitems));

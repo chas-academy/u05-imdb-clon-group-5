@@ -1,11 +1,5 @@
 <?php
 
-//////////////////////////////////////////////////////////////////
-//                                                              //
-//  - Suited for the imdb DB by Jorge                           //
-// * Run: php artisan db:seed --class="MoviesTableSeeder"       //
-//                                                              //
-//////////////////////////////////////////////////////////////////
 
 
 namespace Database\Seeders;
@@ -30,41 +24,12 @@ class MoviesTableSeeder extends Seeder
             'writer' => 'Chris Terrio',
             'description' => 'Zack Snyders definitive directors cut of Justice League. Determined to ensure Supermans ultimate sacrifice was not in vain, Bruce Wayne aligns forces with Diana Prince with plans to recruit a team of metahumans to protect the world from an approaching threat of catastrophic proportions.',
             'year' => 2021,
-            'runtime' => 04.25,
+            'runtime' => 04.02,
             'release_date'  => '2021-02-13',
             'img' => 'https://m.media-amazon.com/images/M/MV5BYjI3NDg0ZTEtMDEwYS00YWMyLThjYjktMTNlM2NmYjc1OGRiXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_FMjpg_UY864_.jpg',
             'featured' => 1,
         ]);
 
-
-        DB::table('movies')->insert([
-            'title' => 'The Falcon and the Winter Soldier',
-            'director' => 'Kari Skogland',
-            'rating' => 4,
-            'writer' => 'John Wick',
-            'description' => 'Following the events of "Avengers: Endgame," Sam Wilson/Falcon (Anthony Mackie) and Bucky Barnes/Winter Soldier (Sebastian Stan) team up in a global adventure that tests their abilities -- and their patience.',
-            'year' => 2021,
-            'runtime' => 00.51,
-            'release_date'  => '2021-02-13',
-            'img' => 'https://media.comicbook.com/2020/12/marvel-falcon-and-the-winter-soldier-poster-2021-1248503.jpeg?auto=webp&width=800&height=1185&crop=800:1185,smart',
-            'featured' => 1,
-        ]);
-
-
-        DB::table('movies')->insert([
-            'title' => 'Stranger Things',
-            'director' => 'Matt Duffer',
-            'rating' => 4,
-            'writer' => 'Ross Duffer',
-            'description' => 'When a young boy disappears, his mother, a police chief and his friends must confront terrifying supernatural forces in order to get him back.',
-            'year' => 2021,
-            'runtime' => 00.54,
-            'release_date'  => '2021-02-13',
-            'img' => 'https://m.media-amazon.com/images/M/MV5BMjEzMDAxOTUyMV5BMl5BanBnXkFtZTgwNzAxMzYzOTE@._V1_UX182_CR0,0,182,268_AL_.jpg',
-            'featured' => 0,
-            'video_url' => 'https://www.youtube.com/watch?v=b9EkMc79ZSU',
-            'img' => 'https://m.media-amazon.com/images/M/MV5BMjEzMDAxOTUyMV5BMl5BanBnXkFtZTgwNzAxMzYzOTE@._V1_UX182_CR0,0,182,268_AL_.jpg'
-        ]);
 
         DB::table('movies')->insert([
             'title' => 'The Father (2020)',
@@ -75,9 +40,8 @@ class MoviesTableSeeder extends Seeder
             'year' => 2021,
             'runtime' => 01.00,
             'release_date'  => '2021-02-13',
+            'img' => 'https://m.media-amazon.com/images/M/MV5BZGJhNWRiOWQtMjI4OS00ZjcxLTgwMTAtMzQ2ODkxY2JkOTVlXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_UX182_CR0,0,182,268_AL_.jpg',
             'featured' => 0,
-            'video_url' => 'https://www.youtube.com/watch?v=4TZb7YfK-JI',
-            'img' => 'https://m.media-amazon.com/images/M/MV5BZGJhNWRiOWQtMjI4OS00ZjcxLTgwMTAtMzQ2ODkxY2JkOTVlXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_UX182_CR0,0,182,268_AL_.jpg'
         ]);
 
         DB::table('movies')->insert([
@@ -91,8 +55,6 @@ class MoviesTableSeeder extends Seeder
             'release_date'  => '2021-02-13',
             'img' => 'https://m.media-amazon.com/images/M/MV5BMjg5MDFiOGMtNDE1OS00NjQ5LThjZGEtZjExMjAwOTZiYTQ1XkEyXkFqcGdeQXVyNzk4OTQyODU@._V1_UX182_CR0,0,182,268_AL_.jpg',
             'featured' => 0,
-            'video_url' => 'https://www.youtube.com/watch?v=Y0JZVfQFqos',
-            'img' => 'https://m.media-amazon.com/images/M/MV5BMjg5MDFiOGMtNDE1OS00NjQ5LThjZGEtZjExMjAwOTZiYTQ1XkEyXkFqcGdeQXVyNzk4OTQyODU@._V1_UX182_CR0,0,182,268_AL_.jpg'
         ]);
 
 
@@ -107,8 +69,6 @@ class MoviesTableSeeder extends Seeder
             'release_date'  => '2021-02-13',
             'img' => 'https://m.media-amazon.com/images/M/MV5BOGY2MDAxNTEtNjJhOC00ZjNmLWIyYzAtNzQ4OGY2MDBkYTc2XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_UX182_CR0,0,182,268_AL_.jpg',
             'featured' => 1,
-            'video_url' => 'https://www.youtube.com/watch?v=JarbtubycQg',
-            'img' => 'https://m.media-amazon.com/images/M/MV5BOGY2MDAxNTEtNjJhOC00ZjNmLWIyYzAtNzQ4OGY2MDBkYTc2XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_UX182_CR0,0,182,268_AL_.jpg'
         ]);
 
         DB::table('movies')->insert([
@@ -122,8 +82,6 @@ class MoviesTableSeeder extends Seeder
             'release_date'  => '2021-02-13',
             'img' => 'https://m.media-amazon.com/images/M/MV5BMmYwZWVkYTQtZTk2YS00Y2IzLTk2NDYtZTc2YzhiZGNkMDMzXkEyXkFqcGdeQXVyMjM2NjkyNDU@._V1_UY268_CR3,0,182,268_AL_.jpg',
             'featured' => 0,
-            'video_url' => 'https://www.youtube.com/watch?v=CdYUTKDs8Y4',
-            'img' => 'https://m.media-amazon.com/images/M/MV5BMmYwZWVkYTQtZTk2YS00Y2IzLTk2NDYtZTc2YzhiZGNkMDMzXkEyXkFqcGdeQXVyMjM2NjkyNDU@._V1_UY268_CR3,0,182,268_AL_.jpg'
         ]);
 
         DB::table('movies')->insert([
@@ -137,8 +95,6 @@ class MoviesTableSeeder extends Seeder
             'release_date'  => '2021-02-13',
             'img' => 'https://m.media-amazon.com/images/M/MV5BMDY2MDdlNDEtZmViZC00MzE3LTk5ZjAtOTg2OWVjODUyNWVjXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_UX182_CR0,0,182,268_AL_.jpg',
             'featured' => 0,
-            'video_url' => 'https://www.youtube.com/watch?v=qfj2rINpoEI',
-            'img' => 'https://m.media-amazon.com/images/M/MV5BMDY2MDdlNDEtZmViZC00MzE3LTk5ZjAtOTg2OWVjODUyNWVjXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_UX182_CR0,0,182,268_AL_.jpg'
         ]);
 
 
@@ -153,54 +109,9 @@ class MoviesTableSeeder extends Seeder
             'release_date'  => '2021-02-13',
             'img' => 'https://m.media-amazon.com/images/M/MV5BYmM4MDljZmQtOTk1NC00MjhhLTliODItMjVjN2JhNDBjZWU3XkEyXkFqcGdeQXVyMzUyNTk3MDg@._V1_UY268_CR9,0,182,268_AL_.jpg',
             'featured' => 0,
-            'video_url' => 'https://www.youtube.com/watch?v=0Dhh7q9Us5c',
-            'img' => 'https://m.media-amazon.com/images/M/MV5BYmM4MDljZmQtOTk1NC00MjhhLTliODItMjVjN2JhNDBjZWU3XkEyXkFqcGdeQXVyMzUyNTk3MDg@._V1_UY268_CR9,0,182,268_AL_.jpg'
         ]);
 
-        DB::table('movies')->insert([
-            'title' => 'WandaVision',
-            'director' => 'Jac Schaeffer',
-            'rating' => 6,
-            'writer' => 'Jac Schaeffer',
-            'description' => 'Blends the style of classic sitcoms with the MCU in which Wanda Maximoff and Vision -two super-powered beings living their ideal suburban lives-begin to suspect that everything is not as it seems.',
-            'year' => 2014,
-            'runtime' => 00.47,
-            'release_date'  => '2021-02-13',
-            'img' => 'https://m.media-amazon.com/images/M/MV5BYjJiZmE5ZDgtYWUxZi00MWI1LTg2MmEtZmUwZGE2YzRkNTE5XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_UX182_CR0,0,182,268_AL_.jpg',
-            'featured' => 0,
-            'video_url' => 'https://www.youtube.com/watch?v=sj9J2ecsSpo',
-            'img' => 'https://m.media-amazon.com/images/M/MV5BYjJiZmE5ZDgtYWUxZi00MWI1LTg2MmEtZmUwZGE2YzRkNTE5XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_UX182_CR0,0,182,268_AL_.jpg'
-        ]);
 
-        DB::table('movies')->insert([
-            'title' => 'Schitts Creek',
-            'director' => 'Dan Levy',
-            'rating' => 9,
-            'writer' => 'Dan Levy',
-            'description' => 'When rich video-store magnate Johnny Rose and his family suddenly find themselves broke, they are forced to leave their pampered lives to regroup in Schitts Creek.',
-            'year' => 2015,
-            'runtime' => 00.22,
-            'release_date'  => '2021-02-13',
-            'img' => 'https://m.media-amazon.com/images/M/MV5BNWQ1ZmM3MTQtNTVhZC00MWVlLWI5ZjgtYmZiYWQxZjUzZWM0XkEyXkFqcGdeQXVyMzQ2MDI5NjU@._V1_UX182_CR0,0,182,268_AL_.jpg',
-            'featured' => 1,
-            'video_url' => 'https://www.youtube.com/watch?v=W0uWS6CnC2o',
-            'img' => 'https://m.media-amazon.com/images/M/MV5BNWQ1ZmM3MTQtNTVhZC00MWVlLWI5ZjgtYmZiYWQxZjUzZWM0XkEyXkFqcGdeQXVyMzQ2MDI5NjU@._V1_UX182_CR0,0,182,268_AL_.jpg'
-        ]);
-
-        DB::table('movies')->insert([
-            'title' => 'The Mandalorian',
-            'director' => 'Jon Favreau',
-            'rating' => 5,
-            'writer' => 'Jon Favreau',
-            'description' => 'The travels of a lone bounty hunter in the outer reaches of the galaxy, far from the authority of the New Republic.',
-            'year' => 2015,
-            'runtime' => 00.40,
-            'release_date'  => '2021-02-13',
-            'img' => 'https://m.media-amazon.com/images/M/MV5BZDhlMzY0ZGItZTcyNS00ZTAxLWIyMmYtZGQ2ODg5OWZiYmJkXkEyXkFqcGdeQXVyODkzNTgxMDg@._V1_UX182_CR0,0,182,268_AL_.jpg',
-            'featured' => 0,
-            'video_url' => 'https://www.youtube.com/watch?v=aOC8E8z_ifw',
-            'img' => 'https://m.media-amazon.com/images/M/MV5BZDhlMzY0ZGItZTcyNS00ZTAxLWIyMmYtZGQ2ODg5OWZiYmJkXkEyXkFqcGdeQXVyODkzNTgxMDg@._V1_UX182_CR0,0,182,268_AL_.jpg'
-        ]);
 
         DB::table('movies')->insert([
             'title' => 'Bliss',
@@ -213,8 +124,6 @@ class MoviesTableSeeder extends Seeder
             'release_date'  => '2021-02-13',
             'img' => 'https://m.media-amazon.com/images/M/MV5BYmFjNWY5NjQtMTJiNC00NjFlLWIxMGQtNzhmMmQ0MjhiZjQyXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_UX182_CR0,0,182,268_AL_.jpg',
             'featured' => 0,
-            'video_url' => 'https://www.youtube.com/watch?v=ZHtPm8v-yNw',
-            'img' => 'https://m.media-amazon.com/images/M/MV5BYmFjNWY5NjQtMTJiNC00NjFlLWIxMGQtNzhmMmQ0MjhiZjQyXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_UX182_CR0,0,182,268_AL_.jpg'
         ]);
 
         DB::table('movies')->insert([
@@ -228,24 +137,9 @@ class MoviesTableSeeder extends Seeder
             'release_date'  => '2021-02-13',
             'img' => 'https://m.media-amazon.com/images/M/MV5BZTUxN2M3ZWYtMzc1MC00NTc4LWFhZDItMzViZDg2NmFjMzBhXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_UY268_CR4,0,182,268_AL_.jpg',
             'featured' => 0,
-            'video_url' => 'https://www.youtube.com/watch?v=H1WYnJF1Pwo',
-            'img' => 'https://m.media-amazon.com/images/M/MV5BZTUxN2M3ZWYtMzc1MC00NTc4LWFhZDItMzViZDg2NmFjMzBhXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_UY268_CR4,0,182,268_AL_.jpg'
         ]);
 
-        DB::table('movies')->insert([
-            'title' => 'Game of Thrones',
-            'director' => 'David Benioff',
-            'rating' => 2,
-            'writer' => 'D.B. Weiss',
-            'description' => 'Nine noble families fight for control over the lands of Westeros, while an ancient enemy returns after being dormant for millennia.',
-            'year' => 2011,
-            'runtime' => 00.57,
-            'release_date'  => '2021-02-13',
-            'img' => 'https://m.media-amazon.com/images/M/MV5BYTRiNDQwYzAtMzVlZS00NTI5LWJjYjUtMzkwNTUzMWMxZTllXkEyXkFqcGdeQXVyNDIzMzcwNjc@._V1_UY268_CR7,0,182,268_AL_.jpg',
-            'featured' => 0,
-            'video_url' => 'https://www.youtube.com/watch?v=gcTkNV5Vg1E',
-            'img' => 'https://m.media-amazon.com/images/M/MV5BYTRiNDQwYzAtMzVlZS00NTI5LWJjYjUtMzkwNTUzMWMxZTllXkEyXkFqcGdeQXVyNDIzMzcwNjc@._V1_UY268_CR7,0,182,268_AL_.jpg'
-        ]);
+
 
         DB::table('movies')->insert([
             'title' => 'Old',
@@ -258,8 +152,7 @@ class MoviesTableSeeder extends Seeder
             'release_date'  => '2021-02-13',
             'img' => 'https://m.media-amazon.com/images/M/MV5BMzUzYjhkZWMtMzE1NS00YjUxLTliOTItN2FkOWUyY2U2YzhiXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_UX182_CR0,0,182,268_AL_.jpg',
             'featured' => 1,
-            'video_url' => 'https://www.youtube.com/watch?v=ZaaQoutaEj8',
-            'img' => 'https://m.media-amazon.com/images/M/MV5BMzUzYjhkZWMtMzE1NS00YjUxLTliOTItN2FkOWUyY2U2YzhiXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_UX182_CR0,0,182,268_AL_.jpg'
+
         ]);
 
         DB::table('movies')->insert([
@@ -273,52 +166,7 @@ class MoviesTableSeeder extends Seeder
             'release_date'  => '2021-02-13',
             'img' => 'https://m.media-amazon.com/images/M/MV5BYjVkMmU1NGItZjM4MC00ODM1LWEyOTEtY2Y1NTg0YjRhYjEwXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_UX182_CR0,0,182,268_AL_.jpg',
             'featured' => 0,
-            'video_url' => 'https://www.youtube.com/watch?v=CGZmwsK58M8',
-            'img' => 'https://m.media-amazon.com/images/M/MV5BYjVkMmU1NGItZjM4MC00ODM1LWEyOTEtY2Y1NTg0YjRhYjEwXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_UX182_CR0,0,182,268_AL_.jpg'
-        ]);
 
-        DB::table('movies')->insert([
-            'title' => 'Modern Family',
-            'director' => 'Steven Levitan',
-            'rating' => 9,
-            'writer' => 'Christopher Lloyd',
-            'description' => 'A director and his girlfriends relationship is tested after they return home from his Movies premiere and await criticss responses.',
-            'year' => 2009,
-            'runtime' => 00.22,
-            'release_date'  => '2021-02-13',
-            'img' => 'https://i.pinimg.com/originals/d3/d1/4c/d3d14c8d2e51805536839dc6eab90e70.jpg',
-            'featured' => 1,
-            'video_url' => 'https://www.youtube.com/watch?v=X0lRjbrH-L8',
-            'img' => 'https://m.media-amazon.com/images/I/517dRwYtBjL._AC_.jpg'
-        ]);
-
-        DB::table('movies')->insert([
-            'title' => 'The Sinner',
-            'director' => 'Derek Simonds',
-            'rating' => 7,
-            'writer' => 'Derek Simonds',
-            'description' => 'Anthology series that examines how and why ordinary people commit brutal crimes',
-            'year' => 2017,
-            'runtime' => 00.46,
-            'release_date'  => '2021-02-13',
-            'img' => 'https://m.media-amazon.com/images/M/MV5BODIwYmE0MGQtYmNhMS00ZjM4LWJkMzAtNjg5YzI4MzZjMjg3XkEyXkFqcGdeQXVyNjU2ODM5MjU@._V1_UX182_CR0,0,182,268_AL_.jpg',
-            'featured' => 0,
-            'video_url' => 'https://www.youtube.com/watch?v=ZEfnpFuzxnE',
-            'img' => 'https://m.media-amazon.com/images/M/MV5BODIwYmE0MGQtYmNhMS00ZjM4LWJkMzAtNjg5YzI4MzZjMjg3XkEyXkFqcGdeQXVyNjU2ODM5MjU@._V1_UX182_CR0,0,182,268_AL_.jpg'
-        ]);
-
-
-        DB::table('movies')->insert([
-            'title' => 'Criminal Minds',
-            'director' => 'Jeff Davis',
-            'rating' => 4,
-            'writer' => 'Jeff Davis',
-            'description' => 'The cases of the F.B.I. Behavioral Analysis Unit (B.A.U.), an elite group of profilers who analyze the nations most dangerous serial killers and individual heinous crimes in an effort to anticipate their next moves before they strike again.',
-            'year' => 2005,
-            'runtime' => 00.42,
-            'release_date'  => '2021-02-13',
-            'img' => 'https://m.media-amazon.com/images/M/MV5BNGE2ZmFkZTYtNjRiOS00ZjE3LThjOWMtZTViZjRmNDFjNTQwXkEyXkFqcGdeQXVyNjg4NzAyOTA@._V1_UX182_CR0,0,182,268_AL_.jpg',
-            'featured' => 0,
         ]);
 
 

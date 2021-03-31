@@ -24,8 +24,6 @@ class CreateMoviesTable extends Migration
             $table->year('year')->nullable();
             $table->float('runtime', 4, 2)->nullable();
             $table->date('release_date')->nullable();
-            //Added video_url -> Tatjana
-            $table->longtext('video_url')->nullable();
             $table->longText('img')->nullable();
             $table->boolean('featured')->default(false);
             $table->timestamps();
@@ -34,10 +32,6 @@ class CreateMoviesTable extends Migration
         Artisan::call('db:seed', [
             '--class' => MoviesTableSeeder::class,
         ]);
-
-        // Artisan::call('db:seed', [
-        //     '--class' => Genre_MoviesTableSeeder::class,
-        // ]);
     }
 
     /**

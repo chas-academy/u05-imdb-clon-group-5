@@ -2,7 +2,7 @@
 
 
 
-<div class="bg-midnight-500 h-screen pt-40">
+<div class="bg-midnight-500 pt-40">
 
     <div class="font-poppins text-white text-center">
 

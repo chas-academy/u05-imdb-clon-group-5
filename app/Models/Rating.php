@@ -24,6 +24,7 @@ class Rating extends Model
     // protected $hidden = [];
     // protected $dates = [];
 
+
     /*
     |--------------------------------------------------------------------------
     | FUNCTIONS
@@ -35,11 +36,10 @@ class Rating extends Model
     | RELATIONS
     |--------------------------------------------------------------------------
     */
-
-    public function user(){
+    public function user()
+    {
         return $this->belongsTo('App\Models\User');
     }
-
     /*
     |--------------------------------------------------------------------------
     | SCOPES

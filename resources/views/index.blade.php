@@ -46,7 +46,7 @@
 
 
 
- <div class="ml-2">
+ <div class="xl:ml-0 ml-2 mb-4">
 <h1 class="font-bold text-4xl font-inter text-red-500  sm:text-5xl">Featured</h1>
 <h1 id="scroll-down" class="text-white text-4xl font-inter sm:text-5xl">
     <span class="font-bold">Now</span>
@@ -55,7 +55,7 @@
 <div>
     <x-img-carousel data="2" :movies="$movies"/>
 </div>
-<div class="ml-2">
+<div class="xl:ml-0 ml-2 mb-4">
     <h1 class="font-bold font-inter text-4xl text-red-500 mt-4 sm:text-5xl">Top rated</h1>
     <h1 class="text-white text-4xl font-inter sm:text-5xl">
         <span class="font-bold uppercase">movies</span>
@@ -72,7 +72,8 @@
 
 @include('raise_your_awareness')
 
-@include('explore') 
+  @include('explore') 
+
 @endsection
 
 

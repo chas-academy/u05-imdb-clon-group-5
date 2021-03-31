@@ -5,6 +5,7 @@ use App\Http\Controllers\mainController;
 use App\Http\Controllers\MovieController;
 use App\Http\Controllers\WatchlistController;
 use App\Http\Controllers\UserController;
+use App\http\Controllers\GenreController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,10 +22,12 @@ Route::get('/', function () {
     return view('index');
 });
 
-//Jag vet inte var den kommer ifrån men jag låter den kvar.
+
 Route::get('/movies', function () {
     return view('movies');
 });
+
+
 
 
 
@@ -36,30 +39,30 @@ Route::get('/watchlist', [WatchlistController::class, 'show']);
 
 Route::delete('/watchlist/{id}', [WatchlistController::class, 'destroy']);
 
-Route::get('/genre', function () {
-    return view('genre');
-});
-
 
 Route::get('/', [MovieController::class, 'movieCarousel']);
 
 /***************************************************************
 
     - Jorge => authCheck middleware + movie{id} + genre{id}
-        * Mehrdad => review form
-        * Tatjana => review form
+ * Mehrdad => review form
+ * Tatjana => review form
 
-***************************************************************/
+ ***************************************************************/
 
 Route::get('review', [mainController::class, 'review']);
-
+/* Route::get('/register', function () {
+    return view('register');
+}); */
 Route::post('review', [mainController::class, 'store']);
 
 //Movies information
 Route::get('/movie/{id}', [mainController::class, 'getInfo']);
+Route::post('/movie/{id}', [mainController::class, 'store']);
 //Each Genre Information
-Route::get('/genre/{id}', [mainController::class, 'getGenre']);
 
+Route::get('/genre/{id}', [GenreController::class, 'genre']);
+Route::get('/genre-list', [GenreController::class, 'genreList']);
 
 //Storage to the DB
 Route::post('/save', [mainController::class, 'save'])->name('save');
@@ -70,7 +73,7 @@ Route::post('/check', [mainController::class, 'check'])->name('check');
 Route::get('logout', [mainController::class, 'logout'])->name('logout');
 
 //AuthCheck controller..
-Route::group(['middleware'=>['authCheck']], function() {
+Route::group(['middleware' => ['authCheck']], function () {
 
     //Here should we add all files to force the user to be logged in.
     //Remeber to update authCheck middleware (only the pages located here)!!

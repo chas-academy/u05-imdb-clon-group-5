@@ -21,7 +21,7 @@ class GenresTableSeeder extends Seeder
             ['genre' => 'Romance'],
             ['genre' => 'Horror'],
             ['genre' => 'Adventure'],
-            ['genre' => 'Scifi'],
+            ['genre' => 'Sci-fi'],
             ['genre' => 'Drama'],
             ['genre' => 'Mystery'],
             ['genre' => 'Fantasy'],

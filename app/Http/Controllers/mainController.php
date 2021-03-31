@@ -20,8 +20,9 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Genreitem;
 use App\Models\Watchlist;
-
-
+use Illuminate\Routing\Redirector;
+use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\URL;
 
 
 
@@ -83,7 +84,6 @@ class mainController extends Controller
                 if (null === User::find($user_id)->watchlist) {
                     $watchlist = new Watchlist();
                     $watchlist->user_id = $request->session()->get('LoggedUser');
-
                     $watchlist->save();
                 }
 
@@ -172,14 +172,16 @@ class mainController extends Controller
         return view('review');
     }
 
-    /*     function store(Request $request)
+    public function store(Request $request, $id)
     {
-        $Review = new Review;
-        $Review->title = $request->title;
-        $Review->text = $request->text;
-        $Review->user_id = $request->session()->get('LoggedUser');
-        $Review->movie_id = !null;
-        $Review->save();
-        return redirect('movie')->with('status', 'Succsess');
-    } */
+        //SUBMIT THE REVIEW
+        $review = new Review;
+        $review->reviewTitle = $request->title;
+        $review->reviewText = $request->text;
+        $review->user_id = $request->session()->get('LoggedUser');
+        $review->movie_id = $id;
+        $review->save();
+
+        return Redirect::to(URL::previous());
+    }
 }

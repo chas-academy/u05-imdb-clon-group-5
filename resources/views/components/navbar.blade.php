@@ -21,12 +21,13 @@
                     </h1>
                 </div>
 
-                <!-- New search -->
+                <!-- Search -->
                 <div class="x1 lg:auto w-3/6 md:mt-1" style="margin-left: auto;margin-right: auto;" class="md:flex md:justify-center md:items-center" id="mobs" id="burgerbtn">
-                    <form action="{{ route('search.index') }}" method="GET" class="hidden sm:hidden md:flex lg:w-26 lg:mt-1.5 max-w-screen-lg bg-gradient-to-l from-blue-300 to-blue-500 items-center rounded-full shadow-xl md:h-9 p-2 md:mt-1">
+                    <form action="{{ route('search') }}" method="GET" role="search" class="hidden sm:hidden md:flex lg:w-26 lg:mt-1.5 max-w-screen-lg bg-gradient-to-l from-blue-300 to-blue-500 items-center rounded-full shadow-xl md:h-9 p-2 md:mt-1">
+                    @csrf
                         <img class="w-9 mb-1 mr-auto mt-1" src="./img/magnifier.svg" alt="magnifier" title="magnifier">
                         <input class="rounded-l-full w-full py0 px0 bg-gradient-to-l from-blue-300 to-blue-500 text-white leading-tight focus:outline-none h-2 p-2" id="search" placeholder="Search" type="text" name="search" required/>
-                        <a href="{{ route('search.index') }}" class=" mt-1">
+                        <a href="{{ route('search') }}" class=" mt-1">
                             <button class="lg:w-24 top-1/2 left-1/2 bg-white text-blue-600 rounded-full p-2 hover:bg-gray-300 focus:outline-none w-16 h-6 flex items-center justify-center" type="submit" >GO</button>
                         </a>
                         
@@ -137,3 +138,14 @@
         </header>
     </div>
 </nav>
+
+
+
+<!-- No posts found here -->
+
+
+<!-- Search results -->
+
+<!-- <div class="container mt-0 p-0">
+    <div id="search-results" class="row m-0 mb-4"></div>
+</div> -->

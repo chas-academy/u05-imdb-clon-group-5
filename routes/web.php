@@ -29,11 +29,10 @@ Route::get('/register', function () {
 });
 
 // ------ search -----
-
 // Route::get('/search', [SearchController::class, 'search']);
 // Route::get('/search', [mainController::class, 'search']);
 
-Route::post('{uri?}search', [SearchController::class, 'search'])->name('search')->where('uri', '.*');
+Route::get('/search', [SearchController::class, 'search'])->name('search');
 
 
 Route::get('/', [MovieController::class, 'movieCarousel']);

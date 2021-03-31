@@ -63,12 +63,6 @@ class mainController extends Controller
     function check(Request $request)
     {
         $credentials = $request->only('email', 'password');
-        
-        //! if (Auth::attempt($credentials)) {
-        //!     $request->session()->regenerate();
-
-        //!     return redirect()->intended('/');
-        //! }
 
         // return $request->input();
         $request->validate([
@@ -110,17 +104,6 @@ class mainController extends Controller
             return redirect('login');
         }
     }
-
-    //! public function logout(Request $request)
-    //! {
-    // !    Auth::logout();
-
-    //!     $request->session()->invalidate();
-
-    //!     $request->session()->regenerateToken();
-
-    //!     return redirect('/');
-    //! }
 
     //WARNING!!
     //Remember all functions added here are the ones inside web authCheck!

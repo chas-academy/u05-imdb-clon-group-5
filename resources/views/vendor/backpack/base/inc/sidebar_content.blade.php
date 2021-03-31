@@ -5,6 +5,6 @@
 <li class='nav-item'><a class='nav-link' href='{{ backpack_url('watchlist') }}'><i class='la la-angle-double-right'></i> Watchlists</a></li>
 <li class='nav-item'><a class='nav-link' href='{{ backpack_url('watchlistitem') }}'><i class='la la-angle-double-right'></i> Watchlistitems</a></li>
 <li class='nav-item'><a class='nav-link' href='{{ backpack_url('genre') }}'><i class='la la-angle-double-right'></i> Genres</a></li>
-{{-- <li class='nav-item'><a class='nav-link' href='{{ backpack_url('genreitem') }}'><i class='la la-angle-double-right'></i> Genreitems</a></li> --}}
+<li class='nav-item'><a class='nav-link' href='{{ backpack_url('genreitem') }}'><i class='la la-angle-double-right'></i> Genreitems</a></li>
 <li class='nav-item'><a class='nav-link' href='{{ backpack_url('review') }}'><i class='la la-angle-double-right'></i> Reviews</a></li>
 <li class='nav-item'><a class='nav-link' href='{{ backpack_url('rating') }}'><i class='la la-angle-double-right'></i> Ratings</a></li>

@@ -36,25 +36,10 @@
 
     <section class="flex text-white justify-between font-poppins text-1xl bg-green-600 h-20 items-center sm:text2">
        <div class="ml-5 mr-5">
-
-
-            @auth
-            <form action="/movie/{{ $page->id }}" method="POST">
+            <form action="/watchlist/{{ $page->id }}" method="POST">
                 @csrf      
                 <input class="font-semibold font-poppins rounded-lg p-2 shadow-md text-white bg-red-500 hover:bg-yellow-700 lg:p-4 lg:text-lg cursor-pointer" type="submit" value="Add to Watchlist">
-              </form>
-            @endauth 
-
-
-
-            @guest
-            {{-- <form class="delete-form" action="/movie/{{ $page->id }}" method="POST">
-                @csrf      
-                <input type='hidden' name='complete_todo' value="{{ $page->id }}">
-                <input class="font-semibold font-poppins rounded-lg p-2 shadow-md text-white bg-red-500 hover:bg-yellow-700 lg:p-4 lg:text-lg" type="submit" name="delete" value="Watchlist">
-              </form> --}}
-               {{--  <a href="/login" class="font-semibold font-poppins rounded-lg p-2 shadow-md text-white bg-red-500 hover:bg-yellow-700 lg:p-4 lg:text-lg">Add to Watchlist</a> --}}
-            @endguest  
+            </form>
         </div>
        
                  {{-- Movie information rating and Release date --}}

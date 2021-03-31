@@ -43,6 +43,10 @@ class Movie extends Model
         return $this->belongsToMany('App\Models\Genre', 'genre_movie', 'movie_id', 'genre_id');
     }
 
+    public function review() {
+        return $this->hasMany('App\Models\Review', 'reviews', 'user_id', 'movie_id');
+    }
+
     /*
     |--------------------------------------------------------------------------
     | SCOPES

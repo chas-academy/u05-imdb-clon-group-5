@@ -15,16 +15,16 @@ class GenresTableSeeder extends Seeder
     public function run()
     {
         DB::table('genres')->insert([
-            ['genre' => 'action'],
-            ['genre' => 'comedy'],
-            ['genre' => 'thriller'],
-            ['genre' => 'romance'],
-            ['genre' => 'horror'],
-            ['genre' => 'adventure'],
-            ['genre' => 'scifi'],
-            ['genre' => 'drama'],
-            ['genre' => 'mystery'],
-            ['genre' => 'fantasy'],
+            ['genre' => 'Action'],
+            ['genre' => 'Comedy'],
+            ['genre' => 'Thriller'],
+            ['genre' => 'Romance'],
+            ['genre' => 'Horror'],
+            ['genre' => 'Adventure'],
+            ['genre' => 'Sci-fi'],
+            ['genre' => 'Drama'],
+            ['genre' => 'Mystery'],
+            ['genre' => 'Fantasy'],
         ]);
     }
 }

@@ -22,10 +22,8 @@ class CreateMoviesTable extends Migration
             $table->unsignedSmallInteger('rating')->nullable();
             $table->longText('description')->nullable();
             $table->year('year')->nullable();
-            $table->time('runtime')->nullable();
+            $table->float('runtime', 4, 2)->nullable();
             $table->date('release_date')->nullable();
-            //Added video_url -> Tatjana
-            $table->longtext('video_url')->nullable();
             $table->longText('img')->nullable();
             $table->boolean('featured')->default(false);
             $table->timestamps();

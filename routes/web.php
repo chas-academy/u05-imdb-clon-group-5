@@ -4,6 +4,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\mainController;
 use App\Http\Controllers\MovieController;
 use App\Http\Controllers\SearchController;
+use App\Http\Controllers\WatchlistController;
+use App\Http\Controllers\UserController;
+use App\http\Controllers\GenreController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,28 +23,55 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/login-user', function () {
-    return view('login-user');
+
+Route::get('/movies', function () {
+    return view('movies');
 });
+
+
+
+
 
 Route::get('/register', function () {
     return view('register');
 });
+Route::post('/watchlist', [WatchlistController::class, 'store']);
+Route::get('/watchlist', [WatchlistController::class, 'show']);
 
 // ------ search -----
 // Route::get('/search', [SearchController::class, 'search']);
 // Route::get('/search', [mainController::class, 'search']);
 
 Route::get('/search', [SearchController::class, 'search'])->name('search');
+Route::delete('/watchlist/{id}', [WatchlistController::class, 'destroy']);
 
 
 Route::get('/', [MovieController::class, 'movieCarousel']);
 
-Route::get('/leaveAreview', [MovieController::class, 'leaveAreview']);
+// Route::get('/leaveAreview', [MovieController::class, 'leaveAreview']);
 
-Route::get('/movie-info', function () {
-    return view('movie-info');
-});
+
+/***************************************************************
+
+    - Jorge => authCheck middleware + movie{id} + genre{id}
+ * Mehrdad => review form
+ * Tatjana => review form
+
+ ***************************************************************/
+
+Route::get('review', [mainController::class, 'review']);
+/* Route::get('/register', function () {
+    return view('register');
+}); */
+Route::post('review', [mainController::class, 'store']);
+
+//Movies information
+Route::get('/movie/{id}', [mainController::class, 'getInfo']);
+Route::post('/movie/{id}', [mainController::class, 'store']);
+//Each Genre Information
+
+Route::get('/genre/{id}', [GenreController::class, 'genre']);
+Route::get('/genre-list', [GenreController::class, 'genreList']);
 
 //Storage to the DB
 Route::post('/save', [mainController::class, 'save'])->name('save');

@@ -58,6 +58,19 @@ module.exports = {
                     800: '#4B1D15',
                     900: '#230D0A'
                 },
+                'japanese-laurel': {  
+                    DEFAULT: '#197901',  
+                    '50': '#81FE62',  
+                    '100': '#6DFD49',  
+                    '200': '#44FD16',  
+                    '300': '#2EDE02',  
+                    '400': '#23AC01',  
+                    '500': '#197901',  
+                    '600': '#0F4601',  
+                    '700': '#041400',  
+                    '800': '#000000',  
+                    '900': '#000000'
+                },
             },
         },
         fontFamily: {
@@ -71,5 +84,8 @@ module.exports = {
     variants: {
         extend: {},
     },
-    plugins: [require("tailwind-scrollbar-hide")],
+    plugins: [
+        require("tailwind-scrollbar-hide"), 
+        require("@tailwindcss/line-clamp"),
+    ]
 };

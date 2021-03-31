@@ -17,8 +17,8 @@ class CreateReviewsTable extends Migration
             $table->id();
             $table->foreignId('user_id')->constrained();
             $table->foreignId('movie_id')->constrained();
-            $table->string('review-title')->nullable();
-            $table->text('review-text')->nullable();
+            $table->string('reviewTitle')->nullable();
+            $table->text('reviewText')->nullable();
             $table->timestamps();
         });
     }

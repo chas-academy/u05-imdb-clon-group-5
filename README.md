@@ -8,178 +8,86 @@ This repo is functionality complete — PRs and issues welcome!
 
 ----------
 
-# Getting started
 
-## Installation
+# IMDB clone
 
-Please check the official laravel installation guide for server requirements before you start. [Official Documentation](https://laravel.com/docs/5.4/installation#installation)
+This is our attempt to recreating imdb page. this project is made with laravel, backpack and Tailwind CSS.
 
-Alternative installation is possible without local dependencies relying on [Docker](#docker). 
+**IMDB clone** was developed based on IMDb (International Movie Database) website which is the world's most authoritative source for movie, TV and celebrity content.
 
-Clone the repository
+**Goals**
+Our goals was to create a completely dynamic website by using:
+1. Backend
+PHP
 
-    git clone git@github.com:gothinkster/laravel-realworld-example-app.git
+2. Front-end
+JavaScript,
+HTML
+CSS (Tailwind)
+Graphics and design FIGMA
 
-Switch to the repo folder
+3. The framework of PHP
+Laravel
 
-    cd laravel-realworld-example-app
+4. Development environment
+Laravel Homestead
 
-Install all the dependencies using composer
+5. Database
+MySQL database with tables and Laravel migration data.
+Artisan to handle database migration
 
-    composer install
+# Envirnoment and setup
 
-Copy the example env file and make the required configuration changes in the .env file
+**Installation**
+1. Install Composer
+https://dbwebb.se/kunskap/installera-composer
+Run the "composer install" command to install the required php / laravel dependencies
 
-    cp .env.example .env
+Run the "npm install" command to install the necessary dependencies.
 
-Generate a new application key
+4. Rename the .env.example file to .env and configure it
 
-    php artisan key:generate
+5. Create a database named “moviedb” from localhost / phpMyAdmin
 
-Generate a new JWT authentication secret key
+6. Start the app with php artisan serve
+Run "php artisan db: seed"
+8. Install Backpack
+"Php artisan backpack: install"
+9. To log in with admin in backpack:
+email: "admin@admin.com"
+password: "adminadmin"
 
-    php artisan jwt:generate
+---
 
-Run the database migrations (**Set the database connection in .env before migrating**)
+**Access**
+Our website has three different types of access:
+1. Public audience
+2. visited without logging in for
+3. regular visitors
 
-    php artisan migrate
+Logged in user - requires registration. Where you as a user can:
 
-Start the local development server
+**Review movies**
+Create a list of movies (Add) - Watchlist.
+Modify a list of movies (save / delete) - Watchlist
+Rate movies
 
-    php artisan serve
+3. Administrator - protected part
+Manage reviews and comments (approve, delete)
+CRUD operations for movies
+CRUD operations for users
 
-You can now access the server at http://localhost:8000
+**Contributions**
+Thanks to:
+Filip Johansson
+Mehrdad Amini
+Thommie Wallin
+Jorge Pereda
+Tatjana Albairmani
+Natalie Nillsson
+Ellinor Scherberg
 
-**TL;DR command list**
+## Backlog
+We used trello to track our progress
+https://trello.com/b/Fi8FwiCD/u05-imdb-redesign
 
-    git clone git@github.com:gothinkster/laravel-realworld-example-app.git
-    cd laravel-realworld-example-app
-    composer install
-    cp .env.example .env
-    php artisan key:generate
-    php artisan jwt:generate 
-    
-**Make sure you set the correct database connection information before running the migrations** [Environment variables](#environment-variables)
-
-    php artisan migrate
-    php artisan serve
-
-## Database seeding
-
-**Populate the database with seed data with relationships which includes users, articles, comments, tags, favorites and follows. This can help you to quickly start testing the api or couple a frontend and start using it with ready content.**
-
-Open the DummyDataSeeder and set the property values as per your requirement
-
-    database/seeds/DummyDataSeeder.php
-
-Run the database seeder and you're done
-
-    php artisan db:seed
-
-***Note*** : It's recommended to have a clean database before seeding. You can refresh your migrations at any point to clean the database by running the following command
-
-    php artisan migrate:refresh
-    
-## Docker
-
-To install with [Docker](https://www.docker.com), run following commands:
-
-```
-git clone git@github.com:gothinkster/laravel-realworld-example-app.git
-cd laravel-realworld-example-app
-cp .env.example.docker .env
-docker run -v $(pwd):/app composer install
-cd ./docker
-docker-compose up -d
-docker-compose exec php php artisan key:generate
-docker-compose exec php php artisan jwt:generate
-docker-compose exec php php artisan migrate
-docker-compose exec php php artisan db:seed
-docker-compose exec php php artisan serve --host=0.0.0.0
-```
-
-The api can be accessed at [http://localhost:8000/api](http://localhost:8000/api).
-
-## API Specification
-
-This application adheres to the api specifications set by the [Thinkster](https://github.com/gothinkster) team. This helps mix and match any backend with any other frontend without conflicts.
-
-> [Full API Spec](https://github.com/gothinkster/realworld/tree/master/api)
-
-More information regarding the project can be found here https://github.com/gothinkster/realworld
-
-----------
-
-# Code overview
-
-## Dependencies
-
-- [jwt-auth](https://github.com/tymondesigns/jwt-auth) - For authentication using JSON Web Tokens
-- [laravel-cors](https://github.com/barryvdh/laravel-cors) - For handling Cross-Origin Resource Sharing (CORS)
-
-## Folders
-
-- `app` - Contains all the Eloquent models
-- `app/Http/Controllers/Api` - Contains all the api controllers
-- `app/Http/Middleware` - Contains the JWT auth middleware
-- `app/Http/Requests/Api` - Contains all the api form requests
-- `app/RealWorld/Favorite` - Contains the files implementing the favorite feature
-- `app/RealWorld/Filters` - Contains the query filters used for filtering api requests
-- `app/RealWorld/Follow` - Contains the files implementing the follow feature
-- `app/RealWorld/Paginate` - Contains the pagination class used to paginate the result
-- `app/RealWorld/Slug` - Contains the files implementing slugs to articles
-- `app/RealWorld/Transformers` - Contains all the data transformers
-- `config` - Contains all the application configuration files
-- `database/factories` - Contains the model factory for all the models
-- `database/migrations` - Contains all the database migrations
-- `database/seeds` - Contains the database seeder
-- `routes` - Contains all the api routes defined in api.php file
-- `tests` - Contains all the application tests
-- `tests/Feature/Api` - Contains all the api tests
-
-## Environment variables
-
-- `.env` - Environment variables can be set in this file
-
-***Note*** : You can quickly set the database information and other variables in this file and have the application fully working.
-
-----------
-
-# Testing API
-
-Run the laravel development server
-
-    php artisan serve
-
-The api can now be accessed at
-
-    http://localhost:8000/api
-
-Request headers
-
-| **Required** 	| **Key**              	| **Value**            	|
-|----------	|------------------	|------------------	|
-| Yes      	| Content-Type     	| application/json 	|
-| Yes      	| X-Requested-With 	| XMLHttpRequest   	|
-| Optional 	| Authorization    	| Token {JWT}      	|
-
-Refer the [api specification](#api-specification) for more info.
-
-----------
- 
-# Authentication
- 
-This applications uses JSON Web Token (JWT) to handle authentication. The token is passed with each request using the `Authorization` header with `Token` scheme. The JWT authentication middleware handles the validation and authentication of the token. Please check the following sources to learn more about JWT.
- 
-- https://jwt.io/introduction/
-- https://self-issued.info/docs/draft-ietf-oauth-json-web-token.html
-
-----------
-
-# Cross-Origin Resource Sharing (CORS)
- 
-This applications has CORS enabled by default on all API endpoints. The default configuration allows requests from `http://localhost:3000` and `http://localhost:4200` to help speed up your frontend testing. The CORS allowed origins can be changed by setting them in the config file. Please check the following sources to learn more about CORS.
- 
-- https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS
-- https://en.wikipedia.org/wiki/Cross-origin_resource_sharing
-- https://www.w3.org/TR/cors

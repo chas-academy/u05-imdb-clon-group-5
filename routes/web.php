@@ -6,6 +6,7 @@ use App\Http\Controllers\MovieController;
 use App\Http\Controllers\WatchlistController;
 use App\Http\Controllers\UserController;
 use App\http\Controllers\GenreController;
+use App\http\Controllers\RatingController;
 
 /*
 |--------------------------------------------------------------------------
@@ -90,4 +91,7 @@ Route::group(['middleware' => ['authCheck']], function () {
     Route::get('/watchlist', [WatchlistController::class, 'show']);
     Route::post('/watchlist/{id}', [WatchlistController::class, 'store']);
     Route::delete('/watchlist/{id}', [WatchlistController::class, 'destroy']);
+
+    // Rating
+    Route::post('/{id}/rating', [RatingController::class,'store'])->name('rating');
 });

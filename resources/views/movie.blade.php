@@ -39,18 +39,44 @@
                 <input class="font-semibold font-poppins rounded-lg p-2 shadow-md text-white bg-red-500 hover:bg-yellow-700 lg:p-4 lg:text-lg cursor-pointer" type="submit" value="Add to Watchlist">
             </form>
         </div>
-       
-                 {{-- Movie information rating and Release date --}}
+    
+        {{-- Movie information rating and Release date --}}            
+        <div>
+            <h2 class="mr-2">Release date: {{$page->release_date}}</h2>
+        </div>
+        <div>
+            <h2>Time: {{$page->runtime}}h</h2>
+        </div>  
+        <div class="text-white mr-4 sm:mr-15">
+            <h4><span class="text-yellow-400">&#9733;</span> {{$page->rating}}/10</h4>
+        </div>
+        @auth
+            @isset($userRating)
+                <div class="text-white mr-4 sm:mr-15">
+                    <h4>{{ Auth::user()->name }}:<span class="text-yellow-400">&#9733;</span> {{ $userRating }}/10</h4>
+                </div>
+            @endisset
             
-                    <div>
-                        <h2 class="mr-2">Release date: {{$page->release_date}}</h2>
-                    </div>
-                    <div>
-                        <h2>Time: {{$page->runtime}}h</h2>
-                    </div>  
-                    <div class="text-white mr-4 sm:mr-20">
-                        <h4><span class="text-yellow-400">&#9733;</span> {{$page->rating}}/10</h4>
-                    </div>
+        @endauth
+        
+        <div class="ml-5 mr-5 text-black">
+            <form action="/{{ $page->id }}/rating" method="POST">
+                @csrf
+                <select name="rating" class="">
+                    <option  value='1'>1 &#9733;</option>
+                    <option  value='2'>2 &#9733;</option>
+                    <option  value='3'>3 &#9733;</option>
+                    <option  value='4'>4 &#9733;</option>
+                    <option  value='5'>5 &#9733;</option>
+                    <option  value='6'>6 &#9733;</option>
+                    <option  value='7'>7 &#9733;</option>
+                    <option  value='8'>8 &#9733;</option>
+                    <option  value='9'>9 &#9733;</option>
+                    <option  value='10'>10 &#9733;</option>
+                </select>
+                <input class="font-semibold font-poppins rounded-lg p-2 shadow-md text-white bg-red-500 hover:bg-yellow-700 lg:p-4 lg:text-lg cursor-pointer" type="submit" value="Rate">
+            </form>
+        </div>
                 
     </section>
         <!-- Review -->
@@ -85,7 +111,7 @@
 </div>
 
 
-<section id="writeReview" class="hidden max-w-4xl p-6 mx-auto bg-white rounded-md shadow-md dark:bg-gray-800">
+<section id="writeReview" class="hidden  max-w-4xl p-6 mx-auto bg-white rounded-md shadow-md dark:bg-gray-800">
     <h2 class="text-lg font-semibold text-gray-700 dark:text-white">Review of {{ $page->title }}</h2>
     <form method="post" action="{{url('movie/'.$page->id.'')}}">
         @csrf
@@ -96,7 +122,7 @@
             </div>
             <div>
                 <label class="text-gray-700 dark:text-gray-200" for="text">Description</label>
-                <textarea name="text" required id="text" type="text" class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring"></textarea>
+                <textarea name="text" required id="text" type="text" class="block h-10 w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-300 rounded-md dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring"></textarea>
             </div>
         </div>
 

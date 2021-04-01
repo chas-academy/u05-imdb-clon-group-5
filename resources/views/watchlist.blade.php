@@ -20,12 +20,12 @@
           <li class="font-bold text-base"><a href="/movie/{{$movie->id}}">{{ $movie->title }}</a></li>
           <li class="flex text-sm">
             <div class="flex items-center">
-              <img class="object-none mx-0.5" src="../img/rating-star.png">{{ $movie->rating }}/10
+              <span class="object-none mx-0.5 text-yellow-400">&#9733</span>{{ $movie->rating }}/10
             </div>
             <div class="flex items-center ml-1">
               @foreach ($ratings as $rating)
                 @if ($rating->movies_id === $movie->id)
-                  User: <img class="object-none mx-0.5" src="../img/rating-star.png">{{ $rating->rating }}/10
+                  {{ Auth::user()->name }}: <span class="object-none mx-0.5 text-yellow-400">&#9733</span>{{ $rating->rating }}/10
                 @endif
               @endforeach
             </div>          

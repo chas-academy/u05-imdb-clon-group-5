@@ -56,14 +56,10 @@ Route::get('/', [MovieController::class, 'movieCarousel']);
 
  ***************************************************************/
 
-Route::get('review', [mainController::class, 'review']);
-/* Route::get('/register', function () {
-    return view('register');
-}); */
-Route::post('review', [mainController::class, 'store']);
+
+
 
 //Movies information
-
 Route::get('/movie/{id}', [mainController::class, 'getInfo'])->name('movie');
 Route::post('/movie/{id}', [mainController::class, 'store']);
 //Each Genre Information
@@ -101,4 +97,7 @@ Route::group(['middleware' => ['authCheck']], function () {
 
     // Rating
     Route::post('/{id}/rating', [RatingController::class,'store'])->name('rating');
+
+    // Review
+    Route::post('review/{id}', [mainController::class, 'store']);
 });

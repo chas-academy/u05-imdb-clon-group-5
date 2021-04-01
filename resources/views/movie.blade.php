@@ -133,7 +133,7 @@
 
 <section id="writeReview" class="hidden  max-w-4xl p-6 mx-auto bg-white rounded-md shadow-md dark:bg-gray-800">
     <h2 class="text-lg font-semibold text-gray-700 dark:text-white">Review of {{ $page->title }}</h2>
-    <form method="post" action="{{url('movie/'.$page->id.'')}}">
+    <form method="post" action="{{url('review/'.$page->id.'')}}">
         @csrf
         <div class="grid grid-cols-1 gap-6 mt-4 sm:grid-cols-2">
             <div>

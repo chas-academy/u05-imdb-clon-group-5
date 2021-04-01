@@ -11,17 +11,15 @@
                         </a>
                     </h1>
                 </div>
-
                 <!-- Search -->
                 <div class="x1 lg:auto w-3/6 md:mt-1" style="margin-left: auto;margin-right: auto;" class="md:flex md:justify-center md:items-center" id="mobs" id="burgerbtn">
                     <form action="{{ route('search') }}" method="GET" role="search" class="hidden sm:hidden md:flex lg:w-26 lg:mt-1.5 max-w-screen-lg bg-gradient-to-l from-blue-300 to-blue-500 items-center rounded-full shadow-xl md:h-9 p-2 md:mt-1">
                         @csrf
-                        <img class="w-9 mb-1 mr-auto mt-1" src="./img/magnifier.svg" alt="magnifier" title="magnifier">
-                        <input class="rounded-l-full w-full py0 px0 bg-gradient-to-l from-blue-300 to-blue-500 text-white leading-tight focus:outline-none h-2 p-2" id="search" placeholder="Search" type="text" name="search" required />
+                        <img class="w-9 mb-1 mr-auto mt-1" src="../img/magnifier.svg" alt="magnifier" title="magnifier">
+                        <input class="rounded-l-full w-full py0 px0 bg-gradient-to-l from-blue-300 to-blue-500 text-white leading-tight focus:outline-none h-2 p-2" id="search" placeholder="Search" type="search" name="search" required />
                         <a href="{{ route('search') }}" class=" mt-1">
                             <button class="lg:w-24 top-1/2 left-1/2 bg-white text-blue-600 rounded-full p-2 hover:bg-gray-300 focus:outline-none w-16 h-6 flex items-center justify-center" type="submit">GO</button>
                         </a>
-
                     </form>
                 </div>
                 <!-- LOGIN -->
@@ -77,18 +75,22 @@
                         </div>
                         <!-- Search (nav-open) -->
                         <div class="p-2 w-full justify-center inline-flex ml-3" style="margin-top: 3rem;padding-left: 2rem;left: 50%;margin-left: -0.75rem;">
-                            <div class="rounded-l-full bg-white flex items-center rounded-full shadow-xl h-8 xl:h-16">
-                                <span class="rounded-l-full w-12 h-8 lg:h-10 flex justify-end items-center text-gray-00 p-2 bg-blue-500 p-1.5 md:left0  xl:h-16" style="padding: 0rem;">
-                                    <img class="w-20 mb-1 mr-auto mt-1 bg-blue-500 h-8 " style="position: relative;left: 0.75rem;width: 2rem;" src=" ../img/magnifier.svg" alt="magnifier" title="magnifier">
-                                </span>
-                                <input class="w-full py-4 px-6 bg-gradient-to-l from-blue-300 to-blue-500 text-white leading-tight focus:outline-none h-8 lg:h-10 text-xl xl:h-16" id="search" type="text" placeholder="Search">
-                                <div class="p-1 h-8 lg:h-10 rounded-r-full bg-blue-300 xl:h-16">
-                                    <button class="lg:w-24 top-1/2 left-1/2 bg-white text-indigo-500 rounded-full p-2 hover:bg-blue-300 focus:outline-none w-12 h-6 lg:h-8 flex items-center justify-center text-xl xl:h-14">
-                                        Go
-                                    </button>
-                                    </form>
+                            <form action="{{ route('search') }}" method="GET" role="search">
+                                @csrf
+                                <div class="rounded-l-full bg-white flex items-center rounded-full shadow-xl h-8 xl:h-16">
+                                    <span class="rounded-l-full w-12 h-8 lg:h-10 flex justify-end items-center text-gray-00 p-2 bg-blue-500 p-1.5 md:left0  xl:h-16" style="padding: 0rem;">
+                                        <img class="w-20 mb-1 mr-auto mt-1 bg-blue-500 h-8" style="position: relative;left: 0.75rem;width: 2rem;" src=" ../img/magnifier.svg" alt="magnifier" title="magnifier">
+                                    </span>
+                                    <input class="w-full py-4 px-6 bg-gradient-to-l from-blue-300 to-blue-500 text-white leading-tight focus:outline-none h-8 lg:h-10 text-xl xl:h-16" id="search" placeholder="Search" type="search" name="search">
+                                    <div class="p-1 h-8 lg:h-10 rounded-r-full bg-blue-300 xl:h-16">
+                                        <a href="{{ route('search') }}">
+                                            <button class="lg:w-24 top-1/2 left-1/2 bg-white text-indigo-500 rounded-full p-2 hover:bg-blue-300 focus:outline-none w-12 h-6 lg:h-8 flex items-center justify-center text-xl xl:h-14" type="submit">
+                                                Go
+                                            </button>
+                                        </a>
+                                    </div>
                                 </div>
-                            </div>
+                            </form>
                         </div>
                         <div class="lg:hidden mt-2">
                             <a href="javascript:void(0)" class="closebtn relative top-10 w-full text-center mt-8-3 sm:" onclick="closeNav()">
@@ -97,19 +99,7 @@
                         </div>
                     </div>
                 </div>
-
             </div>
         </header>
     </div>
 </nav>
-
-
-
-<!-- No posts found here -->
-
-
-<!-- Search results -->
-
-<!-- <div class="container mt-0 p-0">
-    <div id="search-results" class="row m-0 mb-4"></div>
-</div> -->

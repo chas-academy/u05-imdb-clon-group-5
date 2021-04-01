@@ -150,9 +150,12 @@ class mainController extends Controller
             $genres[$i] = Genre::find($genreitems[$i])->first();
         }
         $ratings = [];
+        $review_users = [];
         for ($i = 0; $i < count($reviews); $i++) {
             $ratings[$i] = Rating::where('user_id', $reviews[$i]->user_id)->where('movies_id', $id)->first();
+            $review_users[$i] = User::where('id', $reviews[$i]->user_id)->first();
         }
+       
         $userRatings = Auth::user()->rating;
         $userRating = null;
         for ($i = 0; $i < count($userRatings); $i++) {
@@ -162,10 +165,11 @@ class mainController extends Controller
         }
         if ($userRating == null) {
             return view('movie', array('page' => $page, 'reviews' => $reviews, 'ratings' => $ratings, 'genres' =>
-            $genres));
+            $genres, 'review_users' => $review_users));
         }
 
-        return view('movie', array('page' => $page, 'reviews' => $reviews, 'ratings' => $ratings, 'genres' => $genres, 'userRating' => $userRating));
+        return view('movie', array('page' => $page, 'reviews' => $reviews, 'ratings' => $ratings, 'genres' => $genres,
+        'userRating' => $userRating, 'review_users' => $review_users));
     }
 
     public function getGenre($id)

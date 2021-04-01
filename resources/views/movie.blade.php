@@ -87,6 +87,12 @@
             @foreach($reviews as $review)
                 <div class="w-96 m-10">
                     <h1 class="uppercase tracking-wide text-sm text-yellow-500 font-semibold">{{$review->reviewTitle}}</h1>
+                    @foreach ($review_users as $review_user)      
+                        @if ($review_user->id == $review->user_id)
+                            <p class="text-white">By: <span>{{ $review_user->name }}</span></p>
+                        @endif    
+                    @endforeach
+                    
                     <p class="normal-case text-gray-100">{{$review->reviewText}}</p>
           
                 @foreach ($ratings as $rating)

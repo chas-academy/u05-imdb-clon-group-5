@@ -1,11 +1,5 @@
 <?php
-///////////////////////////////////////////////////////////////////
-//* Add your name if you changed something                      *//
-//* Contributors:                                               *//
-//*     - Jorge Pereda                                          *//
-//*     - ...                                                   *//
-//* Do not forget to add the comments above the code you wrote! *//
-///////////////////////////////////////////////////////////////////
+
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
@@ -56,7 +50,7 @@ class mainController extends Controller
             ]);
         if ($imdb) {
             //
-            return redirect('user');
+            return redirect('/');
         } else {
             //
             return back()->with('fail', 'Something went wrong, try again');
@@ -90,7 +84,7 @@ class mainController extends Controller
                     $watchlist->save();
                 }
 
-                return redirect('user');
+                return redirect('/');
             } else {
                 //If the passsword is incorrect, then...
                 return back()->with('fail', 'Incorrect password');
@@ -153,19 +147,21 @@ class mainController extends Controller
         for ($i = 0; $i < count($reviews); $i++) {
             $ratings[$i] = Rating::where('user_id', $reviews[$i]->user_id)->where('movies_id', $id)->first();
         }
-        $userRatings = Auth::user()->rating;
-        $userRating = null;
-        for ($i = 0; $i < count($userRatings); $i++) {
-            if ($userRatings[$i]->movies_id == $id) {
-                $userRating = $userRatings[$i]->rating;
+        if (Auth::check()) {
+            $userRatings = Auth::user()->rating;
+            $userRating = null;
+            for ($i = 0; $i < count($userRatings); $i++) {
+                if ($userRatings[$i]->movies_id == $id) {
+                    $userRating = $userRatings[$i]->rating;
+                }
             }
-        }
-        if ($userRating == null) {
-            return view('movie', array('page' => $page, 'reviews' => $reviews, 'ratings' => $ratings, 'genres' =>
-            $genres));
+            return view('movie', array('page' => $page, 'reviews' => $reviews, 'ratings' => $ratings, 'genres' => $genres, 'userRating' => $userRating));
         }
 
-        return view('movie', array('page' => $page, 'reviews' => $reviews, 'ratings' => $ratings, 'genres' => $genres, 'userRating' => $userRating));
+
+
+        return view('movie', array('page' => $page, 'reviews' => $reviews, 'ratings' => $ratings, 'genres' =>
+        $genres));
     }
 
     public function getGenre($id)
@@ -196,7 +192,7 @@ class mainController extends Controller
         $review->user_id = $request->session()->get('LoggedUser');
         $review->movie_id = $id;
         $review->save();
-        
+
         return Redirect::to(URL::previous());
     }
 }

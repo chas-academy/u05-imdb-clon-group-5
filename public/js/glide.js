@@ -7,17 +7,17 @@ for (var i = 0; i < sliders.length; i++) {
         type: "carousel",
         breakpoints: {
             1200: {
-                perView: 7,
+                perView: 5,
                 gap: 0,
             },
             1050: {
-                perView: 6,
-            },
-            886: {
                 perView: 5,
             },
-            750: {
+            886: {
                 perView: 4,
+            },
+            750: {
+                perView: 3,
             },
 
             489: {

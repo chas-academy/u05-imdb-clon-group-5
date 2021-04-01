@@ -2,7 +2,7 @@
 @extends('layout/layout')
 @section('content')
 
-<div class="overflow-x-hidden m-auto bg-midnight lg:mt-16">
+<div class="overflow-x-hidden m-auto bg-midnight lg:mt-16 max-w-screen-xl">
     <img style="max-height: 500px; min-width: 100%" class="sm:hidden" src="{{ $page->img }}">
 
         <!-- movie information -->

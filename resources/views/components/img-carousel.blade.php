@@ -14,7 +14,7 @@
             @if ($moviedata == 1 and $movie->rating >= 7 )
 
             <li class="glide__slide">
-                <a href="/movie/{{$movie->id}}"><img class=" w-36 h-48" src="{{$movie->img}}" /></a>
+                <a href="/movie/{{$movie->id}}"><img class="w-48 h-48" src="{{$movie->img}}" /></a>
             </li>
 
 
@@ -22,11 +22,12 @@
                     show featured movies this is all movies at this point --}}
 
             @elseif($moviedata == 2 and $movie->featured == 1)
+            
             <li class="glide__slide">
-                <div class="bg-midnight-800 w-36 min-w-max text-center font-bold text-white">
-                    <a href="/movie/{{$movie->id}}"><img class="w-36 h-48" src="{{$movie->img}}" /></a>
-
-                </div>
+            
+                    <a href="/movie/{{$movie->id}}"><img class=" w-48 h-48" src="{{$movie->img}}" /></a>    
+              
+               
             </li>
 
 
@@ -34,8 +35,8 @@
                     show only movie img --}}
             @elseif($moviedata == 3)
             <li class="glide__slide">
-                <div class="bg-midnight-800 w-36 min-w-max text-center font-bold text-white">
-                    <a href="/movie/{{$movie->id}}"><img class="w-36 h-48" src="{{$movie->img}}" /></a>
+                <div class=" min-w-max text-center font-bold text-white">
+                    <a href="/movie/{{$movie->id}}"><img class="w-48 h-48" src="{{$movie->img}}" /></a>
                 </div>
             </li>
 

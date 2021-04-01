@@ -80,7 +80,7 @@ class mainController extends Controller
             //Checking password
             if ($request->password) {
                 //
-                $request->session()->put('LoggedUser', $userInfo->id);   
+                $request->session()->put('LoggedUser', $userInfo->id);
 
                 // Create new watchlist once
                 $user_id = $request->session()->get('LoggedUser');
@@ -103,7 +103,7 @@ class mainController extends Controller
         if (session()->has('LoggedUser')) {
             session()->pull('LoggedUser');
             Auth::logout();
-            return redirect('login');
+            return redirect('/');
         }
     }
 

@@ -1,9 +1,6 @@
 <div class="mt-40">
         <footer class="bg-midnight-800 text-center flex justify-center h-20 items-center"> 
-                <img class="inline object-contain md:object-scale-down" src="../img/imdb_logo.svg" alt="imdb">
-                <img class="inline object-contain md:object-scale-down" src="../img/cat.png" alt="cat">
-                <p class="inline text-white">  
-                <a href="#">About us</a>
-                </p>
+                <h1 class="inline object-contain md:object-scale-down text-white font-poppins font-normal">IMDB-clone</h1>
+                <a class="inline object-contain ml-5 md:object-scale-down text-white font-poppins font-normal" href="/">Home</a>
         </footer>   
 </div>

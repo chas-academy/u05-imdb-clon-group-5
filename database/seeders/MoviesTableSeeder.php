@@ -711,18 +711,7 @@ class MoviesTableSeeder extends Seeder
             'img' => 'https://images-na.ssl-images-amazon.com/images/I/814eu9I4cwL._AC_SL1500_.jpg',
             'featured' => 0,
         ]);
-        DB::table('movies')->insert([
-            'title' => 'Wrong Turn',
-            'director' => 'Mike P. Nelson',
-            'rating' => 4,
-            'writer' => 'Alan B. McElroy',
-            'description' => 'Jen and a group of friends set out to hike the Appalachian Trail. Despite warnings to stick to the trail, the hikers stray off course—and cross into land inhabited by The Foundation, a hidden community of mountain dwellers who use deadly means to protect their way of life.',
-            'year' => 2021,
-            'runtime' => 01.50,
-            'release_date'  => '2021-01-26',
-            'img' => 'https://m.media-amazon.com/images/M/MV5BM2Y5ZWE2MTMtODE3ZC00NWQ4LWJkNzctNGY4Njg5NDY5MzNlXkEyXkFqcGdeQXVyNjUxMjc1OTM@._V1_.jpg',
-            'featured' => 1,
-        ]);
+
         DB::table('movies')->insert([
             'title' => 'The Funeral Home',
             'director' => 'Mauro Iván Ojeda',

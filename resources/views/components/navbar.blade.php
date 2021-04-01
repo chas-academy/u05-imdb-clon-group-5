@@ -1,6 +1,6 @@
 
 
-<nav class="font-poppins bg-dianne-500 {{-- bg-midnight-500 --}} text-white px-4 w-full flex justify-between md:justify-evenly items-center h-16">
+<nav class="font-poppins bg-dianne-500 {{-- bg-midnight-500 --}} text-white px-4 w-full flex justify-between lg:justify-evenly items-center h-16">
  
         <!-- style="max-width: 64rem; -->
  
@@ -8,7 +8,7 @@
                 <!-- Logo -->
               
 
-                        <a class="x1 ml-2 text-2xl font-poppins font-bold transition duration-500 ease-in-out hover:text-red-500" href="/">
+                        <a class="x1 ml-2 text-1xl sm:text-2xl font-poppins font-bold transition duration-500 ease-in-out hover:text-red-500" href="/">
                             IMDB-clone
                         </a>
                  
@@ -27,16 +27,24 @@
           
                 <!-- LOGIN -->
                
-                   
-                        <a href="/login" class="x2 mr-5 text-2xl font-medium font-poppins flex items-center transition duration-500 ease-in-out hover:text-red-500">
-                            Login
-                        </a>
+                   @auth
+                   <a href="/logout" class="x2 mr-5 text-1xl sm:text-2xl font-medium font-poppins flex items-center transition duration-500 ease-in-out hover:text-red-500">
+                    Logout
+                </a>
+                   @endauth
+
+                   @guest
+                   <a href="/login" class="x2 mr-5 text-1xl sm:text-2xl font-medium font-poppins flex items-center transition duration-500 ease-in-out hover:text-red-500">
+                    Login
+                </a>
+                   @endguest
+                      
                   
                
                 <!-- Naviagation -->
                 
                 <div class="transform -rotate-90">
-                    <span tabindex="0" aria-haspopup="true" style="font-size:30px;cursor:pointer;" onclick="openNav()">
+                    <span class="cursor-pointer text-lg sm:text-3xl" tabindex="0" aria-haspopup="true" onclick="openNav()">
                      
                             <span role="navigation"  class="h-4 w-2 rounded-2xl  text-white bg-white">&nbsp;</span>
                             <span role="navigation"   class="h-4 w-2 rounded-2xl text-white bg-white">&nbsp;</span>
@@ -57,30 +65,16 @@
                         <!-- Navigation links -->
                         <div class="lg:mt-24 md:10">
                             <div class="containerx mt-7">
-                                <a class="imagex p-2 no-underline text-4xl lg:text-6xl text-white block duration-75 hover:bg-gray-800 focus:ring-gray-200top-1 right-2 lg:mb-2 md:mb-1 sm:mb-1 xl:text-8xl" href="/movies">Movies
-                                    <div class="hidden sm:hidden lg:flex overlayx">
-                                        <div class="hidden sm:hidden lg:flex textx">
-                                            <img class="" src="../img/movies-hover.svg" alt="movies-hover-frame" title="movies-hover-frame">
-                                        </div>
-                                    </div>
+                                <a class="imagex p-2 no-underline text-4xl lg:text-6xl text-white block hover:bg-gray-800 focus:ring-gray-200top-1 right-2 lg:mb-2 md:mb-1 sm:mb-1 xl:text-8xl transition duration-500 ease-in-out hover:text-red-500" href="/movies">Movies</a>
+                            </div>
+                            <div class="containerx mt-7">
+                                <a class="imagex p-2 no-underline text-4xl lg:text-6xl text-white block  hover:bg-gray-800 focus:ring-gray-200 top-1 right-2 lg:mb-2 md:mb-1 xl:text-8xl transition duration-500 ease-in-out hover:text-red-500" href="/genre-list">Genre
+                                   
                                 </a>
                             </div>
                             <div class="containerx mt-7">
-                                <a class="imagex p-2 no-underline text-4xl lg:text-6xl text-white block duration-75 hover:bg-gray-800 focus:ring-gray-200 top-1 right-2 lg:mb-2 md:mb-1 xl:text-8xl" href="/genre-list">Genre
-                                    <div class="hidden sm:hidden lg:flex overlayx">
-                                        <div class="hidden sm:hidden lg:flex textx">
-                                            <img class="" src="../img/genre-hover.svg" alt="genre-hover-frame" title="genre-hover-frame">
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="containerx mt-7">
-                                <a class="imagex p-2 no-underline text-4xl lg:text-6xl text-white block duration-75 hover:bg-gray-800 focus:ring-gray-200 top-1 right-2 lg:mb-2 md:mb-1 xl:text-8xl" href="/watchlist">Watchlist
-                                    <div class="hidden sm:hidden lg:flex overlayx l">
-                                        <div class="hidden sm:hidden lg:flex textx">
-                                            <img class="" src="../img/watchlist-hover.svg" alt="watchlist-hover-frame" title="watchlist-hover-frame">
-                                        </div>
-                                    </div>
+                                <a class="imagex p-2 no-underline text-4xl lg:text-6xl text-white block  hover:bg-gray-800 focus:ring-gray-200 top-1 right-2 lg:mb-2 md:mb-1 xl:text-8xl transition duration-500 ease-in-out hover:text-red-500" href="/watchlist">Watchlist
+                                  
                                 </a>
                             </div>
                         </div>

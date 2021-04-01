@@ -408,7 +408,7 @@ class MoviesTableSeeder extends Seeder
             'year' => 2010,
             'runtime' => 01.59,
             'release_date'  => '2021-02-19',
-            'img' => 'https://m.media-amazon.com/images/M/MV5BYWU2ZTRhNDMtMWYxMC00ZTVkLThjZmItZGY4MGU0YmZlMjJlXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg',
+            'img' => 'https://www.rovinj-tourism.com/uploads/imgcache/large/events/21642/1612433292_2855.jpg',
             'featured' => 0,
         ]);
         DB::table('movies')->insert([
@@ -480,7 +480,7 @@ class MoviesTableSeeder extends Seeder
             'year' => 2020,
             'runtime' => 01.55,
             'release_date'  => '2020-09-04',
-            'img' => 'https://idasrecensioner.se/wp-content/uploads/2020/12/mulan-poster.png',
+            'img' => 'https://cdn.cdon.com/media-dynamic/images/product/cloud/store/PostersPrints/000/052/187/764/52187764-80763648-11453-org.jpg?impolicy=product&w=1280&h=720',
             'featured' => 0,
         ]);
         DB::table('movies')->insert([
@@ -516,7 +516,7 @@ class MoviesTableSeeder extends Seeder
             'year' => 2020,
             'runtime' => 02.00,
             'release_date'  => '2020-07-29',
-            'img' => 'https://m.media-amazon.com/images/M/MV5BMzcyMzU4MDUtM2JhOC00ZDg2LTg5MGMtZjc2OGMyMjhlMGE2XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg',
+            'img' => 'https://i.pinimg.com/564x/32/1f/93/321f93f93f069481736982d06aeb5a86.jpg',
             'featured' => 0,
         ]);
         DB::table('movies')->insert([
@@ -648,7 +648,7 @@ class MoviesTableSeeder extends Seeder
             'year' => 2014,
             'runtime' => 01.42,
             'release_date'  => '2014-06-13',
-            'img' => 'https://m.media-amazon.com/images/M/MV5BMzMwMTAwODczN15BMl5BanBnXkFtZTgwMDk2NDA4MTE@._V1_.jpg',
+            'img' => 'https://movieposters2.com/images/1561401-b.jpg',
             'featured' => 0,
         ]);
         DB::table('movies')->insert([
@@ -721,7 +721,7 @@ class MoviesTableSeeder extends Seeder
             'year' => 2020,
             'runtime' => 01.26,
             'release_date'  => '2020-08-02',
-            'img' => 'https://m.media-amazon.com/images/M/MV5BNjc5NDMzNzEtYWU2NC00MzAwLWIxY2YtODAyOGY3YzZlODViXkEyXkFqcGdeQXVyNTE1MjQzMDE@._V1_.jpg',
+            'img' => 'https://i.pinimg.com/564x/cf/6b/78/cf6b786f00de861aa445bfe23dedc5cf.jpg',
             'featured' => 0,
         ]);
         DB::table('movies')->insert([

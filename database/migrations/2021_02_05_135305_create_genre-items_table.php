@@ -19,6 +19,9 @@ class CreateGenreItemsTable extends Migration
             $table->foreignId('movies_id')->constrained();
             $table->timestamps();
         });
+        Artisan::call('db:seed', [
+            '--class' => GenreItemTabelSeeder::class,
+        ]);
     }
 
     /**

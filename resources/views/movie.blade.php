@@ -8,32 +8,45 @@
         <!-- movie information -->
     
              <!-- add to Watchlist -->
-             <div class="bg-gray-800 flex justify-around items-center  lg:justify-start">
+             <div class=" pb-8 md:pb-0 bg-gray-800 flex justify-around items-center lg:justify-start">
                     <img class="w-64 h-96 hidden sm:block" src="{{ $page->img }}">
              <div>
-            <div class="text-red-600 text-4xl py-4 mx-10">
+            <div class="text-red-600 text-4xl py-4 mx-8">
                 <h1 class="text-6xl">{{ $page->title }}</h1>
             </div>
-            <div class="xl:text-justify normal-case mx-10 text-xl text-gray-100 mb-4">
+            <div class="xl:text-justify normal-case mx-8 text-xl text-gray-100 mb-4">
                 {{ $page->description }}
             </div>
-            <div class="text-xl mx-10">
+            <div class="text-xl mx-8">
                 <span class="text-red-600">Director's: <span class="text-gray-100">{{ $page->director }}</span></span>
             </div>
-            <div class="text-xl mx-10">
+            <div class="text-xl mx-8">
                 <span class="text-red-600">Writer's: <span class="text-gray-100">{{ $page->writer }}</span></span>
             </div>
-            <div class="text-xl mx-10 flex">
+            <div class="text-xl mx-8 flex">
                 <h1 class="text-red-600">Genre: </h1>
             @foreach ($genres as $genre)
             <span class="text-gray-100 mx-1">{{$genre->genre}}</span>
             @endforeach 
             </div>
+
+           {{--  mobil view --}}
+            <div class="text-xl mx-8">
+                <h2 class="mr-2  md:hidden text-red-600">Release date: <span class="text-white">{{$page->release_date}}</span></h2>
+            </div>
+            <div class="text-xl mx-8">
+                <h2 class=" md:hidden text-red-600">Time: <span class="text-white"> {{$page->runtime}}h</span></h2>
+            </div>  
+            <div class="text-xl mx-8 md:hidden">
+                <h4 class="text-gray-100"><span class="text-yellow-400">&#9733;</span> {{$page->rating}}/10</h4>
+            </div>
+            {{--  mobil view --}}
+
         </div>
     </div>
 
     <section class="flex text-white justify-between font-poppins text-1xl bg-green-600 h-20 items-center sm:text2">
-       <div class="ml-5 mr-5">
+       <div class="ml-2 mr-0 sm:mr-5 sm:ml-5">
             <form action="/watchlist/{{ $page->id }}" method="POST">
                 @csrf      
                 <input class="font-semibold font-poppins rounded-lg p-2 shadow-md text-white bg-red-500 hover:bg-yellow-700 lg:p-4 lg:text-lg cursor-pointer" type="submit" value="Add to Watchlist">
@@ -42,24 +55,25 @@
     
         {{-- Movie information rating and Release date --}}            
         <div>
-            <h2 class="mr-2">Release date: {{$page->release_date}}</h2>
+            <h2 class="mr-2 hidden md:block">Release date: {{$page->release_date}}</h2>
         </div>
         <div>
-            <h2>Time: {{$page->runtime}}h</h2>
+            <h2 class="hidden md:block">Time: {{$page->runtime}}h</h2>
         </div>  
-        <div class="text-white mr-4 sm:mr-15">
-            <h4><span class="text-yellow-400">&#9733;</span> {{$page->rating}}/10</h4>
+        <div class="text-white mr-4 sm:mr-15 hidden md:block">
+            <h4><span class="text-yellow-400 ">&#9733;</span> {{$page->rating}}/10</h4>
         </div>
         @auth
             @isset($userRating)
-                <div class="text-white mr-4 sm:mr-15">
-                    <h4>{{ Auth::user()->name }}:<span class="text-yellow-400">&#9733;</span> {{ $userRating }}/10</h4>
+                <div class="text-white text-sm mr-4 sm:mr-15">
+                    <h4>Your rating:</h4>
+                    <h4><span class="text-yellow-400"> &#9733;</span> {{ $userRating }}/10</h4>
                 </div>
             @endisset
             
         @endauth
         
-        <div class="ml-5 mr-5 text-black">
+        <div class="text-sm mr-1 sm:mr-3 text-black">
             <form action="/{{ $page->id }}/rating" method="POST">
                 @csrf
                 <select name="rating" class="">
@@ -74,7 +88,7 @@
                     <option  value='9'>9 &#9733;</option>
                     <option  value='10'>10 &#9733;</option>
                 </select>
-                <input class="font-semibold font-poppins rounded-lg p-2 shadow-md text-white bg-red-500 hover:bg-yellow-700 lg:p-4 lg:text-lg cursor-pointer" type="submit" value="Rate">
+                <input class="font-semibold font-poppins rounded-lg p-2 shadow-md text-white bg-red-500 hover:bg-yellow-700 lg:text-lg cursor-pointer" type="submit" value="Rate">
             </form>
         </div>
                 
@@ -94,12 +108,12 @@
                     @endforeach
                     
                     <p class="normal-case text-gray-100">{{$review->reviewText}}</p>
-          
+        
                 @foreach ($ratings as $rating)
                 @isset($rating)
                     @if ($rating->user_id == $review->user_id)
                     @endisset
-                       <span class="text-yellow-500 italic">Rating:<span class="text-justify normal-case text-gray-100 font-poppins"> {{$rating->rating}}/10</span></span>
+                    <span class="text-yellow-500 italic">Rating:<span class="text-justify normal-case text-gray-100 font-poppins"> {{$rating->rating}}/10</span></span>
                     @endif 
                 @endforeach 
                 </div>

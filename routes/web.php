@@ -42,22 +42,7 @@ Route::get('/searchfail', [SearchController::class, 'search'])->name('searchfail
 
 Route::delete('/watchlist/{id}', [WatchlistController::class, 'destroy']);
 
-
 Route::get('/', [MovieController::class, 'movieCarousel']);
-
-// Route::get('/leaveAreview', [MovieController::class, 'leaveAreview']);
-
-
-/***************************************************************
-
-    - Jorge => authCheck middleware + movie{id} + genre{id}
- * Mehrdad => review form
- * Tatjana => review form
-
- ***************************************************************/
-
-
-
 
 //Movies information
 Route::get('/movie/{id}', [mainController::class, 'getInfo'])->name('movie');

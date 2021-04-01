@@ -16,12 +16,8 @@ class Movie extends Model
     */
 
     protected $table = 'movies';
-    // protected $primaryKey = 'id';
-    // public $timestamps = false;
     protected $guarded = ['id'];
-    // protected $fillable = [];
-    // protected $hidden = [];
-    // protected $dates = [];
+
 
     /*
     |--------------------------------------------------------------------------
@@ -39,11 +35,13 @@ class Movie extends Model
     //     return $this->hasMany('App\Models\Watchlistitems');
     // }
 
-    public function genre() {
+    public function genre()
+    {
         return $this->belongsToMany('App\Models\Genre', 'genre_movie', 'movie_id', 'genre_id');
     }
 
-    public function review() {
+    public function review()
+    {
         return $this->hasMany('App\Models\Review', 'reviews', 'user_id', 'movie_id');
     }
 

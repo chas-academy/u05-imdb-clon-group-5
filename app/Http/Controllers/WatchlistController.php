@@ -7,8 +7,6 @@ use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\URL;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Movie;
-use App\Models\Review;
-use App\Models\Watchlist;
 use App\Models\Watchlistitem;
 
 class WatchlistController extends Controller
@@ -32,22 +30,22 @@ class WatchlistController extends Controller
     {
         $watchlist = Auth::user()->watchlist;
         $watchlistitems = Watchlistitem::where('watchlists_id', $watchlist->id)->get();
-        
+
         if ($watchlistitems->isEmpty()) {
             $movies = [];
             return view('watchlist', array('movies' => $movies));
         } else {
             $movie = Movie::find($watchlistitems[0]->movies_id);
         }
-        
+
         $movies = [];
-        for ($i=1; $i < count($watchlistitems); $i++) {
+        for ($i = 1; $i < count($watchlistitems); $i++) {
             $movies[$i] = Movie::find($watchlistitems[$i]->movies_id);
         }
-        
+
         $reviews = Auth::user()->review;
         $ratings = Auth::user()->rating;
-        
+
         return view('watchlist', array('movies' => $movies, 'movie' => $movie, 'reviews' => $reviews, 'ratings' => $ratings));
     }
 
@@ -56,11 +54,11 @@ class WatchlistController extends Controller
         $watchlist = Auth::user()->watchlist;
         $watchlistitems = Watchlistitem::where('watchlists_id', $watchlist->id)->where('movies_id', $id)->get();
 
-        for ($i=0; $i < count($watchlistitems); $i++) {
+        for ($i = 0; $i < count($watchlistitems); $i++) {
             $watchlistitem_id = Watchlistitem::findorfail($watchlistitems[$i]->id);
             $watchlistitem_id->delete();
         }
-        
+
         return redirect('watchlist');
     }
 }

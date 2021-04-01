@@ -17,12 +17,7 @@ class Watchlistitem extends Model
     */
 
     protected $table = 'watchlistitems';
-    // protected $primaryKey = 'id';
-    // public $timestamps = false;
     protected $guarded = ['id'];
-    // protected $fillable = [];
-    // protected $hidden = [];
-    // protected $dates = [];
 
     /*
     |--------------------------------------------------------------------------
@@ -36,11 +31,13 @@ class Watchlistitem extends Model
     |--------------------------------------------------------------------------
     */
 
-    public function watchlist() {
+    public function watchlist()
+    {
         return $this->belongsTo('App\Models\Watchlist', 'watchlists_id');
     }
 
-    public function movies() {
+    public function movies()
+    {
         return $this->belongsTo('App\Models\Movie', 'movies_id');
     }
 

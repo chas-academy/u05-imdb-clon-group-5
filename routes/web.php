@@ -42,18 +42,9 @@ Route::get('/searchfail', [SearchController::class, 'search'])->name('searchfail
 
 Route::delete('/watchlist/{id}', [WatchlistController::class, 'destroy']);
 
-
 Route::get('/', [MovieController::class, 'movieCarousel']);
 
-// Route::get('/leaveAreview', [MovieController::class, 'leaveAreview']);
-
-
-
-Route::get('review', [mainController::class, 'review']);
-Route::post('review', [mainController::class, 'store']);
-
 //Movies information
-
 Route::get('/movie/{id}', [mainController::class, 'getInfo'])->name('movie');
 Route::post('/movie/{id}', [mainController::class, 'store']);
 //Each Genre Information
@@ -90,5 +81,8 @@ Route::group(['middleware' => ['authCheck']], function () {
     Route::delete('/watchlist/{id}', [WatchlistController::class, 'destroy']);
 
     // Rating
-    Route::post('/{id}/rating', [RatingController::class, 'store'])->name('rating');
+    Route::post('/{id}/rating', [RatingController::class,'store'])->name('rating');
+
+    // Review
+    Route::post('review/{id}', [mainController::class, 'store']);
 });

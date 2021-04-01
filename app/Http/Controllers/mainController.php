@@ -178,12 +178,6 @@ class mainController extends Controller
         return view('genre', array('genreList' => $genreList));
     }
 
-    function review()
-    {
-        //
-        return view('review');
-    }
-
     public function store(Request $request, $id)
     {
         //SUBMIT THE REVIEW

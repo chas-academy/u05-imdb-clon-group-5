@@ -7,17 +7,15 @@ use App\Models\User;
 use App\Models\Rating;
 use App\Models\Review;
 use App\Models\Movie;
-use App\Models\GenreMovie;
 use App\Models\Genre;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Genreitem;
 use App\Models\Watchlist;
-use Illuminate\Routing\Redirector;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\URL;
-use App\http\Controllers\RatingController;
+
 
 
 

@@ -16,12 +16,8 @@ class Genre extends Model
     */
 
     protected $table = 'genres';
-    // protected $primaryKey = 'id';
-    // public $timestamps = false;
     protected $guarded = ['id'];
-    // protected $fillable = [];
-    // protected $hidden = [];
-    // protected $dates = [];
+
 
     /*
     |--------------------------------------------------------------------------
@@ -35,7 +31,8 @@ class Genre extends Model
     |--------------------------------------------------------------------------
     */
 
-    public function movies() {
+    public function movies()
+    {
         return $this->belongsToMany('App\Models\Movie', 'genre_movie', 'genre_id');
     }
 

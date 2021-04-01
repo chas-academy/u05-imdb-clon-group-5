@@ -150,7 +150,7 @@ class GenreItemTabelSeeder extends Seeder
 
         DB::table('genreitems')->insert([
             'genres_id' => 3,
-            'movies_id' => 3
+            'movies_id' => 23
 
         ]);
 

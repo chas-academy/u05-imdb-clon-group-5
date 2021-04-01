@@ -3,9 +3,12 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\mainController;
 use App\Http\Controllers\MovieController;
+use App\Http\Controllers\SearchController;
 use App\Http\Controllers\WatchlistController;
 use App\Http\Controllers\UserController;
 use App\http\Controllers\GenreController;
+use Illuminate\Support\Facades\Request;
+use APP\Models\Movie;
 use App\http\Controllers\RatingController;
 
 /*
@@ -23,24 +26,27 @@ Route::get('/', function () {
     return view('index');
 });
 
-
 Route::get('/movies', function () {
     return view('movies');
 });
-
-
-
 
 
 Route::get('/register', function () {
     return view('register');
 });
 
+// ------ search -----
+Route::get('/search', [SearchController::class, 'search'])->name('search');
+Route::get('/searchfail', [SearchController::class, 'search'])->name('searchfail');
 
 
+Route::delete('/watchlist/{id}', [WatchlistController::class, 'destroy']);
 
 
 Route::get('/', [MovieController::class, 'movieCarousel']);
+
+// Route::get('/leaveAreview', [MovieController::class, 'leaveAreview']);
+
 
 /***************************************************************
 
@@ -57,7 +63,8 @@ Route::get('review', [mainController::class, 'review']);
 Route::post('review', [mainController::class, 'store']);
 
 //Movies information
-Route::get('/movie/{id}', [mainController::class, 'getInfo']);
+
+Route::get('/movie/{id}', [mainController::class, 'getInfo'])->name('movie');
 Route::post('/movie/{id}', [mainController::class, 'store']);
 //Each Genre Information
 

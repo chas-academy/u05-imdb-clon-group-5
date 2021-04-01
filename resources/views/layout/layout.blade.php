@@ -20,7 +20,7 @@
 
 <body class="bg-midnight-500">
     <x-navbar/>
-    <div class="max-w-screen-xl m-auto">
+    <div class="{{-- max-w-screen-xl --}} m-auto">
 
 
         @yield('content')

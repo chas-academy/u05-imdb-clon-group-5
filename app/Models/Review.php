@@ -17,12 +17,8 @@ class Review extends Model
     */
 
     protected $table = 'reviews';
-    // protected $primaryKey = 'id';
-    // public $timestamps = false;
     protected $guarded = ['id'];
-    // protected $fillable = [];
-    // protected $hidden = [];
-    // protected $dates = [];
+
 
     /*
     |--------------------------------------------------------------------------
@@ -36,11 +32,13 @@ class Review extends Model
     |--------------------------------------------------------------------------
     */
 
-    public function movie() {
+    public function movie()
+    {
         return $this->belongsTo('App\Models\Movie', 'reviews', 'user_id', 'movie_id');
     }
 
-    public function user(){
+    public function user()
+    {
         return $this->belongsTo('App\Models\User');
     }
 

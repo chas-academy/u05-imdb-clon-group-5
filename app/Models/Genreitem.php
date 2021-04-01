@@ -17,12 +17,8 @@ class Genreitem extends Model
     */
 
     protected $table = 'genreitems';
-    // protected $primaryKey = 'id';
-    // public $timestamps = false;
     protected $guarded = ['id'];
-    // protected $fillable = [];
-    // protected $hidden = [];
-    // protected $dates = [];
+
 
     /*
     |--------------------------------------------------------------------------
@@ -36,11 +32,13 @@ class Genreitem extends Model
     |--------------------------------------------------------------------------
     */
 
-    public function Genre() {
+    public function Genre()
+    {
         return $this->belongsTo('App\Models\Genre', 'genres_id');
     }
 
-    public function movies() {
+    public function movies()
+    {
         return $this->belongsTo('App\Models\Movie', 'movies_id');
     }
 

@@ -48,18 +48,8 @@ Route::get('/', [MovieController::class, 'movieCarousel']);
 // Route::get('/leaveAreview', [MovieController::class, 'leaveAreview']);
 
 
-/***************************************************************
-
-    - Jorge => authCheck middleware + movie{id} + genre{id}
- * Mehrdad => review form
- * Tatjana => review form
-
- ***************************************************************/
 
 Route::get('review', [mainController::class, 'review']);
-/* Route::get('/register', function () {
-    return view('register');
-}); */
 Route::post('review', [mainController::class, 'store']);
 
 //Movies information
@@ -100,5 +90,5 @@ Route::group(['middleware' => ['authCheck']], function () {
     Route::delete('/watchlist/{id}', [WatchlistController::class, 'destroy']);
 
     // Rating
-    Route::post('/{id}/rating', [RatingController::class,'store'])->name('rating');
+    Route::post('/{id}/rating', [RatingController::class, 'store'])->name('rating');
 });

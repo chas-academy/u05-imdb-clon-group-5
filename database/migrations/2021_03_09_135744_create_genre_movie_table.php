@@ -14,12 +14,10 @@ class CreateGenreMovieTable extends Migration
     public function up()
     {
         Schema::create('genre_movie', function (Blueprint $table) {
-            // $table->id();
             $table->bigIncrements('id');
             $table->string('movie_id')->references('title')->on('movies')->onDelete('cascade');
             $table->string('genre_id')->references('genre')->on('genres')->onDelete('cascade');
             $table->timestamps();
-
         });
     }
 

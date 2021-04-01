@@ -34,10 +34,9 @@ Route::get('/movies', function () {
 Route::get('/register', function () {
     return view('register');
 });
-Route::post('/watchlist', [WatchlistController::class, 'store']);
-Route::get('/watchlist', [WatchlistController::class, 'show']);
 
-Route::delete('/watchlist/{id}', [WatchlistController::class, 'destroy']);
+
+
 
 
 Route::get('/', [MovieController::class, 'movieCarousel']);
@@ -86,6 +85,9 @@ Route::group(['middleware' => ['authCheck']], function () {
     Route::get('/user/mywatchs',    [mainController::class, 'mywatchs']);
     Route::get('/user/myratings',   [mainController::class, 'myratings']);
     Route::get('/user/mymovies',    [mainController::class, 'mymovies']);
-    //More user pages to add...
 
+    // Watchlist
+    Route::get('/watchlist', [WatchlistController::class, 'show']);
+    Route::post('/watchlist/{id}', [WatchlistController::class, 'store']);
+    Route::delete('/watchlist/{id}', [WatchlistController::class, 'destroy']);
 });

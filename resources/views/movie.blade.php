@@ -34,25 +34,10 @@
 
     <section class="flex text-white justify-between font-poppins text-1xl bg-green-600 h-20 items-center sm:text2">
        <div class="ml-5 mr-5">
-
-
-     
-
-
-       @if (Session::has('users'))
-           <form class="delete-form" action="/movie/{{ $page->id }}" method="POST">
-            @csrf      
-            <input class="w-36 h-6 absolute bg-mojo font-inter text-center font-bold text-white cursor-pointer" type="submit" name="delete" value="Watchlist">
-          </form>
-           @else
-           <form class="delete-form" action="/movie/{{ $page->id }}" method="POST">
-            @csrf      
-            <input class="font-semibold font-poppins rounded-lg p-2 shadow-md text-white bg-red-500 hover:bg-yellow-700 lg:p-4 lg:text-lg" type="submit" name="delete" value="Watchlist">
-          </form>
-            <a href="/login" class="font-semibold font-poppins rounded-lg p-2 shadow-md text-white bg-red-500 hover:bg-yellow-700 lg:p-4 lg:text-lg">Add to Watchlist</a>
-           @endif 
-
-
+            <form action="/watchlist/{{ $page->id }}" method="POST">
+                @csrf      
+                <input class="font-semibold font-poppins rounded-lg p-2 shadow-md text-white bg-red-500 hover:bg-yellow-700 lg:p-4 lg:text-lg cursor-pointer" type="submit" value="Add to Watchlist">
+            </form>
         </div>
        
                  {{-- Movie information rating and Release date --}}

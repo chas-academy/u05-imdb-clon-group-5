@@ -63,6 +63,8 @@ class mainController extends Controller
     }
     function check(Request $request)
     {
+        $credentials = $request->only('email', 'password');
+
         // return $request->input();
         $request->validate([
             'email'     =>  'required|email',
@@ -71,15 +73,15 @@ class mainController extends Controller
         $userInfo   =   DB::table('users')
             ->where('email', $request->email)
             ->first();
-        if (!$userInfo) {
+        if (!Auth::attempt($credentials)) {
             return back()->with('fail', 'You do not have any account');
         } else {
             //Checking password
             if ($request->password) {
                 //
-                $request->session()->put('LoggedUser', $userInfo->id);
+                $request->session()->put('LoggedUser', $userInfo->id);   
 
-                // Create new watchlist
+                // Create new watchlist once
                 $user_id = $request->session()->get('LoggedUser');
                 if (null === User::find($user_id)->watchlist) {
                     $watchlist = new Watchlist();
@@ -99,6 +101,7 @@ class mainController extends Controller
         //Just killing the session here :D
         if (session()->has('LoggedUser')) {
             session()->pull('LoggedUser');
+            Auth::logout();
             return redirect('login');
         }
     }

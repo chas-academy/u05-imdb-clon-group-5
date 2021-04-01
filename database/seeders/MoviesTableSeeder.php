@@ -203,7 +203,7 @@ class MoviesTableSeeder extends Seeder
             'year' => 2021,
             'runtime' => 01.32,
             'release_date'  => '2020-12-18',
-            'img' => 'https://m.media-amazon.com/images/M/MV5BOTk1Y2IyYzAtZGVkNC00Y2U3LWE0MWQtN2E3MTE1OTBjN2QyXkEyXkFqcGdeQXVyMTEyMjM2NDc2._V1_.jpg',
+            'img' => 'https://i.pinimg.com/originals/9a/32/59/9a32594fa3e284e9c12ef5ed60eb18c7.png',
             'featured' => 0,
         ]);
         DB::table('movies')->insert([
@@ -227,7 +227,7 @@ class MoviesTableSeeder extends Seeder
             'year' => 2020,
             'runtime' => 02.30,
             'release_date'  => '2020-03-09',
-            'img' => 'https://m.media-amazon.com/images/M/MV5BYzg0NGM2NjAtNmIxOC00MDJmLTg5ZmYtYzM0MTE4NWE2NzlhXkEyXkFqcGdeQXVyMTA4NjE0NjEy._V1_.jpg',
+            'img' => 'https://images-na.ssl-images-amazon.com/images/I/51TeNLseaSL._AC_.jpg',
             'featured' => 0,
         ]);
         DB::table('movies')->insert([
@@ -263,7 +263,7 @@ class MoviesTableSeeder extends Seeder
             'year' => 2020,
             'runtime' => 01.38,
             'release_date'  => '2020-09-10',
-            'img' => 'https://www.pophorror.com/wp-content/uploads/2020/08/alonebanner.jpg',
+            'img' => 'https://m.media-amazon.com/images/M/MV5BYmFiNTZjMmYtMTcyZS00MGQ5LWEwMDYtMGI5MGJiMjUwMDZhXkEyXkFqcGdeQXVyNzQ3MDQzMA@@._V1_UY1200_CR90,0,630,1200_AL_.jpg',
             'featured' => 1,
         ]);
         DB::table('movies')->insert([
@@ -275,7 +275,7 @@ class MoviesTableSeeder extends Seeder
             'year' => 2020,
             'runtime' => 01.56,
             'release_date'  => '2020-04-24',
-            'img' => 'https://m.media-amazon.com/images/M/MV5BMDJiNzUwYzEtNmQ2Yy00NWE4LWEwNzctM2M0MjE0OGUxZTA3XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg',
+            'img' => 'https://cdn.flickeringmyth.com/wp-content/uploads/2020/04/Extraction-poster-600x889.jpg',
             'featured' => 0,
         ]);
         DB::table('movies')->insert([
@@ -374,18 +374,7 @@ class MoviesTableSeeder extends Seeder
             'img' => 'https://d13ezvd6yrslxm.cloudfront.net/wp/wp-content/images/rmjedpxk6z251.jpg',
             'featured' => 1,
         ]);
-        DB::table('movies')->insert([
-            'title' => 'Jon Turteltaub',
-            'director' => 'Yeon Sang-ho',
-            'rating' => 6,
-            'writer' => 'Belle Avery',
-            'description' => 'A deep sea submersible pilot revisits his past fears in the Mariana Trench, and accidentally unleashes the seventy foot ancestor of the Great White Shark believed to be extinct.',
-            'year' => 2018,
-            'runtime' => 01.53,
-            'release_date'  => '2018-10-08',
-            'img' => 'https://m.media-amazon.com/images/M/MV5BMTAxMGRmODYtM2NkYS00ZGRlLWE1MWItYjI1MzIwNjQwN2RiXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg',
-            'featured' => 0,
-        ]);
+
         DB::table('movies')->insert([
             'title' => 'Avatar',
             'director' => 'James Cameron',
@@ -419,7 +408,7 @@ class MoviesTableSeeder extends Seeder
             'year' => 2010,
             'runtime' => 01.59,
             'release_date'  => '2021-02-19',
-            'img' => 'https://m.media-amazon.com/images/M/MV5BYWU2ZTRhNDMtMWYxMC00ZTVkLThjZmItZGY4MGU0YmZlMjJlXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg',
+            'img' => 'https://www.rovinj-tourism.com/uploads/imgcache/large/events/21642/1612433292_2855.jpg',
             'featured' => 0,
         ]);
         DB::table('movies')->insert([
@@ -431,7 +420,7 @@ class MoviesTableSeeder extends Seeder
             'year' => 2013,
             'runtime' => 03.00,
             'release_date'  => '2013-12-25',
-            'img' => 'https://m.media-amazon.com/images/M/MV5BMjIxMjgxNTk0MF5BMl5BanBnXkFtZTgwNjIyOTg2MDE@._V1_.jpg',
+            'img' => 'http://2.bp.blogspot.com/-X5LxL1y1vjo/VkSgua74vyI/AAAAAAAAANQ/GNlKpugmtyE/s1600/wolf-of-wall-poster.jpg',
             'featured' => 0,
         ]);
         DB::table('movies')->insert([
@@ -491,7 +480,7 @@ class MoviesTableSeeder extends Seeder
             'year' => 2020,
             'runtime' => 01.55,
             'release_date'  => '2020-09-04',
-            'img' => 'https://m.media-amazon.com/images/M/MV5BNDliY2E1MjUtNzZkOS00MzJlLTgyOGEtZDg4MTI1NzZkMTBhXkEyXkFqcGdeQXVyNjMwMzc3MjE@._V1_.jpg',
+            'img' => 'https://cdn.cdon.com/media-dynamic/images/product/cloud/store/PostersPrints/000/052/187/764/52187764-80763648-11453-org.jpg?impolicy=product&w=1280&h=720',
             'featured' => 0,
         ]);
         DB::table('movies')->insert([
@@ -527,7 +516,7 @@ class MoviesTableSeeder extends Seeder
             'year' => 2020,
             'runtime' => 02.00,
             'release_date'  => '2020-07-29',
-            'img' => 'https://m.media-amazon.com/images/M/MV5BMzcyMzU4MDUtM2JhOC00ZDg2LTg5MGMtZjc2OGMyMjhlMGE2XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg',
+            'img' => 'https://i.pinimg.com/564x/32/1f/93/321f93f93f069481736982d06aeb5a86.jpg',
             'featured' => 0,
         ]);
         DB::table('movies')->insert([
@@ -659,7 +648,7 @@ class MoviesTableSeeder extends Seeder
             'year' => 2014,
             'runtime' => 01.42,
             'release_date'  => '2014-06-13',
-            'img' => 'https://m.media-amazon.com/images/M/MV5BMzMwMTAwODczN15BMl5BanBnXkFtZTgwMDk2NDA4MTE@._V1_.jpg',
+            'img' => 'https://movieposters2.com/images/1561401-b.jpg',
             'featured' => 0,
         ]);
         DB::table('movies')->insert([
@@ -695,7 +684,7 @@ class MoviesTableSeeder extends Seeder
             'year' => 2019,
             'runtime' => 01.37,
             'release_date'  => '2019-12-06',
-            'img' => 'https://m.media-amazon.com/images/M/MV5BNDAyN2M2OTgtMjc5Ni00MDJiLTk0OWEtMWI3MDA0NzNjZmRkXkEyXkFqcGdeQXVyNDExMzMxNjE@._V1_.jpg',
+            'img' => 'https://images-na.ssl-images-amazon.com/images/I/61hbHPQrD%2BL._AC_SX466_.jpg',
             'featured' => 0,
         ]);
         DB::table('movies')->insert([
@@ -722,18 +711,7 @@ class MoviesTableSeeder extends Seeder
             'img' => 'https://images-na.ssl-images-amazon.com/images/I/814eu9I4cwL._AC_SL1500_.jpg',
             'featured' => 0,
         ]);
-        DB::table('movies')->insert([
-            'title' => 'Wrong Turn',
-            'director' => 'Mike P. Nelson',
-            'rating' => 4,
-            'writer' => 'Alan B. McElroy',
-            'description' => 'Jen and a group of friends set out to hike the Appalachian Trail. Despite warnings to stick to the trail, the hikers stray off course—and cross into land inhabited by The Foundation, a hidden community of mountain dwellers who use deadly means to protect their way of life.',
-            'year' => 2021,
-            'runtime' => 01.50,
-            'release_date'  => '2021-01-26',
-            'img' => 'https://m.media-amazon.com/images/M/MV5BM2Y5ZWE2MTMtODE3ZC00NWQ4LWJkNzctNGY4Njg5NDY5MzNlXkEyXkFqcGdeQXVyNjUxMjc1OTM@._V1_.jpg',
-            'featured' => 1,
-        ]);
+
         DB::table('movies')->insert([
             'title' => 'The Funeral Home',
             'director' => 'Mauro Iván Ojeda',
@@ -743,7 +721,7 @@ class MoviesTableSeeder extends Seeder
             'year' => 2020,
             'runtime' => 01.26,
             'release_date'  => '2020-08-02',
-            'img' => 'https://m.media-amazon.com/images/M/MV5BNjc5NDMzNzEtYWU2NC00MzAwLWIxY2YtODAyOGY3YzZlODViXkEyXkFqcGdeQXVyNTE1MjQzMDE@._V1_.jpg',
+            'img' => 'https://i.pinimg.com/564x/cf/6b/78/cf6b786f00de861aa445bfe23dedc5cf.jpg',
             'featured' => 0,
         ]);
         DB::table('movies')->insert([
@@ -779,7 +757,7 @@ class MoviesTableSeeder extends Seeder
             'year' => 2018,
             'runtime' => 01.54,
             'release_date'  => '2018-12-21',
-            'img' => 'https://m.media-amazon.com/images/M/MV5BMjUwNjU5NDMyNF5BMl5BanBnXkFtZTgwNzgxNjM2NzM@._V1_.jpg',
+            'img' => 'https://filmparadiset.se/wp-content/grand-media/image/Bumblebee_Poster_16.jpg',
             'featured' => 0,
         ]);
         DB::table('movies')->insert([
@@ -815,7 +793,7 @@ class MoviesTableSeeder extends Seeder
             'year' => 2017,
             'runtime' => 02.03,
             'release_date'  => '2017-12-22',
-            'img' => 'https://m.media-amazon.com/images/M/MV5BNGNiNWQ5M2MtNGI0OC00MDA2LWI5NzEtMmZiYjVjMDEyOWYzXkEyXkFqcGdeQXVyMjM4NTM5NDY@._V1_.jpg',
+            'img' => 'https://kalafudra.files.wordpress.com/2019/01/theshapeofwater.jpeg',
             'featured' => 1,
         ]);
         DB::table('movies')->insert([
@@ -863,7 +841,7 @@ class MoviesTableSeeder extends Seeder
             'year' => 2012,
             'runtime' => 01.47,
             'release_date'  => '2012-06-29',
-            'img' => 'https://m.media-amazon.com/images/M/MV5BMTQ1OTU0ODcxMV5BMl5BanBnXkFtZTcwOTMxNTUwOA@@._V1_.jpg',
+            'img' => 'https://images-na.ssl-images-amazon.com/images/I/61BAHFJ-5yL._AC_SL1077_.jpg',
             'featured' => 0,
         ]);
         DB::table('movies')->insert([
@@ -878,18 +856,7 @@ class MoviesTableSeeder extends Seeder
             'img' => 'https://m.media-amazon.com/images/M/MV5BMjEwMDg3MDk1NF5BMl5BanBnXkFtZTgwNjYyODA1NTE@._V1_.jpg',
             'featured' => 0,
         ]);
-        DB::table('movies')->insert([
-            'title' => 'Long Weekend',
-            'director' => 'Stephen Basilone',
-            'rating' => 6,
-            'writer' => 'Stephen Basilone',
-            'description' => 'arts chance encounter with the enigmatic Vienna leads to a whirlwind weekend together. The two fall fast and hard, but both carry secrets that could be their undoing or the chance for a fresh start.',
-            'year' => 2021,
-            'runtime' => 01.31,
-            'release_date'  => '2021-03-12',
-            'img' => 'https://resizing.flixster.com/WHr-IbieqLE5LVgd9TwvJJk7Vfg=/ems.ZW1zLXByZC1hc3NldHMvbW92aWVzLzQ5ZjY3YmRiLTQ5MWUtNDIzMS04MDcxLWYxZTk0MjU5YzRiMS5qcGc=',
-            'featured' => 0,
-        ]);
+
         DB::table('movies')->insert([
             'title' => 'Creed II',
             'director' => 'Steven Caple Jr.',
@@ -1019,7 +986,7 @@ class MoviesTableSeeder extends Seeder
             'year' => 2019,
             'runtime' => 01.37,
             'release_date'  => '2019-12-27',
-            'img' => 'https://m.media-amazon.com/images/M/MV5BZThhM2Y1NjItMGE1NS00NWQ4LTliM2ItZDA5ZDNjYjk0YTE0XkEyXkFqcGdeQXVyMzQwMTY2Nzk@._V1_.jpg',
+            'img' => 'https://blob.cede.ch/catalog/16980000/16980667_1_92.jpg',
             'featured' => 0,
         ]);
         DB::table('movies')->insert([
@@ -1079,7 +1046,7 @@ class MoviesTableSeeder extends Seeder
             'year' => 2017,
             'runtime' => 02.16,
             'release_date'  => '2017-04-14',
-            'img' => 'https://m.media-amazon.com/images/M/MV5BMjMxODI2NDM5Nl5BMl5BanBnXkFtZTgwNjgzOTk1MTI@._V1_.jpg',
+            'img' => 'https://upload.wikimedia.org/wikipedia/en/2/2d/The_Fate_of_The_Furious_Theatrical_Poster.jpg',
             'featured' => 0,
         ]);
         DB::table('movies')->insert([

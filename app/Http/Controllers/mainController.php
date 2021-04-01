@@ -23,6 +23,7 @@ use App\Models\Watchlist;
 use Illuminate\Routing\Redirector;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\URL;
+use App\http\Controllers\RatingController;
 
 
 
@@ -63,6 +64,8 @@ class mainController extends Controller
     }
     function check(Request $request)
     {
+        $credentials = $request->only('email', 'password');
+
         // return $request->input();
         $request->validate([
             'email'     =>  'required|email',
@@ -71,7 +74,7 @@ class mainController extends Controller
         $userInfo   =   DB::table('users')
             ->where('email', $request->email)
             ->first();
-        if (!$userInfo) {
+        if (!Auth::attempt($credentials)) {
             return back()->with('fail', 'You do not have any account');
         } else {
             //Checking password
@@ -79,7 +82,7 @@ class mainController extends Controller
                 //
                 $request->session()->put('LoggedUser', $userInfo->id);
 
-                // Create new watchlist
+                // Create new watchlist once
                 $user_id = $request->session()->get('LoggedUser');
                 if (null === User::find($user_id)->watchlist) {
                     $watchlist = new Watchlist();
@@ -99,7 +102,8 @@ class mainController extends Controller
         //Just killing the session here :D
         if (session()->has('LoggedUser')) {
             session()->pull('LoggedUser');
-            return redirect('login');
+            Auth::logout();
+            return redirect('/');
         }
     }
 
@@ -149,8 +153,19 @@ class mainController extends Controller
         for ($i = 0; $i < count($reviews); $i++) {
             $ratings[$i] = Rating::where('user_id', $reviews[$i]->user_id)->where('movies_id', $id)->first();
         }
+        $userRatings = Auth::user()->rating;
+        $userRating = null;
+        for ($i = 0; $i < count($userRatings); $i++) {
+            if ($userRatings[$i]->movies_id == $id) {
+                $userRating = $userRatings[$i]->rating;
+            }
+        }
+        if ($userRating == null) {
+            return view('movie', array('page' => $page, 'reviews' => $reviews, 'ratings' => $ratings, 'genres' =>
+            $genres));
+        }
 
-        return view('movie', array('page' => $page, 'reviews' => $reviews, 'ratings' => $ratings, 'genres' => $genres));
+        return view('movie', array('page' => $page, 'reviews' => $reviews, 'ratings' => $ratings, 'genres' => $genres, 'userRating' => $userRating));
     }
 
     public function getGenre($id)
@@ -181,7 +196,7 @@ class mainController extends Controller
         $review->user_id = $request->session()->get('LoggedUser');
         $review->movie_id = $id;
         $review->save();
-
+        
         return Redirect::to(URL::previous());
     }
 }

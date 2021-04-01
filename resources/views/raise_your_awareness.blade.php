@@ -1,5 +1,5 @@
 <div class="relative m-auto w-full mt-11 max-w-screen-xl">
-  <a href="#">
+  <a href="watchlist">
     <img class="w-full" src="../img/landskape-dark.jpg" alt="background landscape">
     <div class="top-4 md:top-6 left-6 md:left-24 absolute font-inter uppercase font-bold ">
       <h1 class="text-sm sm:text-5xl md:text-7xl mt-1 sm:mt-4 text-mojo">Raise your </h1>

@@ -14,18 +14,18 @@
             @method('DELETE')        
             <input class="w-36 h-6 absolute bg-mojo font-inter text-center font-bold text-white cursor-pointer" type="submit" name="delete" value="- Watchlist">
           </form>
-          <img class="w-36 h-48 mr-1 sm:mr-4" src="{{ $movie->img }}" alt="movie-poster">
+          <a href="/movie/{{$movie->id}}"><img class="w-36 h-48 mr-1 sm:mr-4" src="{{ $movie->img }}" alt="movie-poster"></a>
         </div>
         <ul class="flex-1 sm:flex-auto">
-          <li class="font-bold text-base">{{ $movie->title }}</li>
+          <li class="font-bold text-base"><a href="/movie/{{$movie->id}}">{{ $movie->title }}</a></li>
           <li class="flex text-sm">
             <div class="flex items-center">
-              <img class="object-none mx-0.5" src="../img/rating-star.png">{{ $movie->rating }}/10
+              <span class="object-none mx-0.5 text-yellow-400">&#9733</span>{{ $movie->rating }}/10
             </div>
             <div class="flex items-center ml-1">
               @foreach ($ratings as $rating)
                 @if ($rating->movies_id === $movie->id)
-                  User: <img class="object-none mx-0.5" src="../img/rating-star.png">{{ $rating->rating }}/10
+                  {{ Auth::user()->name }}: <span class="object-none mx-0.5 text-yellow-400">&#9733</span>{{ $rating->rating }}/10
                 @endif
               @endforeach
             </div>          
@@ -41,9 +41,19 @@
         </ul>
       </div>
     @endisset
+
+    @empty($movie)
+      <div class="flex flex-wrap justify-center bg-dianne p-1 rounded">
+        <div class="flex flex-col justify-end">
+          <h3 class="sm:text-5xl text-center font-inter">You haven't saved any movies yet</h3>         
+          <img class="object-fit" class=" mr-1 sm:mr-4" src="../img/movie.png">
+          
+        </div>
+      </div>
+    @endempty
   
     @isset($movies)
-      <div class="flex flex-wrap justify-center bg-dianne p-1 rounded">
+      <div class="flex flex-wrap bg-dianne p-1 rounded">
         @foreach ($movies as $movie)
           <div class="flex-initial relative m-0.5">
             <!-- Delete button -->
@@ -52,11 +62,12 @@
                 @method('DELETE')        
                 <input class="w-36 h-6 absolute bg-mojo font-inter text-center font-bold text-white cursor-pointer" type="submit" name="delete" value="- Watchlist">
               </form>
-            <img class="w-36 h-48" src="{{ $movie->img }}" alt="movie-poster">
+            <a href="/movie/{{$movie->id}}"><img class="w-36 h-48" src="{{ $movie->img }}" alt="movie-poster"></a>
           </div>
         @endforeach
       </div>
     @endisset
-
   </div>
+
+  
 @endsection

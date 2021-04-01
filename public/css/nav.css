@@ -1,7 +1,4 @@
 .containerx {
-    /* display:flex;
-items-center
-justify-content: center; */
     position: relative;
 }
 
@@ -16,7 +13,6 @@ justify-content: center; */
     bottom: 0;
     left: 100%;
     right: 0;
-    /* background-color:rgba(31, 41, 55, var(--tw-bg-opacity));  */
     overflow: hidden;
     width: 0;
     height: 100%;
@@ -40,3 +36,12 @@ justify-content: center; */
     transform: translate(-50%, -50%);
     white-space: nowrap;
 }
+
+@media screen and (max-width: 768px) {
+    #hidde-form{
+        display: none;
+    }
+  }
+
+
+

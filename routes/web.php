@@ -9,6 +9,7 @@ use App\Http\Controllers\UserController;
 use App\http\Controllers\GenreController;
 use Illuminate\Support\Facades\Request;
 use APP\Models\Movie;
+use App\http\Controllers\RatingController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,8 +34,6 @@ Route::get('/movies', function () {
 Route::get('/register', function () {
     return view('register');
 });
-Route::post('/watchlist', [WatchlistController::class, 'store']);
-Route::get('/watchlist', [WatchlistController::class, 'show']);
 
 // ------ search -----
 Route::get('/search', [SearchController::class, 'search'])->name('search');
@@ -94,6 +93,12 @@ Route::group(['middleware' => ['authCheck']], function () {
     Route::get('/user/mywatchs',    [mainController::class, 'mywatchs']);
     Route::get('/user/myratings',   [mainController::class, 'myratings']);
     Route::get('/user/mymovies',    [mainController::class, 'mymovies']);
-    //More user pages to add...
 
+    // Watchlist
+    Route::get('/watchlist', [WatchlistController::class, 'show']);
+    Route::post('/watchlist/{id}', [WatchlistController::class, 'store']);
+    Route::delete('/watchlist/{id}', [WatchlistController::class, 'destroy']);
+
+    // Rating
+    Route::post('/{id}/rating', [RatingController::class,'store'])->name('rating');
 });

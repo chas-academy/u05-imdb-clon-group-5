@@ -1,11 +1,3 @@
-/* const writeReview = document.getElementById("writeReview");
-const reviewbtn = document.getElementById("reviewbtn");
-
-reviewbtn.addEventListener("click", () => {
-    writeReview.classList.remove("hidden");
-});
- */
-
 const openmodal = document.querySelectorAll(".modal-open");
 for (var i = 0; i < openmodal.length; i++) {
     openmodal[i].addEventListener("click", function (event) {
@@ -42,3 +34,10 @@ function toggleModal() {
     modal.classList.toggle("pointer-events-none");
     body.classList.toggle("modal-active");
 }
+
+//show user if you added movie to watchlist
+const addedToWatchList = document.querySelector("#addedToWatchList");
+const submitedToWatchList = document.querySelector("#submitedToWatchList");
+submitedToWatchList.addEventListener("click", () => {
+    addedToWatchList.classList.remove("hidden");
+});

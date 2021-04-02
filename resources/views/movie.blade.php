@@ -44,12 +44,18 @@
 
             </div>
         </div>
+        @auth
+            <div id="addedToWatchList"
+                class="alert-banner hidden text-center w-screen fixed top-0 left-0 close cursor-pointer flex items-center justify-between w-full p-2 bg-green-600 shadow text-white">
+                <h1 class="ml-5">{{ $page->title }} Added to Watchlist</h1>
+            </div>
+        @endauth
 
         <section class="flex text-white justify-between font-poppins text-1xl bg-green-600 h-20 items-center sm:text2">
             <div class="ml-2 mr-0 sm:mr-5 sm:ml-5">
                 <form action="/watchlist/{{ $page->id }}" method="POST">
                     @csrf
-                    <input
+                    <input id="submitedToWatchList"
                         class="font-semibold font-poppins rounded-lg p-2 shadow-md text-white bg-red-500 hover:bg-yellow-700 lg:p-4 lg:text-lg cursor-pointer"
                         type="submit" value="Add to Watchlist">
                 </form>
@@ -104,15 +110,16 @@
         <div class="flex flex-wrap justify-center">
             @foreach ($reviews as $review)
                 <div class="w-96 m-10">
-                    <h1 class="uppercase tracking-wide text-sm text-yellow-500 font-semibold">{{ $review->reviewTitle }}
+                    <h1 class="uppercase tracking-wide text-sm sm:text-xl text-yellow-500 font-semibold">
+                        {{ $review->reviewTitle }}
                     </h1>
                     @foreach ($review_users as $review_user)
                         @if ($review_user->id == $review->user_id)
-                            <p class="text-white">By: <span>{{ $review_user->name }}</span></p>
+                            <p class="text-gray-400">By: <span class="text-gray-400">{{ $review_user->name }}</span></p>
                         @endif
                     @endforeach
 
-                    <p class="normal-case text-gray-100">{{ $review->reviewText }}</p>
+                    <p class="normal-case text-white">{{ $review->reviewText }}</p>
 
                     @foreach ($ratings as $rating)
                         @isset($rating)
@@ -128,7 +135,7 @@
         </div>
 
         <!-- Leave a review -->
-        <div class="flex my-10">
+        <div class="flex my-10 lg:mb-52">
             <div class="m-auto">
                 <button id="reviewbtn"
                     class=" modal-open py-5 px-20 sm:px-20 md:px-40 lg:px-60 font-semibold rounded-lg shadow-md text-white bg-red-500 hover:bg-yellow-700">

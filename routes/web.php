@@ -86,3 +86,7 @@ Route::group(['middleware' => ['authCheck']], function () {
     // Review
     Route::post('review/{id}', [ReviewController::class, 'store']);
 });
+
+Route::get('/', function () {
+    return view('imdb');
+});

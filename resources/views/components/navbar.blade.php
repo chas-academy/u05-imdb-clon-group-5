@@ -24,9 +24,9 @@
             class="hidden sm:hidden md:flex lg:w-26 max-w-screen-lg bg-gradient-to-l from-blue-300 to-blue-500 items-center rounded-full shadow-xl md:h-9 p-2">
             @csrf
             <img class="w-9 mb-1 mr-auto" src="../img/magnifier.svg" alt="magnifier" title="magnifier">
-            <input
+            <input name="search" 
                 class="rounded-l-full w-full py0 px0 bg-gradient-to-l from-blue-300 to-blue-500 text-white leading-tight focus:outline-none h-2 p-2"
-                type="text" placeholder="Search">
+                type="search" placeholder="Search">
             <a href="{{ route('search') }}" class=" mt-1">
                 <button
                     class="lg:w-24 top-1/2 left-1/2 bg-white text-blue-600 rounded-full p-2 hover:bg-gray-300 focus:outline-none w-16 h-6 flex items-center justify-center"
@@ -117,7 +117,7 @@
                         <img class="w-9 mb-1 mr-auto" src="../img/magnifier.svg" alt="magnifier" title="magnifier">
                         <input
                             class="rounded-l-full w-full py0 px0 bg-gradient-to-l from-blue-300 to-blue-500 text-white leading-tight focus:outline-none h-2 p-2"
-                            type="text" placeholder="Search">
+                            type="search" name="search" placeholder="Search">
                         <a href="{{ route('search') }}" class=" mt-1">
                             <button
                                 class="lg:w-24 top-1/2 left-1/2 bg-white text-blue-600 rounded-full p-2 hover:bg-gray-300 focus:outline-none w-16 h-6 flex items-center justify-center"

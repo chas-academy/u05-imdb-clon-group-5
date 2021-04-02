@@ -1,6 +1,6 @@
 @extends('layout/layout')
 @section('content')
-    <div class="flex flex-col items-center p-2">
+    <div style="height: 70vh" class="flex flex-col items-center p-2">
         <div class="text-white font-bold mt-8 flex flex-col items-center">
             <h1 class="text-5xl font-inter">Watchlist</h1>
         </div>
@@ -19,12 +19,12 @@
                             alt="movie-poster"></a>
                 </div>
                 <ul class="flex-1 sm:flex-auto">
-                    <li class="font-bold text-base"><a href="/movie/{{ $movie->id }}">{{ $movie->title }}</a></li>
+                    <li class="font-bold text-base mt-3"><a class="text-2xl" href="/movie/{{ $movie->id }}">{{ $movie->title }}</a></li>
                     <li class="flex text-sm">
-                        <div class="flex items-center">
+                        <div class="flex items-center mt-3">
                             <span class="object-none mx-0.5 text-yellow-400">&#9733</span>{{ $movie->rating }}/10
                         </div>
-                        <div class="flex items-center ml-1">
+                        <div class="flex items-center ml-1 mt-3">
                             @foreach ($ratings as $rating)
                                 @if ($rating->movies_id === $movie->id)
                                     {{ Auth::user()->name }}: <span
@@ -33,7 +33,7 @@
                             @endforeach
                         </div>
                     </li>
-                    <li class="text-sm line-clamp-3">{{ $movie->description }}</li>
+                    <li class="text-sm mt-3 line-clamp-3">{{ $movie->description }}</li>
 
                     @foreach ($reviews as $review)
                         @if ($review->movie_id === $movie->id)

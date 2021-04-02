@@ -37,14 +37,21 @@
 
     <section class="flex">
 
-
+        <div id="logout"
+            class="alert-banner hidden text-center w-screen fixed top-0 left-0 close cursor-pointer flex items-center justify-between w-full p-2 bg-red-600 shadow text-white">
+            <h1 class="ml-5">You are now logging out</h1>
+        </div>
 
         <!-- logout -->
         @auth
-            <a href="/logout"
+            <a id="logoutbtn" href="/logout"
                 class="x2 mr-5 text-1xl sm:text-2xl font-medium font-poppins flex items-center transition duration-500 ease-in-out hover:text-red-500">
                 Logout
             </a>
+
+
+
+
         @endauth
         <!-- LOGIN -->
         @guest

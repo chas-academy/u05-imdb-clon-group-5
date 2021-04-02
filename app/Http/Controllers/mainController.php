@@ -19,6 +19,7 @@ use Illuminate\Support\Facades\URL;
 
 
 
+
 class mainController extends Controller
 {
 
@@ -95,7 +96,7 @@ class mainController extends Controller
         if (session()->has('LoggedUser')) {
             session()->pull('LoggedUser');
             Auth::logout();
-            return redirect('/');
+            return Redirect::to(URL::previous());
         }
     }
 

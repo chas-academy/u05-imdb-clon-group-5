@@ -25,7 +25,7 @@ class GenreItemTabelSeeder extends Seeder
         ]);
 
         DB::table('genreitems')->insert([
-            'genres_id' => 2,
+            'genres_id' => 10,
             'movies_id' => 2
 
         ]);
@@ -84,7 +84,7 @@ class GenreItemTabelSeeder extends Seeder
         ]);
 
         DB::table('genreitems')->insert([
-            'genres_id' => 3,
+            'genres_id' => 10,
             'movies_id' => 12
 
         ]);
@@ -278,7 +278,7 @@ class GenreItemTabelSeeder extends Seeder
         ]);
 
         DB::table('genreitems')->insert([
-            'genres_id' => 6,
+            'genres_id' => 10,
             'movies_id' => 46
 
         ]);
@@ -308,7 +308,7 @@ class GenreItemTabelSeeder extends Seeder
         ]);
 
         DB::table('genreitems')->insert([
-            'genres_id' => 2,
+            'genres_id' => 10,
             'movies_id' => 51
 
         ]);
@@ -362,7 +362,7 @@ class GenreItemTabelSeeder extends Seeder
         ]);
 
         DB::table('genreitems')->insert([
-            'genres_id' => 2,
+            'genres_id' => 10,
             'movies_id' => 60
 
         ]);
@@ -527,7 +527,7 @@ class GenreItemTabelSeeder extends Seeder
         ]);
 
         DB::table('genreitems')->insert([
-            'genres_id' => 8,
+            'genres_id' => 10,
             'movies_id' => 88
 
         ]);

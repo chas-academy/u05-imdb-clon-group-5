@@ -39,6 +39,10 @@ Route::get('/register', function () {
 Route::get('/search', [SearchController::class, 'search'])->name('search');
 Route::get('/searchfail', [SearchController::class, 'search'])->name('searchfail');
 
+// ------ search result of search -----
+Route::get('/result', function () {
+    return view('result');
+});
 
 Route::delete('/watchlist/{id}', [WatchlistController::class, 'destroy']);
 
@@ -81,7 +85,7 @@ Route::group(['middleware' => ['authCheck']], function () {
     Route::delete('/watchlist/{id}', [WatchlistController::class, 'destroy']);
 
     // Rating
-    Route::post('/{id}/rating', [RatingController::class,'store'])->name('rating');
+    Route::post('/{id}/rating', [RatingController::class, 'store'])->name('rating');
 
     // Review
     Route::post('review/{id}', [mainController::class, 'store']);

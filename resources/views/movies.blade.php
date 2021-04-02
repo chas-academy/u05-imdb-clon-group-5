@@ -4,7 +4,7 @@
     <div class="mt-8">
 
 
-        <video class="w-full max-w-screen-xl m-auto" controls src="../img/thedig.mp4"></video>
+        <video style="height: 500px" class="w-full" controls src=" ../img/thedig.mp4"></video>
 
 
 

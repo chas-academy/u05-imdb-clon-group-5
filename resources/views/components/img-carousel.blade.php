@@ -9,38 +9,38 @@
             {{-- List all movies from database --}}
             @foreach ($movies as $movie)
 
-            {{-- Check if we are sending variabel from to the component and if rating is grater or = 7
+                {{-- Check if we are sending variabel from to the component and if rating is grater or = 7
                     This is for top-rated now carousel --}}
-            @if ($moviedata == 1 and $movie->rating >= 7 )
+                @if ($moviedata == 1 and $movie->rating >= 7)
 
-            <li class="glide__slide">
-                <a href="/movie/{{$movie->id}}"><img class="w-48 h-48" src="{{$movie->img}}" /></a>
-            </li>
+                    <li class="glide__slide">
+                        <a href="/movie/{{ $movie->id }}"><img class="h-52 w-48" src="{{ $movie->img }}" /></a>
+                    </li>
 
 
-            {{-- Check if we are sending variabel from to the component
+                    {{-- Check if we are sending variabel from to the component
                     show featured movies this is all movies at this point --}}
 
-            @elseif($moviedata == 2 and $movie->featured == 1)
-            
-            <li class="glide__slide">
-            
-                    <a href="/movie/{{$movie->id}}"><img class=" w-48 h-48" src="{{$movie->img}}" /></a>    
-              
-               
-            </li>
+                @elseif($moviedata == 2 and $movie->featured == 1)
+
+                    <li class="glide__slide">
+
+                        <a href="/movie/{{ $movie->id }}"><img class="h-52 w-48" src=" {{ $movie->img }}" /></a>
 
 
-            {{-- Check if we are sending variabel from to the component
+                    </li>
+
+
+                    {{-- Check if we are sending variabel from to the component
                     show only movie img --}}
-            @elseif($moviedata == 3)
-            <li class="glide__slide">
-                <div class=" min-w-max text-center font-bold text-white">
-                    <a href="/movie/{{$movie->id}}"><img class="w-48 h-48" src="{{$movie->img}}" /></a>
-                </div>
-            </li>
+                @elseif($moviedata == 3)
+                    <li class="glide__slide">
+                        <div class=" min-w-max text-center font-bold text-white">
+                            <a href="/movie/{{ $movie->id }}"><img class="h-52 w-48" src="{{ $movie->img }}" /></a>
+                        </div>
+                    </li>
 
-            @endif
+                @endif
 
             @endforeach
 

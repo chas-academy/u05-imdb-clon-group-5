@@ -59,7 +59,7 @@
         <!-- Naviagation -->
 
         <div class="transform -rotate-90">
-            <span class="cursor-pointer text-lg sm:text-3xl" tabindex="0" aria-haspopup="true" onclick="openNav()">
+            <span class="cursor-pointer text-lg sm:text-2xl h-2" tabindex="0" aria-haspopup="true" onclick="openNav()">
 
                 <span role="navigation" class="h-4 w-2 rounded-2xl  text-white bg-white">&nbsp;</span>
                 <span role="navigation" class="h-4 w-2 rounded-2xl text-white bg-white">&nbsp;</span>

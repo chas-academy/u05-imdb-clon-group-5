@@ -31,3 +31,7 @@ for (var i = 0; i < sliders.length; i++) {
 
     glide.mount();
 }
+
+new Glide(".glide", {
+    autoplay: 4000,
+});

@@ -10,11 +10,16 @@
         "production": "mix --production"
     },
     "devDependencies": {
-        "autoprefixer": "^10.2.4",
+        "autoprefixer": "^10.2.5",
         "axios": "^0.21",
         "laravel-mix": "^6.0.6",
         "lodash": "^4.17.19",
-        "postcss": "^8.2.4",
-        "tailwindcss": "^2.0.2"
+        "postcss": "^8.2.6",
+        "tailwindcss": "^2.0.3"
+    },
+    "dependencies": {
+        "@tailwindcss/line-clamp": "^0.2.0",
+        "@glidejs/glide": "^3.4.1",
+        "tailwind-scrollbar-hide": "^1.0.3"
     }
 }

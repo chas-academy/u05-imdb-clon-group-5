@@ -2,7 +2,12 @@
 
 namespace App\Providers;
 
+
+use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\View;
+use Illuminate\Support\Facades\DB;
+
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -23,8 +28,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        /*   if ($this->app->environment('production')) {
+        if ($this->app->environment('production')) {
             \URL::forceScheme('https');
-        } */
+        }
     }
 }

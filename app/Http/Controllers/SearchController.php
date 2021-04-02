@@ -14,7 +14,7 @@ class SearchController extends Controller
         // Take input data and search database table movies
         $search = $request->search;
         $tests = Movie::where('title', 'LIKE', "%$search%")->first();
-
+        
         if ($tests) {
             return redirect()->route('movie', ['id' => $tests->id]);
         } else {

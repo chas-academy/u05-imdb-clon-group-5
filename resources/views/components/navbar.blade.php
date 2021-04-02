@@ -20,18 +20,19 @@
     <div id="hidde-form" class="x1 sm:hidden xl:w-3/4 w-3/6 md:flex justify-center md:items-center" id="mobs"
         id="burgerbtn">
         <form action="{{ route('search') }}" method="GET" role="search"
-            class="hidden sm:hidden md:flex lg:w-26 max-w-screen-lg bg-gradient-to-l from-blue-300 to-blue-500 items-center rounded-full shadow-xl md:h-9 p-2">
+            class="hidden w-3/4 xl:w-3/6 xl:max-w-screen-md  sm:hidden md:flex lg:w-26 max-w-screen-lg bg-white  items-center rounded-full shadow-xl md:h-9 p-2">
             @csrf
-            <img class="w-9 mb-1 mr-auto" src="../img/magnifier.svg" alt="magnifier" title="magnifier">
+           
             <input name="search"
-                class="rounded-l-full w-full py0 px0 bg-gradient-to-l from-blue-300 to-blue-500  text-white leading-tight focus:outline-none h-2 p-2"
+                class="rounded-xl w-full py0 px0 font-poppins text-black leading-tight focus:outline-none h-2 p-2"
                 type="search" placeholder="Search title">
-            <a href="{{ route('search') }}" class=" mt-1">
+            <a href="{{ route('search') }}">
                 <button
-                    class="lg:w-24 top-1/2 left-1/2 mb-2 bg-white text-blue-600 rounded-full p-2 hover:bg-gray-300 focus:outline-none w-16 h-6 flex items-center justify-center"
+                    class="lg:w-24 top-1/2 left-1/2 font-inter font-semibold  bg-gradient-to-br from-indigo-300 via-purple-400 to-purple-600 rounded-full hover:bg-gray-300 focus:outline-none w-16 h-6 flex items-center justify-center"
                     type="submit">GO</button>
             </a>
         </form>
+        
     </div>
 
     <section class="flex">
@@ -108,17 +109,17 @@
             <!-- Search (nav-open) -->
             <div class="p-2 w-full justify-center inline-flex ml-3"
                 style="margin-top: 3rem;padding-left: 2rem;left: 50%;margin-left: -0.75rem;">
-                <div class="x1 xl:w-3/4 w-3/6 md:flex md:justify-center md:items-center" id="mobs" id="burgerbtn">
+                <div class="xl:w-3/4 md:flex md:justify-center md:items-center" id="mobs" id="burgerbtn">
                     <form action="{{ route('search') }}" method="GET" role="search"
-                        class=" flex lg:w-26 max-w-screen-lg bg-gradient-to-l from-blue-300 to-blue-500 items-center rounded-full shadow-xl md:h-9 p-2">
+                        class=" flex xl:max-w-screen-md  sm:hidden md:flex lg:w-26 max-w-screen-lg bg-white  items-center rounded-full shadow-xl md:h-9 p-2">
                         @csrf
-                        <img class="w-9 mb-1 mr-auto" src="../img/magnifier.svg" alt="magnifier" title="magnifier">
+                        
                         <input
-                            class="rounded-l-full w-full py0 px0 bg-gradient-to-l from-blue-300 to-blue-500 text-white leading-tight focus:outline-none h-2 p-2"
+                            class="rounded-xl w-full py0 px0 font-poppins text-black leading-tight focus:outline-none h-2 p-2"
                             type="search" name="search" placeholder="Search">
-                        <a href="{{ route('search') }}" class=" mt-1">
+                        <a href="{{ route('search') }}">
                             <button
-                                class="lg:w-24 top-1/2 left-1/2 bg-white text-blue-600 rounded-full p-2 hover:bg-gray-300 focus:outline-none w-16 h-6 flex items-center justify-center"
+                                class="lg:w-24 top-1/2 left-1/2 font-inter font-semibold  bg-gradient-to-br from-indigo-300 via-purple-400 to-purple-600 rounded-full hover:bg-gray-300 focus:outline-none w-16 h-6 flex items-center justify-center"
                                 type="submit">GO</button>
                         </a>
                     </form>

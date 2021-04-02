@@ -25,7 +25,7 @@
                 <div class="text-xl mx-8 flex">
                     <h1 class="text-red-600">Genre: </h1>
                     @foreach ($genres as $genre)
-                        <span class="text-gray-100 mx-1">{{ $genre->genre }}</span>
+                        <a href="/genre/{{$genre->id}}" class="text-gray-100 mx-1">{{ $genre->genre }}</a>
                     @endforeach
                 </div>
 

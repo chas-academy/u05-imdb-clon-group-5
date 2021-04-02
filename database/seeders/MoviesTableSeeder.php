@@ -227,7 +227,7 @@ class MoviesTableSeeder extends Seeder
             'year' => 2020,
             'runtime' => 02.30,
             'release_date'  => '2020-03-09',
-            'img' => 'https://images-na.ssl-images-amazon.com/images/I/51TeNLseaSL._AC_.jpg',
+            'img' => 'https://movieposterfactory.com/wp-content/uploads/2020/09/2020_SF_tenet_1_1_resultat.jpg',
             'featured' => 0,
         ]);
         DB::table('movies')->insert([

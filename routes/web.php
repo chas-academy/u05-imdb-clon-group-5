@@ -67,11 +67,11 @@ Route::group(['middleware' => ['authCheck']], function () {
 
     //Here should we add all files to force the user to be logged in.
     //Remeber to update authCheck middleware (only the pages located here)!!
-    Route::get('/login', function() {
+    Route::get('/login', function () {
         return view('login');
     })->name('login');
 
-    Route::get('/register', function() {
+    Route::get('/register', function () {
         return view('register');
     })->name('register');
 
@@ -85,8 +85,4 @@ Route::group(['middleware' => ['authCheck']], function () {
 
     // Review
     Route::post('review/{id}', [ReviewController::class, 'store']);
-});
-
-Route::get('/', function () {
-    return view('imdb');
 });

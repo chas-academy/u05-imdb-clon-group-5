@@ -91,7 +91,7 @@ class mainController extends Controller
     }
     function logout()
     {
-        //Just killing the session here.
+        //Just killing the session here :D
         if (session()->has('LoggedUser')) {
             session()->pull('LoggedUser');
             Auth::logout();
@@ -99,6 +99,7 @@ class mainController extends Controller
         }
     }
 
+    //WARNING!!
     //Remember all functions added here are the ones inside web authCheck!
 
     function profile()
@@ -141,8 +142,10 @@ class mainController extends Controller
             $genres[$i] = Genre::find($genreitems[$i])->first();
         }
         $ratings = [];
+        $review_users = [];
         for ($i = 0; $i < count($reviews); $i++) {
             $ratings[$i] = Rating::where('user_id', $reviews[$i]->user_id)->where('movies_id', $id)->first();
+            $review_users[$i] = User::where('id', $reviews[$i]->user_id)->first();
         }
         if (Auth::check()) {
             $userRatings = Auth::user()->rating;
@@ -152,15 +155,28 @@ class mainController extends Controller
                     $userRating = $userRatings[$i]->rating;
                 }
             }
-            return view('movie', array('page' => $page, 'reviews' => $reviews, 'ratings' => $ratings, 'genres' => $genres, 'userRating' => $userRating));
+            return view('movie', array('page' => $page, 'reviews' => $reviews, 'ratings' => $ratings, 'genres' =>
+            $genres, 'userRating' => $userRating, 'review_users' => $review_users));
         }
 
+
+
         return view('movie', array('page' => $page, 'reviews' => $reviews, 'ratings' => $ratings, 'genres' =>
-        $genres));
+        $genres, 'review_users' => $review_users));
     }
 
-
-
+    public function getGenre($id)
+    {
+        $genreList  =   DB::select('SELECT  movies.id,
+                                            movies.title,
+                                            movies.img,
+                                            group_concat(genres.genre) AS genre
+                                            FROM movies
+                                            INNER JOIN genre_movie ON genre_movie.movie_id = movies.id
+                                            INNER JOIN genres ON genre_movie.genre_id = genres.id WHERE genre_movie.genre_id=' . $id . '
+                                            GROUP BY movies.id, movies.title, movies.img');
+        return view('genre', array('genreList' => $genreList));
+    }
 
     public function store(Request $request, $id)
     {

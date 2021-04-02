@@ -76,7 +76,7 @@
         </div>
     </section>
     <div id="myNav"
-        class="overlay h-0 w-full fixed z-10 top-0 left-0 bg-gray-800 no-underline text-gray-600 block duration-75 focus:ring-gray-200 overflow-y-auto right-2">
+        class="overlay h-0 w-full fixed z-50 top-0 left-0 bg-gray-800 no-underline text-gray-600 block duration-75 focus:ring-gray-200 overflow-y-auto right-2">
         <div class="hidden sm:hidden lg:flex">
             <a href="javascript:void(0)" class=" closebtn absolute text-white text-6xl top-1 right-3 sm:"
                 onclick="closeNav()">

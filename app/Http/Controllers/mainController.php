@@ -3,36 +3,18 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\User;
-use App\Models\Rating;
-use App\Models\Review;
-use App\Models\Movie;
-use App\Models\Genre;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
-use App\Models\Genreitem;
-use App\Models\Watchlist;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\URL;
 
-
-
-
+use App\Models\User;
+use App\Models\Watchlist;
 
 class mainController extends Controller
 {
-
-    function login()
-    {
-        //
-        return view('login');
-    }
-    function register()
-    {
-        //
-        return view('register');
-    }
+    // Creating user
     function save(Request $request)
     {
         //Validating the request before sending.
@@ -55,11 +37,12 @@ class mainController extends Controller
             return back()->with('fail', 'Something went wrong, try again');
         }
     }
+
+    // Login
     function check(Request $request)
     {
         $credentials = $request->only('email', 'password');
-
-        // return $request->input();
+        
         $request->validate([
             'email'     =>  'required|email',
             'password'  =>  'required|min:5|max:12'
@@ -72,7 +55,6 @@ class mainController extends Controller
         } else {
             //Checking password
             if ($request->password) {
-                //
                 $request->session()->put('LoggedUser', $userInfo->id);
 
                 // Create new watchlist once
@@ -85,99 +67,18 @@ class mainController extends Controller
 
                 return redirect('/');
             } else {
-                //If the passsword is incorrect, then...
+                //If the passsword is incorrect
                 return back()->with('fail', 'Incorrect password');
             }
         }
     }
+
     function logout()
     {
-        //Just killing the session here :D
         if (session()->has('LoggedUser')) {
             session()->pull('LoggedUser');
             Auth::logout();
             return Redirect::to(URL::previous());
         }
-    }
-
-    //WARNING!!
-    //Remember all functions added here are the ones inside web authCheck!
-
-    function profile()
-    {
-        $data = ['LoggedUserInfo' => User::where('id', '=', session('LoggedUser'))->first()];
-        return view('user.profile', $data);
-    }
-    function Settings()
-    {
-        $data = ['LoggedUserInfo' => User::where('id', '=', session('LoggedUser'))->first()];
-        return view('user.settings', $data);
-    }
-
-    function myWatchs()
-    {
-        $data = ['LoggedUserInfo' => User::where('id', '=', session('LoggedUser'))->first()];
-        return view('user.mywatchs', $data);
-    }
-    function myRatings()
-    {
-        $data = ['LoggedUserInfo' => User::where('id', '=', session('LoggedUser'))->first()];
-        return view('user.myratings', $data);
-    }
-    function myMovies()
-    {
-        $data = ['LoggedUserInfo' => User::where('id', '=', session('LoggedUser'))->first()];
-        return view('user.mymovies', $data);
-    }
-
-
-
-
-    public function getInfo($id)
-    {
-        $page = Movie::findorfail($id);
-        $reviews = Review::where('movie_id', $id)->paginate(4);
-        $genres = [];
-        $genreitems = Genreitem::where('movies_id', $id)->get();
-        for ($i = 0; $i < count($genreitems); $i++) {
-            $genres[$i] = Genre::find($genreitems[$i])->first();
-        }
-        $ratings = [];
-        $review_users = [];
-        for ($i = 0; $i < count($reviews); $i++) {
-            $ratings[$i] = Rating::where('user_id', $reviews[$i]->user_id)->where('movies_id', $id)->first();
-            $review_users[$i] = User::where('id', $reviews[$i]->user_id)->first();
-        }
-        if (Auth::check()) {
-            $userRatings = Auth::user()->rating;
-            $userRating = null;
-            for ($i = 0; $i < count($userRatings); $i++) {
-                if ($userRatings[$i]->movies_id == $id) {
-                    $userRating = $userRatings[$i]->rating;
-                }
-            }
-            return view('movie', array('page' => $page, 'reviews' => $reviews, 'ratings' => $ratings, 'genres' =>
-            $genres, 'userRating' => $userRating, 'review_users' => $review_users));
-        }
-
-
-
-        return view('movie', array('page' => $page, 'reviews' => $reviews, 'ratings' => $ratings, 'genres' =>
-        $genres, 'review_users' => $review_users));
-    }
-
-
-
-    public function store(Request $request, $id)
-    {
-        //SUBMIT THE REVIEW
-        $review = new Review;
-        $review->reviewTitle = $request->title;
-        $review->reviewText = $request->text;
-        $review->user_id = $request->session()->get('LoggedUser');
-        $review->movie_id = $id;
-        $review->save();
-
-        return Redirect::to(URL::previous());
     }
 }

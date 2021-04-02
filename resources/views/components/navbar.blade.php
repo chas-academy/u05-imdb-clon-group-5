@@ -1,7 +1,6 @@
 <nav
-    class="font-poppins bg-dianne-500 {{-- bg-midnight-500 --}} text-white px-4 w-full flex justify-between lg:justify-evenly items-center h-16">
+    class="font-poppins bg-dianne-500  text-white px-4 w-full flex justify-between lg:justify-evenly items-center h-16">
 
-    <!-- style="max-width: 64rem; -->
 
 
     <!-- Logo -->
@@ -18,18 +17,18 @@
 
 
     <!-- search -->
-    <div id="hidde-form" class="x1 sm:hidden xl:w-3/4 w-3/6 md:flex md:justify-center md:items-center" id="mobs"
+    <div id="hidde-form" class="x1 sm:hidden xl:w-3/4 w-3/6 md:flex justify-center md:items-center" id="mobs"
         id="burgerbtn">
         <form action="{{ route('search') }}" method="GET" role="search"
             class="hidden sm:hidden md:flex lg:w-26 max-w-screen-lg bg-gradient-to-l from-blue-300 to-blue-500 items-center rounded-full shadow-xl md:h-9 p-2">
             @csrf
             <img class="w-9 mb-1 mr-auto" src="../img/magnifier.svg" alt="magnifier" title="magnifier">
-            <input name="search" 
-                class="rounded-l-full w-full py0 px0 bg-gradient-to-l from-blue-300 to-blue-500 text-white leading-tight focus:outline-none h-2 p-2"
-                type="search" placeholder="Search">
+            <input name="search"
+                class="rounded-l-full w-full py0 px0 bg-gradient-to-l from-blue-300 to-blue-500  text-white leading-tight focus:outline-none h-2 p-2"
+                type="search" placeholder="Search title">
             <a href="{{ route('search') }}" class=" mt-1">
                 <button
-                    class="lg:w-24 top-1/2 left-1/2 bg-white text-blue-600 rounded-full p-2 hover:bg-gray-300 focus:outline-none w-16 h-6 flex items-center justify-center"
+                    class="lg:w-24 top-1/2 left-1/2 mb-2 bg-white text-blue-600 rounded-full p-2 hover:bg-gray-300 focus:outline-none w-16 h-6 flex items-center justify-center"
                     type="submit">GO</button>
             </a>
         </form>
@@ -109,10 +108,9 @@
             <!-- Search (nav-open) -->
             <div class="p-2 w-full justify-center inline-flex ml-3"
                 style="margin-top: 3rem;padding-left: 2rem;left: 50%;margin-left: -0.75rem;">
-                <div id="hidde-form" class="x1 sm:hidden xl:w-3/4 w-3/6 md:flex md:justify-center md:items-center"
-                    id="mobs" id="burgerbtn">
+                <div class="x1 xl:w-3/4 w-3/6 md:flex md:justify-center md:items-center" id="mobs" id="burgerbtn">
                     <form action="{{ route('search') }}" method="GET" role="search"
-                        class="hidden sm:hidden md:flex lg:w-26 max-w-screen-lg bg-gradient-to-l from-blue-300 to-blue-500 items-center rounded-full shadow-xl md:h-9 p-2">
+                        class=" flex lg:w-26 max-w-screen-lg bg-gradient-to-l from-blue-300 to-blue-500 items-center rounded-full shadow-xl md:h-9 p-2">
                         @csrf
                         <img class="w-9 mb-1 mr-auto" src="../img/magnifier.svg" alt="magnifier" title="magnifier">
                         <input

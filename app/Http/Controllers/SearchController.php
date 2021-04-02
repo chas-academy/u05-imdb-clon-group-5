@@ -13,10 +13,13 @@ class SearchController extends Controller
     {
         // Take input data and search database table movies
         $search = $request->search;
-        $tests = Movie::where('title', 'LIKE', "%$search%")->first();
-        
-        if ($tests) {
-            return redirect()->route('movie', ['id' => $tests->id]);
+        $findResults = Movie::where('title', 'LIKE', "%$search%")->get();
+
+        if ($findResults->count() == 1) {
+            return redirect()->route('movie', ['id' => $findResults[0]->id]);
+        } elseif ($findResults->count() > 1) {
+            /*  dd($findResults); */
+            return view('result', array('findResults' => $findResults, 'search' => $search));
         } else {
             return view('searchfail', array('search' => $search));
         }

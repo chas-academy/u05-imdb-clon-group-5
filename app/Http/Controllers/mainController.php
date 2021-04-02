@@ -166,18 +166,7 @@ class mainController extends Controller
         $genres, 'review_users' => $review_users));
     }
 
-    public function getGenre($id)
-    {
-        $genreList  =   DB::select('SELECT  movies.id,
-                                            movies.title,
-                                            movies.img,
-                                            group_concat(genres.genre) AS genre
-                                            FROM movies
-                                            INNER JOIN genre_movie ON genre_movie.movie_id = movies.id
-                                            INNER JOIN genres ON genre_movie.genre_id = genres.id WHERE genre_movie.genre_id=' . $id . '
-                                            GROUP BY movies.id, movies.title, movies.img');
-        return view('genre', array('genreList' => $genreList));
-    }
+
 
     public function store(Request $request, $id)
     {

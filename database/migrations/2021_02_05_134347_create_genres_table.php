@@ -19,9 +19,9 @@ class CreateGenresTable extends Migration
             $table->timestamps();
         });
 
-        Artisan::call('db:seed', [
-            '--class' => GenresTableSeeder::class,
-        ]);
+        // Artisan::call('db:seed', [
+        //     '--class' => GenresTableSeeder::class,
+        // ]);
     }
 
     /**

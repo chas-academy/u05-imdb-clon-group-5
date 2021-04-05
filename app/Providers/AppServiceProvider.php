@@ -28,8 +28,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        
-        
+        $movies = DB::table('movies')->get();
+        View::share('movies', $movies); 
         
         if ($this->app->environment('production')) {
             \URL::forceScheme('https');

@@ -7,6 +7,7 @@ use App\Http\Controllers\mainController;
 use App\Http\Controllers\MovieController;
 use App\Http\Controllers\SearchController;
 use App\Http\Controllers\WatchlistController;
+use App\Http\Controllers\UserController;
 use App\http\Controllers\GenreController;
 use App\http\Controllers\RatingController;
 use App\http\Controllers\ReviewController;

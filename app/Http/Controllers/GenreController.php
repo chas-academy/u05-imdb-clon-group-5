@@ -28,7 +28,7 @@ class GenreController extends Controller
         for ($i = 0; $i < count($genreitems); $i++) {
             $moviesgenre[$i] = Movie::find($genreitems[$i]->movies_id);
         }
-        Genreitem::where('genres_id', $genreitems)->get();
+        
         return view('genre', array('genres' => $genreitems, 'moviesgenres' => $moviesgenre, 'genreInformation' => $genreInformation));
     }
 }

@@ -11,6 +11,7 @@ use App\Models\Genreitem;
 use App\Models\Genre;
 use App\Models\Rating;
 use App\Models\User;
+use App\Models\Watchlistitem;
 
 class MovieController extends Controller
 {
@@ -57,6 +58,16 @@ class MovieController extends Controller
             if ($userRatings[$i]->movies_id == $id) {
                $userRating = $userRatings[$i]->rating;
             }
+         }
+
+         // Check if movie aleady in watchlist
+         $watchlist = Auth::user()->watchlist;
+         $checkWatchlist = Watchlistitem::where('watchlists_id', $watchlist->id)->where('movies_id', $id)->first();
+         // dd($checkWatchlist);
+
+         if ($checkWatchlist) {
+            return view('movie', array('page' => $page, 'reviews' => $reviews, 'ratings' => $ratings, 'genres' =>
+            $genres, 'userRating' => $userRating, 'review_users' => $review_users, 'checkWatchlist' => $checkWatchlist));
          }
 
          // Return with rating for logged-in user

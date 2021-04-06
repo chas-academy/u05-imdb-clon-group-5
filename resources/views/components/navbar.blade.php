@@ -119,7 +119,7 @@
                             type="search" name="search" placeholder="Search">
                         <a href="{{ route('search') }}">
                             <button
-                                class="lg:w-24 top-1/2 left-1/2 font-inter font-semibold  bg-gradient-to-br from-indigo-300 via-purple-400 to-purple-600 rounded-full hover:bg-gray-300 focus:outline-none w-16 h-6 flex items-center justify-center"
+                                class="lg:w-24 top-1/2 left-1/2 font-inter font-semibold  bg-gradient-to-br from-indigo-300 via-purple-400 to-purple-600 rounded-full hover:bg-gray-300 text-white focus:outline-none w-16 h-6 flex items-center justify-center"
                                 type="submit">GO</button>
                         </a>
                     </form>

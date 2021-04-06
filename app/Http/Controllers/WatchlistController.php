@@ -59,6 +59,6 @@ class WatchlistController extends Controller
             $watchlistitem_id->delete();
         }
 
-        return redirect('watchlist');
+        return Redirect::to(URL::previous());
     }
 }

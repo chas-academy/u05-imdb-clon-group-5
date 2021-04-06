@@ -20,7 +20,7 @@
     <title>Movie-db</title>
 </head>
 
-<body class="bg-midnight-500">
+<body class="bg-midnight-500 relative min-h-screen">
     <x-navbar />
     <div class="m-auto">
 

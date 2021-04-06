@@ -1,5 +1,5 @@
 
-<main class="max-w-screen-xl m-auto">
+<main class="max-w-screen-xl m-auto pb-24">
     
 <h2 class="uppercasev font-inter font-semibold mt-10 text-center text-red-500 text-2xl sm:text-3xl lg:text-4xl">Explore all Genres</h2>
            

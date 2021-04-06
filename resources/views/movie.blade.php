@@ -45,21 +45,56 @@
             </div>
         </div>
         @auth
-            <div id="addedToWatchList"
-                class="alert-banner hidden text-center w-screen fixed top-0 left-0 close cursor-pointer flex items-center justify-between w-full p-2 bg-green-600 shadow text-white">
-                <h1 class="ml-5">{{ $page->title }} Added to Watchlist</h1>
-            </div>
+            @empty($checkWatchlist)
+                <div id="addedToWatchList"
+                    class="alert-banner hidden text-center w-screen fixed top-0 left-0 close cursor-pointer flex items-center justify-between w-full p-2 bg-green-600 shadow text-white">
+                    <h1 class="ml-5">{{ $page->title }} Added to Watchlist</h1>
+                </div>
+            @endempty
+            @isset($checkWatchlist)
+                <div id="addedToWatchList"
+                    class="alert-banner hidden text-center w-screen fixed top-0 left-0 close cursor-pointer flex items-center justify-between w-full p-2 bg-red-500 shadow text-white">
+                    <h1 class="ml-5">Removing {{ $page->title }} from Watchlist</h1>
+                </div>
+            @endisset
         @endauth
 
         <section class="flex text-white justify-between font-poppins text-1xl bg-green-600 h-20 items-center sm:text2">
-            <div class="ml-2 mr-0 sm:mr-5 sm:ml-5">
-                <form action="/watchlist/{{ $page->id }}" method="POST">
-                    @csrf
-                    <input id="submitedToWatchList"
-                        class="font-semibold font-poppins rounded-lg p-2 shadow-md text-white bg-red-500 hover:bg-yellow-700 lg:p-4 lg:text-lg cursor-pointer"
-                        type="submit" value="Add to Watchlist">
-                </form>
-            </div>
+            @auth
+                @empty($checkWatchlist)
+                    <div class="ml-2 mr-0 sm:mr-5 sm:ml-5">
+                        <form action="/watchlist/{{ $page->id }}" method="POST">
+                            @csrf
+                            <input id="submitedToWatchList"
+                                class="font-semibold font-poppins rounded-lg p-2 shadow-md text-white bg-red-500 hover:bg-yellow-700 lg:p-4 lg:text-lg cursor-pointer"
+                                type="submit" value="Add to Watchlist">
+                        </form>
+                    </div>
+                @endempty
+                @isset($checkWatchlist)
+                    <div class="ml-2 mr-0 sm:mr-5 sm:ml-5">
+                        <form action="/watchlist/{{ $page->id }}" method="POST">
+                            @csrf
+                            @method('DELETE')
+                            <input id="submitedToWatchList"
+                                class="font-semibold font-poppins rounded-lg p-2 shadow-md text-white bg-red-500 hover:bg-yellow-700 lg:p-4 lg:text-lg cursor-pointer"
+                                type="submit" value="Remove from Watchlist">
+                        </form>
+                    </div>
+                @endisset
+            @endauth
+
+            @guest
+                <div class="ml-2 mr-0 sm:mr-5 sm:ml-5">
+                    <form action="/watchlist/{{ $page->id }}" method="POST">
+                        @csrf
+                        <input id="submitedToWatchList"
+                            class="font-semibold font-poppins rounded-lg p-2 shadow-md text-white bg-red-500 hover:bg-yellow-700 lg:p-4 lg:text-lg cursor-pointer"
+                            type="submit" value="Add to Watchlist">
+                    </form>
+                </div>
+            @endguest
+            
 
             {{-- Movie information rating and Release date --}}
             <div>

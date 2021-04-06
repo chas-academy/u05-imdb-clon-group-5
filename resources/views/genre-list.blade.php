@@ -3,7 +3,7 @@
 
 <div class="bg-midnight-500 py-10">
 
-    <ul class="font-Inter text-3xl sm:text-6xl text-white text-center">
+    <ul class="font-Inter text-3xl lg:text-4xl text-white text-center 2xl:text-6xl">
        @foreach ($genres as $genre)
            <li class="mt-2"><a class="hover:text-red-700" href="/genre/{{$genre->id}}">{{$genre->genre}}</a></li>
 

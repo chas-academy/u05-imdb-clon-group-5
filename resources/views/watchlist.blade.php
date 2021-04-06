@@ -27,7 +27,7 @@
                         <div class="flex items-center ml-1 mt-3">
                             @foreach ($ratings as $rating)
                                 @if ($rating->movies_id === $movie->id)
-                                    {{ Auth::user()->name }}: <span
+                                    Your rating: <span
                                         class="object-none mx-0.5 text-yellow-400">&#9733</span>{{ $rating->rating }}/10
                                 @endif
                             @endforeach

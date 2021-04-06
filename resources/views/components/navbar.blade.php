@@ -91,6 +91,10 @@
             <div class="lg:mt-24 md:10">
                 <div class="containerx mt-7">
                     <a class="imagex p-2 no-underline text-4xl lg:text-6xl text-white block hover:bg-gray-800 focus:ring-gray-200top-1 right-2 lg:mb-2 md:mb-1 sm:mb-1 xl:text-8xl transition duration-500 ease-in-out hover:text-red-500"
+                        href="/">Home</a>
+                </div>
+                <div class="containerx mt-7">
+                    <a class="imagex p-2 no-underline text-4xl lg:text-6xl text-white block hover:bg-gray-800 focus:ring-gray-200top-1 right-2 lg:mb-2 md:mb-1 sm:mb-1 xl:text-8xl transition duration-500 ease-in-out hover:text-red-500"
                         href="/movies">Movies</a>
                 </div>
                 <div class="containerx mt-7">

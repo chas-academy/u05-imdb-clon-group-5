@@ -170,7 +170,7 @@
         </div>
 
         <!-- Leave a review -->
-        <div class="flex my-10 lg:mb-52">
+        <div class="flex my-10 lg:mb-52 pb-20">
             <div class="m-auto">
                 <button id="reviewbtn"
                     class=" modal-open py-5 px-20 sm:px-20 md:px-40 lg:px-60 font-semibold rounded-lg shadow-md text-white bg-red-500 hover:bg-yellow-700">
@@ -236,7 +236,7 @@
                     class="modal-close px-4 bg-indigo-500 p-3 rounded-lg text-white hover:bg-indigo-400 cursor-pointer">Close</a>
 
             </div>
-            <!--Footer-->
+           
 
 
         </div>

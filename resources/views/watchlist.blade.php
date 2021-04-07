@@ -1,6 +1,6 @@
 @extends('layout/layout')
 @section('content')
-    <div style="height: 70vh" class="flex flex-col items-center p-2">
+    <div class="flex flex-col items-center pb-24">
         <div class="text-white font-bold mt-8 flex flex-col items-center">
             <h1 class="text-5xl font-inter">Watchlist</h1>
         </div>
@@ -49,7 +49,7 @@
             <div class="flex flex-wrap  justify-center p-1 rounded">
                 <div class="flex flex-col justify-end">
                     <h3 class="sm:text-5xl text-center font-inter text-white mt-10">Your Watchlist is empty</h3>
-                    <p class="text-white text-center font-inter text-white mt-10">Add movies and shows to your
+                    <p class="text-white text-center font-inter mt-10">Add movies and shows to your
                         Watchlist to keep track of what <br> you want to watch</p>
                     <img class="object-fit text-white h-96 mr-1 sm:mr-4" src="../img/movie.png">
 
@@ -58,7 +58,7 @@
         @endempty
 
         @isset($movies)
-            <div class="flex flex-wrap bg-dianne p-1 rounded">
+            <div class="flex flex-wrap bg-dianne p-1 rounded justify-center">
                 @foreach ($movies as $movie)
                     <div class="flex-initial relative m-0.5">
                         <!-- Delete button -->

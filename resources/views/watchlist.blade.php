@@ -7,7 +7,7 @@
 
         @isset($movie)
             <div class="flex text-white bg-dianne mt-4 mb-4 p-1 font-poppins gap-0.5 rounded max-w-screen-md">
-                <div class="flex-1 sm:flex-none flex justify-end">
+                <div class="flex-1 sm:flex-none flex max-w-max justify-end">
                     <!-- Delete button -->
                     <form class="delete-form" action="/watchlist/{{ $movie->id }}" method="POST">
                         @csrf

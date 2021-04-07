@@ -119,7 +119,7 @@
             <div class="text-sm mr-1 sm:mr-3 text-black">
                 <form action="/{{ $page->id }}/rating" method="POST">
                     @csrf
-                    <select name="rating" class="">
+                    <select name="rating" class="bg-white">
                         <option value='1'>1 &#9733;</option>
                         <option value='2'>2 &#9733;</option>
                         <option value='3'>3 &#9733;</option>
